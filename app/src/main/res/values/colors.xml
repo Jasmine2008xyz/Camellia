@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <!-- 找到的一些实用颜色 -->
+    <color name="透明">#00000000</color>
+    <color name="半透明">#22050505</color>
+    <color name="灰1">#a65b5b5b</color>
+    <color name="灰2">#f5f6fa</color>
+    <color name="白">#ffffff</color>
+    <color name="灰3">#f5f6fa</color>
+    <color name="灰4">#dfdfdf</color>
+    <!-- QQ蓝 -->
+    <color name="QQBlue">#00B1FF</color>
+    <!-- QQ设置灰 -->
+    <color name="QQWhite">#F5F5F5</color>
+</resources>
