@@ -14,5 +14,12 @@ Camellia意为"山茶",
 
 其实取这个名字是迫不得已喵的什么QQ辅助什么QQ助手什么QQ工具全给他们取完了。
 
+拉取: git clone git@github.com:zhidongya813/Camellia.git
+ssh秘钥: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEVXhOfGDVDeI6KSBMQZ+ktEwdSqV70gPR0Msut+WT4N 2968447202@qq.com
+全部文件添加到暂缓区: git add .
+或者: git add -A
+提交更改: git commit -m "更新了"
+推送更改到原创仓库: git push origin main
+强制覆盖远程分支（谨慎操作）: git push -f origin main
 2024/08/16 20:00 0.0.1版本开发者日志
 1.完成项目基本依赖并制作主界面

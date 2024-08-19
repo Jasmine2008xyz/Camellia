@@ -4,32 +4,17 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/README.md",
       "selection": {
         "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 3,
+          "index": 406,
+          "line": 18
         },
         "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/.git/config",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 245,
-          "line": 10
-        },
-        "start": {
-          "column": 0,
-          "index": 245,
-          "line": 10
+          "column": 3,
+          "index": 406,
+          "line": 18
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/.git/config"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/README.md"
 }
