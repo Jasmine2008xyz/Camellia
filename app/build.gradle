@@ -87,7 +87,7 @@ dependencies {
     
     implementation("net.bytebuddy:byte-buddy-android:1.14.10")
     
-    implementation ("org.luckypray:dexkit:2.0.2")
+    implementation ("org.luckypray:dexkit:2.0.0")
     
     implementation project(':utils')
     compileOnly project(':stub')
