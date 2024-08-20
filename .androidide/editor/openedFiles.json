@@ -49,14 +49,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/build.gradle",
       "selection": {
         "end": {
-          "column": 67,
-          "index": 1999,
-          "line": 81
+          "column": 17,
+          "index": 285,
+          "line": 16
         },
         "start": {
-          "column": 4,
-          "index": 1936,
-          "line": 81
+          "column": 17,
+          "index": 285,
+          "line": 16
         }
       }
     },
@@ -79,14 +79,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/stub/build.gradle",
       "selection": {
         "end": {
-          "column": 71,
-          "index": 545,
-          "line": 26
+          "column": 17,
+          "index": 163,
+          "line": 10
         },
         "start": {
-          "column": 71,
-          "index": 545,
-          "line": 26
+          "column": 17,
+          "index": 163,
+          "line": 10
         }
       }
     },
@@ -109,14 +109,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/utils/build.gradle",
       "selection": {
         "end": {
-          "column": 6,
-          "index": 542,
-          "line": 27
+          "column": 17,
+          "index": 164,
+          "line": 10
         },
         "start": {
-          "column": 6,
-          "index": 542,
-          "line": 27
+          "column": 17,
+          "index": 164,
+          "line": 10
         }
       }
     }
