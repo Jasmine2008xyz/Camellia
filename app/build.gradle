@@ -14,7 +14,7 @@ android {
     
     defaultConfig {
         applicationId "com.luoyu.camellia"
-        minSdk 21
+        minSdk 23
         targetSdk 33
         versionCode Integer.parseInt("${apk_version_code}")
         versionName "${apk_version_name}"
