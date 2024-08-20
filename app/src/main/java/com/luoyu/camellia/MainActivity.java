@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 new MainActivityLayoutAdapter.Item(
                         "检测更新",
                         () -> {
-                            Toast.makeText(act, "江西第一纯情男高 拒绝为您服务。", 0).show();
+                            Toast.makeText(act, "江西第一纯情男高 拒绝为您服务。", Toast.LENGTH_SHORT).show();
                         }));
         ItemList.add(
                 new MainActivityLayoutAdapter.Item(
