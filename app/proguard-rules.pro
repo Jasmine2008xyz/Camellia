@@ -52,12 +52,15 @@
 -keep class androidx.**.**{*;}
 -keep class android.**.**{*;}
 
--keep class org.**.** {*;}
+# Keep classes that are missing or referenced dynamically
+-keep class kotlin.jvm.internal.SourceDebugExtension { *; }
+
+# Keep any classes referenced by DexKitBridge
+-keep class org.luckypray.dexkit.DexKitBridge { *; }
+
 -keep class kotlin.jvm.internal.** { *; }
 -keep class kotlin.reflect.** { *; }
 -keep class kotlin.coroutines.** { *; }
-
--keep class kotlin.jvm.internal.SourceDebugExtension { *; }
 
  # -obfuscationdictionary Rules.txt
  # -classobfuscationdictionary Rules.txt
