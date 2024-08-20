@@ -34,14 +34,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/proguard-rules.pro",
       "selection": {
         "end": {
-          "column": 0,
-          "index": 1825,
-          "line": 63
+          "column": 29,
+          "index": 1485,
+          "line": 52
         },
         "start": {
-          "column": 0,
-          "index": 1825,
-          "line": 63
+          "column": 29,
+          "index": 1485,
+          "line": 52
         }
       }
     },
@@ -177,6 +177,21 @@
           "column": 0,
           "index": 0,
           "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/interfaces/ILog.kt",
+      "selection": {
+        "end": {
+          "column": 30,
+          "index": 339,
+          "line": 17
+        },
+        "start": {
+          "column": 30,
+          "index": 339,
+          "line": 17
         }
       }
     }

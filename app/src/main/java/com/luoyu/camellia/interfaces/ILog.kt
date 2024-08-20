@@ -5,15 +5,15 @@ interface ILog {
 
     fun getQLogPath(): String
 
-    fun log(TAG: String, ex: Object)
+    fun log(TAG: String, ex: Any)
     
-    fun d(TAG: String, ex: Object)
+    fun d(TAG: String, ex: Any)
     
-    fun e(TAG: String, ex: Object)
+    fun e(TAG: String, ex: Any)
     
-    fun i(TAG: String, ex: Object)
+    fun i(TAG: String, ex: Any)
     
-    fun w(TAG: String, ex: Object)
+    fun w(TAG: String, ex: Any)
     
-    fun t(TAG: String, ex: Object)
+    fun t(TAG: String, ex: Any)
 }
