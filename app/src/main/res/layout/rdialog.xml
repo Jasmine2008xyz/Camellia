@@ -23,6 +23,7 @@
         android:layout_width="match_parent"
         android:layout_below="@id/RDialog_TextView"
         android:id="@+id/RDialog_Container"
+        android:orientation="vertical"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp" />
 
