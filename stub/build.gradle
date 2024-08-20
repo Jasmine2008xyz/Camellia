@@ -24,5 +24,6 @@ android {
 }
 
 dependencies {
+        implementation ("org.jetbrains.kotlin:kotlin-stdlib:2.0.20-RC")
         implementation("androidx.appcompat:appcompat:1.6.1")
 }

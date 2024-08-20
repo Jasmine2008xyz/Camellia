@@ -19,14 +19,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/README.md",
       "selection": {
         "end": {
-          "column": 26,
-          "index": 226,
-          "line": 14
+          "column": 39,
+          "index": 557,
+          "line": 24
         },
         "start": {
-          "column": 26,
-          "index": 226,
-          "line": 14
+          "column": 16,
+          "index": 534,
+          "line": 24
         }
       }
     },
@@ -54,8 +54,8 @@
           "line": 81
         },
         "start": {
-          "column": 67,
-          "index": 1999,
+          "column": 4,
+          "index": 1936,
           "line": 81
         }
       }
@@ -74,7 +74,52 @@
           "line": 33
         }
       }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/stub/build.gradle",
+      "selection": {
+        "end": {
+          "column": 71,
+          "index": 545,
+          "line": 26
+        },
+        "start": {
+          "column": 71,
+          "index": 545,
+          "line": 26
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/utils/.gitignore",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/utils/build.gradle",
+      "selection": {
+        "end": {
+          "column": 6,
+          "index": 542,
+          "line": 27
+        },
+        "start": {
+          "column": 6,
+          "index": 542,
+          "line": 27
+        }
+      }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/ui/base/EasyButton.java"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/stub/build.gradle"
 }
