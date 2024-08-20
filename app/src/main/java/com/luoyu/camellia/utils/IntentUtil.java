@@ -20,7 +20,7 @@ public class IntentUtil {
             intent.setPackage("tv.danmaku.bili");
             act.startActivity(intent);
         } catch (Exception e) {
-            Toast.makeText(act, "升起BiliBili主页错误：可能是没有安装BiliBili" + e.toString(), 0).show();
+            Toast.makeText(act, "升起BiliBili主页错误：可能是没有安装BiliBili" + e.toString(), Toast.LENGTH_SHORT).show();
         }
     }
 

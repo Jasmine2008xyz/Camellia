@@ -52,6 +52,7 @@
 -keep class androidx.**.**{*;}
 -keep class android.**.**{*;}
 
+-keep class org.**.** {*;}
 -keep class kotlin.jvm.internal.SourceDebugExtension { *; }
 
  # -obfuscationdictionary Rules.txt
