@@ -1,7 +1,7 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/.gitignore",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/gradle/wrapper/gradle-wrapper.properties",
       "selection": {
         "end": {
           "column": 0,
@@ -12,21 +12,6 @@
           "column": 0,
           "index": 0,
           "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/README.md",
-      "selection": {
-        "end": {
-          "column": 39,
-          "index": 557,
-          "line": 24
-        },
-        "start": {
-          "column": 16,
-          "index": 534,
-          "line": 24
         }
       }
     },
@@ -34,14 +19,29 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/build.gradle",
       "selection": {
         "end": {
-          "column": 65,
-          "index": 363,
-          "line": 5
+          "column": 70,
+          "index": 293,
+          "line": 8
         },
         "start": {
-          "column": 65,
-          "index": 363,
-          "line": 5
+          "column": 70,
+          "index": 293,
+          "line": 8
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/settings.gradle",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
         }
       }
     },
@@ -49,29 +49,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/build.gradle",
       "selection": {
         "end": {
-          "column": 17,
-          "index": 285,
-          "line": 16
+          "column": 62,
+          "index": 1994,
+          "line": 81
         },
         "start": {
-          "column": 17,
-          "index": 285,
-          "line": 16
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/ui/base/EasyButton.java",
-      "selection": {
-        "end": {
-          "column": 9,
-          "index": 859,
-          "line": 33
-        },
-        "start": {
-          "column": 9,
-          "index": 859,
-          "line": 33
+          "column": 62,
+          "index": 1994,
+          "line": 81
         }
       }
     },
@@ -79,29 +64,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/stub/build.gradle",
       "selection": {
         "end": {
-          "column": 17,
-          "index": 163,
-          "line": 10
+          "column": 66,
+          "index": 540,
+          "line": 26
         },
         "start": {
-          "column": 17,
-          "index": 163,
-          "line": 10
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/utils/.gitignore",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 66,
+          "index": 540,
+          "line": 26
         }
       }
     },
@@ -109,17 +79,32 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/utils/build.gradle",
       "selection": {
         "end": {
-          "column": 17,
-          "index": 164,
-          "line": 10
+          "column": 66,
+          "index": 602,
+          "line": 27
         },
         "start": {
-          "column": 17,
-          "index": 164,
-          "line": 10
+          "column": 66,
+          "index": 602,
+          "line": 27
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/ui/widget/RDialog.java",
+      "selection": {
+        "end": {
+          "column": 9,
+          "index": 1604,
+          "line": 55
+        },
+        "start": {
+          "column": 9,
+          "index": 1604,
+          "line": 55
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/stub/build.gradle"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/utils/build.gradle"
 }

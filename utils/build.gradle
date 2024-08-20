@@ -8,7 +8,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        minSdk 29
+        minSdk 21
 
     }
 
@@ -25,6 +25,6 @@ android {
 
 dependencies {
         implementation("androidx.appcompat:appcompat:1.6.1")
-        implementation ("org.jetbrains.kotlin:kotlin-stdlib:2.0.20-RC")
+        implementation ("org.jetbrains.kotlin:kotlin-stdlib:2.0.10")
         compileOnly fileTree(dir: 'libs/compile_only', include: ['*.jar'])
 }

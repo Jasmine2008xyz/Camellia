@@ -53,7 +53,7 @@ public class RDialog extends Dialog {
 
         // 造个花里胡哨的背景
         GradientDrawable background = new GradientDrawable();
-        background.setPadding(16, 16, 16, 16);
+       // background.setPadding(16, 16, 16, 16);
         background.setStroke(1, Color.parseColor("#1A1A1A"));
         background.setCornerRadius(30);
         background.setColor(Color.parseColor("#dfdfdf"));

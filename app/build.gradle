@@ -14,7 +14,7 @@ android {
     
     defaultConfig {
         applicationId "com.luoyu.camellia"
-        minSdk 29
+        minSdk 21
         targetSdk 33
         versionCode Integer.parseInt("${apk_version_code}")
         versionName "${apk_version_name}"
@@ -79,7 +79,7 @@ dependencies {
     implementation ("com.github.li-xiaojun:XPopup:2.10.0")
     
   //  implementation("com.squareup.okhttp3:okhttp:4.12.0")
-    implementation ("org.jetbrains.kotlin:kotlin-stdlib:2.0.20-RC")
+    implementation ("org.jetbrains.kotlin:kotlin-stdlib:2.0.10")
     
     implementation("net.bytebuddy:byte-buddy-android:1.14.10")
     
