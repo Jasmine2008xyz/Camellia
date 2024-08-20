@@ -19,14 +19,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/build.gradle",
       "selection": {
         "end": {
-          "column": 11,
-          "index": 643,
-          "line": 30
+          "column": 31,
+          "index": 893,
+          "line": 41
         },
         "start": {
-          "column": 11,
-          "index": 643,
-          "line": 30
+          "column": 31,
+          "index": 893,
+          "line": 41
         }
       }
     },
@@ -166,5 +166,5 @@
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/proguard-rules.pro"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/build.gradle"
 }
