@@ -154,13 +154,13 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/.github/workflows/android.yml",
       "selection": {
         "end": {
-          "column": 27,
-          "index": 733,
+          "column": 23,
+          "index": 729,
           "line": 35
         },
         "start": {
-          "column": 27,
-          "index": 733,
+          "column": 23,
+          "index": 729,
           "line": 35
         }
       }
