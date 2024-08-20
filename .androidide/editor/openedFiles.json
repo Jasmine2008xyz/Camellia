@@ -34,17 +34,47 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/build.gradle",
       "selection": {
         "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 65,
+          "index": 363,
+          "line": 5
         },
         "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 65,
+          "index": 363,
+          "line": 5
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/build.gradle",
+      "selection": {
+        "end": {
+          "column": 67,
+          "index": 1999,
+          "line": 81
+        },
+        "start": {
+          "column": 67,
+          "index": 1999,
+          "line": 81
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/ui/base/EasyButton.java",
+      "selection": {
+        "end": {
+          "column": 9,
+          "index": 859,
+          "line": 33
+        },
+        "start": {
+          "column": 9,
+          "index": 859,
+          "line": 33
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/.gitignore"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/ui/base/EasyButton.java"
 }

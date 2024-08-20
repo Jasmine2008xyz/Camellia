@@ -31,7 +31,7 @@ public class EasyButton {
         setAct(context);
         this.button.setClickable(true);
         GradientDrawable background = new GradientDrawable();
-        background.setPadding(25, 25, 25, 25);
+       // background.setPadding(25, 25, 25, 25);
         background.setCornerRadius(25);
         background.setColor(Color.parseColor("#0099FF"));
         background.setShape(GradientDrawable.RING);
@@ -44,7 +44,7 @@ public class EasyButton {
         setAct(button.getContext());
         this.button.setClickable(true);
         GradientDrawable background = new GradientDrawable();
-        background.setPadding(25, 25, 25, 25);
+       // background.setPadding(25, 25, 25, 25);
         background.setCornerRadius(25);
         background.setColor(Color.parseColor("#0099FF"));
         background.setShape(GradientDrawable.RING);

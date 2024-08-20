@@ -79,6 +79,7 @@ dependencies {
     implementation ("com.github.li-xiaojun:XPopup:2.10.0")
     
   //  implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation ("org.jetbrains.kotlin:kotlin-stdlib:2.0.20-RC")
     
     implementation("net.bytebuddy:byte-buddy-android:1.14.10")
     
