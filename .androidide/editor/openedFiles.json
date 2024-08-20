@@ -94,14 +94,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/README.md",
       "selection": {
         "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 33,
+          "index": 517,
+          "line": 23
         },
         "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 13,
+          "index": 497,
+          "line": 23
         }
       }
     },
@@ -154,17 +154,17 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/.github/workflows/android.yml",
       "selection": {
         "end": {
-          "column": 7,
-          "index": 564,
-          "line": 29
+          "column": 11,
+          "index": 662,
+          "line": 33
         },
         "start": {
-          "column": 7,
-          "index": 564,
-          "line": 29
+          "column": 11,
+          "index": 662,
+          "line": 33
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/.github/workflows/android.yml"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/README.md"
 }

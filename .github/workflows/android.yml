@@ -8,12 +8,12 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
-    - name: set up JDK 17
+
+    - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
         java-version: '17'
@@ -22,10 +22,14 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+
     - name: Build with Gradle
-      run: ./gradlew assembleRelease
+      run: ./gradlew assembleRelease --info
+
+    - name: List files in APK release directory
+      run: ls -R app/build/outputs/apk/release/
+
     - name: Upload APK 
       uses: actions/upload-artifact@v4
       with:
         path: app/build/outputs/apk/release/app-release.apk
-
