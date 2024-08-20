@@ -19,14 +19,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/README.md",
       "selection": {
         "end": {
-          "column": 33,
-          "index": 517,
-          "line": 23
+          "column": 26,
+          "index": 226,
+          "line": 14
         },
         "start": {
-          "column": 13,
-          "index": 497,
-          "line": 23
+          "column": 26,
+          "index": 226,
+          "line": 14
         }
       }
     },
@@ -46,5 +46,5 @@
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/README.md"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/.gitignore"
 }
