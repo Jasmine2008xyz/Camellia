@@ -3,6 +3,8 @@ package com.luoyu.camellia.hook;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
+import com.luoyu.camellia.annotations.Xposed_Item_Controller;
+import com.luoyu.camellia.annotations.Xposed_Item_Entry;
 import com.luoyu.camellia.startup.HookInit;
 import com.luoyu.camellia.ui.widget.RDialog;
 import com.luoyu.camellia.utils.FileUtil;
@@ -16,10 +18,12 @@ import com.luoyu.camellia.base.HookEnv;
 import com.luoyu.camellia.base.MItem;
 import com.luoyu.camellia.utils.ClassUtil;
 
+@Xposed_Item_Controller
 public class PlusMenuInject {
     public static final String TAG = "PlusMenuInject(加号菜单注入)";
     private static Object ItemCache = null;
 
+    @Xposed_Item_Entry
     public void start() {
         if (MItem.Config.getBooleanData("模块设置/关闭加号菜单注入入口", false)) return;
         XposedHelpers.findAndHookMethod(
@@ -51,8 +55,7 @@ public class PlusMenuInject {
                         Drawable drawable =
                                 HookEnv.getContext()
                                         .getResources()
-                                        .getDrawable(
-                                                com.luoyu.camellia.R.drawable.topic);
+                                        .getDrawable(com.luoyu.camellia.R.drawable.topic);
                         XposedHelpers.findField(mAddItem.getClass(), "drawable")
                                 .set(mAddItem, drawable);
                         XposedHelpers.findField(mAddItem.getClass(), "titleColorRes")
