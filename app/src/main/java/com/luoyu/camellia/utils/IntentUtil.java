@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class IntentUtil {
     public static void openBilibili(Context act) {
         try {
-            Toast.makeText(act, "正在尝试升起BiliBili进入主页", 0).show();
+            Toast.makeText(act, "正在尝试升起BiliBili进入主页",Toast.LENGTH_SHORT).show();
             String url = "https://b23.tv/XiciT80";
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(Uri.parse(url));
