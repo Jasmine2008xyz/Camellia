@@ -91,21 +91,6 @@
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/.github/workflows/android.yml",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/README.md",
       "selection": {
         "end": {
@@ -164,7 +149,22 @@
           "line": 25
         }
       }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/.github/workflows/android.yml",
+      "selection": {
+        "end": {
+          "column": 57,
+          "index": 640,
+          "line": 30
+        },
+        "start": {
+          "column": 57,
+          "index": 640,
+          "line": 30
+        }
+      }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/res/layout/rdialog.xml"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/.github/workflows/android.yml"
 }
