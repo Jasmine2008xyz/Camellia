@@ -24,7 +24,7 @@ jobs:
       run: chmod +x gradlew
 
     - name: Build with Gradle
-      run: ./gradlew assembleRelease --info
+      run: ./gradlew assembleRelease
 
     - name: List files in APK release directory
       run: ls -R app/build/outputs/apk/release/
@@ -32,4 +32,4 @@ jobs:
     - name: Upload APK 
       uses: actions/upload-artifact@v4
       with:
-        path: app/build/outputs/apk/release/app-release.apk
+        path: app/build/outputs/apk/release/*.APK
