@@ -34,14 +34,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/proguard-rules.pro",
       "selection": {
         "end": {
-          "column": 29,
-          "index": 1485,
-          "line": 52
+          "column": 0,
+          "index": 1619,
+          "line": 57
         },
         "start": {
-          "column": 29,
-          "index": 1485,
-          "line": 52
+          "column": 0,
+          "index": 1619,
+          "line": 57
         }
       }
     },

@@ -54,6 +54,7 @@
 
 # Keep any classes referenced by DexKitBridge
 -keep class org.luckypray.dexkit.DexKitBridge { *; }
+-dontwarn kotlin.jvm.internal.**
 
 -keep class kotlin.coroutines.** { *; }
 # 保持所有 Kotlin 内部类
