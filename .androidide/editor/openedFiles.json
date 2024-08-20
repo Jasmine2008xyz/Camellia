@@ -44,6 +44,21 @@
           "line": 54
         }
       }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/AndroidManifest.xml",
+      "selection": {
+        "end": {
+          "column": 75,
+          "index": 189,
+          "line": 4
+        },
+        "start": {
+          "column": 75,
+          "index": 189,
+          "line": 4
+        }
+      }
     }
   ],
   "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/proguard-rules.pro"
