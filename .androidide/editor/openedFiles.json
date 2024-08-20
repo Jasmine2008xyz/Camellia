@@ -19,13 +19,13 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/build.gradle",
       "selection": {
         "end": {
-          "column": 31,
-          "index": 893,
+          "column": 30,
+          "index": 892,
           "line": 41
         },
         "start": {
-          "column": 31,
-          "index": 893,
+          "column": 30,
+          "index": 892,
           "line": 41
         }
       }
@@ -164,7 +164,22 @@
           "line": 35
         }
       }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/Rules.txt",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/.github/workflows/android.yml"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/build.gradle"
 }
