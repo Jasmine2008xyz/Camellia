@@ -49,14 +49,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/build.gradle",
       "selection": {
         "end": {
-          "column": 17,
-          "index": 285,
-          "line": 16
+          "column": 62,
+          "index": 1994,
+          "line": 81
         },
         "start": {
-          "column": 17,
-          "index": 285,
-          "line": 16
+          "column": 62,
+          "index": 1994,
+          "line": 81
         }
       }
     },
@@ -64,14 +64,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/stub/build.gradle",
       "selection": {
         "end": {
-          "column": 17,
-          "index": 163,
-          "line": 10
+          "column": 10,
+          "index": 484,
+          "line": 26
         },
         "start": {
-          "column": 17,
-          "index": 163,
-          "line": 10
+          "column": 10,
+          "index": 484,
+          "line": 26
         }
       }
     },
@@ -79,14 +79,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/utils/build.gradle",
       "selection": {
         "end": {
-          "column": 17,
-          "index": 164,
-          "line": 10
+          "column": 10,
+          "index": 546,
+          "line": 27
         },
         "start": {
-          "column": 17,
-          "index": 164,
-          "line": 10
+          "column": 10,
+          "index": 546,
+          "line": 27
         }
       }
     },
@@ -102,6 +102,21 @@
           "column": 9,
           "index": 1604,
           "line": 55
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/build/intermediates/lint_vital_intermediate_text_report/release/lint-results-release.txt",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
         }
       }
     }
