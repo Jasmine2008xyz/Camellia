@@ -164,7 +164,22 @@
           "line": 0
         }
       }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/support/IActivityManagerHandler.java",
+      "selection": {
+        "end": {
+          "column": 31,
+          "index": 2537,
+          "line": 62
+        },
+        "start": {
+          "column": 31,
+          "index": 2537,
+          "line": 62
+        }
+      }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/SettingMenuInject.java"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/support/IActivityManagerHandler.java"
 }
