@@ -1,35 +1,36 @@
 package com.luoyu.camellia.startup;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
-import android.view.LayoutInflater;
+
 import com.luoyu.camellia.BuildConfig;
+import com.luoyu.camellia.activities.support.ActivityProxyManager;
 import com.luoyu.camellia.annotations.Xposed_Item_Entry;
-import com.luoyu.camellia.hook.PlusMenuInject;
-import com.luoyu.camellia.logging.QLog;
-import com.luoyu.camellia.utils.AppUtil;
-import com.luoyu.camellia.utils.FileUtil;
-import com.luoyu.camellia.utils.XRes;
-import de.robv.android.xposed.XC_MethodHook;
-import de.robv.android.xposed.XposedHelpers;
-import android.app.Activity;
 import com.luoyu.camellia.base.HookEnv;
 import com.luoyu.camellia.base.MItem;
+import com.luoyu.camellia.hook.PlusMenuInject;
+import com.luoyu.camellia.hook.SettingMenuInject;
+import com.luoyu.camellia.utils.AppUtil;
 import com.luoyu.camellia.utils.ClassUtil;
+import com.luoyu.camellia.utils.FileUtil;
 import com.luoyu.camellia.utils.MergeClassLoader;
 import com.luoyu.camellia.utils.PathUtil;
-import de.robv.android.xposed.callbacks.XC_LoadPackage;
-import java.io.FileInputStream;
-import java.io.ObjectInputStream;
-import java.io.IOException;
-import java.lang.reflect.Field;
+import com.luoyu.camellia.utils.XRes;
+
+import de.robv.android.xposed.XC_MethodHook;
 import de.robv.android.xposed.XposedBridge;
+import de.robv.android.xposed.XposedHelpers;
+import de.robv.android.xposed.callbacks.XC_LoadPackage;
+
+import org.json.JSONObject;
+
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.concurrent.atomic.AtomicBoolean;
-import org.json.JSONObject;
 
 public class HookInit {
     public static final AtomicBoolean IsInit = new AtomicBoolean();
@@ -70,6 +71,10 @@ public class HookInit {
                         super.afterHookedMethod(param);
                         HookEnv.put("HostContext", (Context) param.args[0]);
                         XRes.addAssetsPath(HookEnv.getContext());
+                        ActivityProxyManager.initActivityProxyManager(
+                                HookEnv.getContext(),
+                                PathUtil.getApkPath(),
+                                com.luoyu.camellia.R.string.app_name);
                         if (!IsLoad.getAndSet(true)) loadMethods();
                     }
                 });
@@ -90,7 +95,12 @@ public class HookInit {
         if (FileUtil.ReadFileString(PathUtil.getApkDataPath() + "Sign") == null
                 || !FileUtil.ReadFileString(PathUtil.getApkDataPath() + "Sign").equals(getSign())) {
             // Signature not found or signature does not match.
-            new PlusMenuInject().start();
+            try {
+                new PlusMenuInject().start();
+                new SettingMenuInject().start();
+            } catch (Exception err) {
+                MItem.QQLog.e("loadMethods", err);
+            }
         } else {
             try {
                 // 先将QQ类放入HashMap

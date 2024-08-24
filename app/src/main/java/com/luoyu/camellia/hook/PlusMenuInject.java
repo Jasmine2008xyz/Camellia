@@ -2,8 +2,10 @@ package com.luoyu.camellia.hook;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
+import com.luoyu.camellia.activities.SettingActivity;
 import com.luoyu.camellia.annotations.Xposed_Item_Controller;
 import com.luoyu.camellia.annotations.Xposed_Item_Entry;
 import com.luoyu.camellia.annotations.Xposed_Item_Finder;
@@ -26,11 +28,11 @@ import com.luoyu.camellia.utils.ClassUtil;
 public class PlusMenuInject {
     public static final String TAG = "PlusMenuInject(加号菜单注入)";
     private static Object ItemCache = null;
-    
-    @Xposed_Item_Finder
+
+    /*@Xposed_Item_Finder
     public void find(IDexFinder finder){
         finder.findMethodsByPathAndUseString(new String[]{TAG},new String[]{"com.tencent.qqnt.aio.menu.ui"},new String[]{"QQCustomMenuItem{title="});
-    }
+    }*/
 
     @Xposed_Item_Entry
     public void start() {
@@ -97,6 +99,8 @@ public class PlusMenuInject {
                                             "DexFinderProcessor_Construction",
                                             Log.getStackTraceString(err));
                                 }
+                            }else{
+                                HookEnv.getActivity().startActivity(new Intent(HookEnv.getActivity(),SettingActivity.class));
                             }
                         }
                     }

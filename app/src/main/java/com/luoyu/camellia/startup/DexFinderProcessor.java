@@ -1,13 +1,14 @@
 package com.luoyu.camellia.startup;
 
-import android.app.Dialog;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
+
+import com.luoyu.camellia.R;
 import com.luoyu.camellia.annotations.Item_Version_Controller;
 import com.luoyu.camellia.annotations.Xposed_Item_Controller;
 import com.luoyu.camellia.annotations.Xposed_Item_Finder;
@@ -15,13 +16,13 @@ import com.luoyu.camellia.base.HookEnv;
 import com.luoyu.camellia.base.MItem;
 import com.luoyu.camellia.interfaces.IDexFinder;
 import com.luoyu.camellia.ui.widget.RDialog;
-import com.luoyu.camellia.R;
 import com.luoyu.camellia.utils.ActivityUtil;
 import com.luoyu.camellia.utils.AppUtil;
 import com.luoyu.camellia.utils.FileUtil;
 import com.luoyu.camellia.utils.PathUtil;
 import com.luoyu.camellia.utils.Util;
 import com.luoyu.dexfinder.DexKitFinder;
+
 import java.lang.reflect.Method;
 
 public class DexFinderProcessor {
