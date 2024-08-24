@@ -1,200 +1,20 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/build.gradle",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/build.gradle",
-      "selection": {
-        "end": {
-          "column": 47,
-          "index": 2212,
-          "line": 89
-        },
-        "start": {
-          "column": 47,
-          "index": 2212,
-          "line": 89
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/proguard-rules.pro",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 1619,
-          "line": 57
-        },
-        "start": {
-          "column": 0,
-          "index": 1619,
-          "line": 57
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/AndroidManifest.xml",
-      "selection": {
-        "end": {
-          "column": 75,
-          "index": 189,
-          "line": 4
-        },
-        "start": {
-          "column": 75,
-          "index": 189,
-          "line": 4
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/MainActivity.java",
-      "selection": {
-        "end": {
-          "column": 86,
-          "index": 2973,
-          "line": 65
-        },
-        "start": {
-          "column": 86,
-          "index": 2973,
-          "line": 65
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/utils/IntentUtil.java",
-      "selection": {
-        "end": {
-          "column": 71,
-          "index": 482,
-          "line": 15
-        },
-        "start": {
-          "column": 71,
-          "index": 482,
-          "line": 15
-        }
-      }
-    },
-    {
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/README.md",
       "selection": {
         "end": {
           "column": 33,
-          "index": 517,
+          "index": 477,
           "line": 23
         },
         "start": {
           "column": 13,
-          "index": 497,
+          "index": 457,
           "line": 23
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/gradlew",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/gradlew.bat",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/res/layout/rdialog.xml",
-      "selection": {
-        "end": {
-          "column": 37,
-          "index": 943,
-          "line": 25
-        },
-        "start": {
-          "column": 37,
-          "index": 943,
-          "line": 25
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/.github/workflows/android.yml",
-      "selection": {
-        "end": {
-          "column": 23,
-          "index": 729,
-          "line": 35
-        },
-        "start": {
-          "column": 23,
-          "index": 729,
-          "line": 35
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/Rules.txt",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/interfaces/ILog.kt",
-      "selection": {
-        "end": {
-          "column": 30,
-          "index": 339,
-          "line": 17
-        },
-        "start": {
-          "column": 30,
-          "index": 339,
-          "line": 17
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/proguard-rules.pro"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/README.md"
 }

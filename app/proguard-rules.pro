@@ -28,7 +28,7 @@
 -dontwarn edu.umd.**
 
 -keep class com.lxj.xpopup.widget.**{*;}
--keep class com.luorui.formula.core.**{*;}
+-keep class com.luorui.camellia.Hook_Entry
 -keep class net.bytebuddy.** {*;}
 
 -keepclassmembers enum * {
@@ -56,21 +56,21 @@
 -keep class org.luckypray.dexkit.DexKitBridge { *; }
 -dontwarn kotlin.jvm.internal.**
 
--keep class kotlin.coroutines.** { *; }
+#-keep class kotlin.coroutines.** { *; }
 # 保持所有 Kotlin 内部类
 -keep class kotlin.jvm.internal.** { *; }
 
 # 保持 Kotlin 反射类
--keep class kotlin.reflect.** { *; }
+#-keep class kotlin.reflect.** { *; }
 
 # 保持 Kotlin 标记注解
--keep @kotlin.Metadata class * { *; }
+# -keep @kotlin.Metadata class * { *; }
 
 # 保持使用动态类加载的类
--keepclassmembers class * {
-    @androidx.annotation.Keep <fields>;
-    @androidx.annotation.Keep <methods>;
-}
+#-keepclassmembers class * {
+#    @androidx.annotation.Keep <fields>;
+#    @androidx.annotation.Keep <methods>;
+#}
 
 
  # -obfuscationdictionary Rules.txt

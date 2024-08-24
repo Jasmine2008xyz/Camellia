@@ -1,10 +1,18 @@
 package com.luoyu.camellia.interfaces;
 
-/*
- * 本项目接口不要用kt写！！！
- */
+import java.util.ArrayList;
+
 public interface IDexFinder {
-    void findMethodByUseString(String TAG, String[] SearchPackageName, String[] UseStrings);
-    
-    void findMethodsByUseAnnotation(String TAG,Class<?> UseAnnotation);
+
+    void findMethodsByPathAndUseString(
+            String TAG[], String[] SearchPackageName, String[] UseStrings);
+
+    /*
+     * 查找自身模块类专用方法
+     */
+    void findSelfClassesByUseAnnotation(Class<?> UseAnnotation);
+
+    void keepToFile();
+
+    ArrayList<Class<?>> getModule_Object_List();
 }

@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import com.luoyu.camellia.base.HookEnv;
 import com.luoyu.camellia.ui.base.EasyButton;
@@ -20,6 +21,8 @@ public class RDialog extends Dialog {
     private Context context;
     private RDialog dialog;
     private Window window;
+    public LinearLayout container;
+    public RelativeLayout root;
 
     public RDialog(Context act) {
         // super必须在第一行
@@ -48,7 +51,7 @@ public class RDialog extends Dialog {
 
         // 加载xml资源
         LayoutInflater inflater = LayoutInflater.from(HookEnv.getActivity());
-        RelativeLayout root =
+        root =
                 (RelativeLayout) inflater.inflate(com.luoyu.camellia.R.layout.rdialog, null);
 
         // 造个花里胡哨的背景
@@ -59,6 +62,10 @@ public class RDialog extends Dialog {
         background.setColor(Color.parseColor("#dfdfdf"));
 
         root.setBackground(background);
+        
+        
+        
+        container=(LinearLayout) root.findViewById(com.luoyu.camellia.R.id.RDialog_Container);
 
         Button btn1 = (Button) root.findViewById(com.luoyu.camellia.R.id.RDialog_Button);
         btn1=EasyButton.create(btn1).getButton();

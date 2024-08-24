@@ -15,7 +15,7 @@
         android:text="Camellia"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_margin="5dp"
+        android:layout_margin="8dp"
         android:id="@+id/RDialog_TextView" />
 
     <LinearLayout
@@ -24,8 +24,8 @@
         android:layout_below="@id/RDialog_TextView"
         android:id="@+id/RDialog_Container"
         android:orientation="vertical"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp" />
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp" />
 
     <LinearLayout
         android:layout_height="wrap_content"

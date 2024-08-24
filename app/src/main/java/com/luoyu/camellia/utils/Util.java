@@ -3,15 +3,23 @@ package com.luoyu.camellia.utils;
 import android.content.Context;
 import android.content.ClipboardManager;
 import android.content.ClipData;
+import android.graphics.Color;
 import android.os.Handler;
 import android.os.Looper;
 import android.content.Intent;
 import android.app.ActivityManager;
+import android.util.Log;
+import androidx.annotation.NonNull;
 import com.luoyu.camellia.base.HookEnv;
 import java.util.List;
 
 public class Util {
-    public static void SetTextClipboard(String str) {
+
+    public static String getStackTraceString(Exception e) {
+        return Log.getStackTraceString(e);
+    }
+
+    public static void setTextClipboard(String str) {
         ClipboardManager manager =
                 (ClipboardManager) HookEnv.getContext().getSystemService(Context.CLIPBOARD_SERVICE);
         ClipData data = ClipData.newPlainText("text", str);
@@ -19,11 +27,11 @@ public class Util {
         Thread.currentThread();
     }
 
-    public static void PostToMain(Runnable run) {
+    public static void postToMain(Runnable run) {
         new Handler(Looper.getMainLooper()).post(run);
     }
 
-    public static void PostToMainDelay(Runnable run, long delay) {
+    public static void postToMainDelay(Runnable run, long delay) {
         new Handler(Looper.getMainLooper()).postDelayed(run, delay);
     }
 
@@ -42,5 +50,9 @@ public class Util {
             }
         }
         android.os.Process.killProcess(android.os.Process.myPid());
+    }
+
+    public static int parseColor(@NonNull String str) {
+        return Color.parseColor(str);
     }
 }

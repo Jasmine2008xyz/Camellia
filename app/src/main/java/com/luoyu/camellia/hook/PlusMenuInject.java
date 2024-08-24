@@ -3,10 +3,14 @@ package com.luoyu.camellia.hook;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 import com.luoyu.camellia.annotations.Xposed_Item_Controller;
 import com.luoyu.camellia.annotations.Xposed_Item_Entry;
+import com.luoyu.camellia.annotations.Xposed_Item_Finder;
+import com.luoyu.camellia.interfaces.IDexFinder;
+import com.luoyu.camellia.logging.QLog;
+import com.luoyu.camellia.startup.DexFinderProcessor;
 import com.luoyu.camellia.startup.HookInit;
-import com.luoyu.camellia.ui.widget.RDialog;
 import com.luoyu.camellia.utils.FileUtil;
 import com.luoyu.camellia.utils.PathUtil;
 import java.util.List;
@@ -22,6 +26,11 @@ import com.luoyu.camellia.utils.ClassUtil;
 public class PlusMenuInject {
     public static final String TAG = "PlusMenuInject(加号菜单注入)";
     private static Object ItemCache = null;
+    
+    @Xposed_Item_Finder
+    public void find(IDexFinder finder){
+        finder.findMethodsByPathAndUseString(new String[]{TAG},new String[]{"com.tencent.qqnt.aio.menu.ui"},new String[]{"QQCustomMenuItem{title="});
+    }
 
     @Xposed_Item_Entry
     public void start() {
@@ -78,7 +87,17 @@ public class PlusMenuInject {
                         super.beforeHookedMethod(param);
                         View v = (View) param.args[0];
                         if (v.getId() == 815) {
-                            new RDialog(HookEnv.getActivity()).show();
+                            if (FileUtil.ReadFileString(PathUtil.getApkDataPath() + "Sign") == null
+                                    || !FileUtil.ReadFileString(PathUtil.getApkDataPath() + "Sign")
+                                            .equals(HookInit.getSign())) {
+                                try {
+                                    new DexFinderProcessor();
+                                } catch (Exception err) {
+                                    MItem.QQLog.e(
+                                            "DexFinderProcessor_Construction",
+                                            Log.getStackTraceString(err));
+                                }
+                            }
                         }
                     }
                 });

@@ -12,7 +12,7 @@ Camellia意为"山茶",
 @contact QQ: 2968447202
 @contact e-mail luoyu2@foxmail.com
 
-其实取这个名字是迫不得已喵的什么QQ辅助什么QQ助手什么QQ工具全给他们取完了。
+
 
 拉取: git pull
 克隆: git clone git@github.com:zhidongya813/Camellia.git

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#33a3dc">
+<!--水波纹动画-->
+    <item>
+        <!--圆角属性-->
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="15dp"
+                android:left="10dp"
+                android:right="10dp"
+                android:top="15dp" />
+            <solid android:color="#FFFFFF" />
+            <stroke
+                android:width="0dp"
+                android:color="#000000" />
+            <corners android:radius="15dp" />
+        </shape>
+    </item>
+
+</ripple>

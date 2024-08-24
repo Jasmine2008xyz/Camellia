@@ -5,6 +5,7 @@ import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
 import com.luoyu.camellia.BuildConfig;
+import com.luoyu.camellia.annotations.Xposed_Item_Entry;
 import com.luoyu.camellia.hook.PlusMenuInject;
 import com.luoyu.camellia.logging.QLog;
 import com.luoyu.camellia.utils.AppUtil;
@@ -19,13 +20,23 @@ import com.luoyu.camellia.utils.ClassUtil;
 import com.luoyu.camellia.utils.MergeClassLoader;
 import com.luoyu.camellia.utils.PathUtil;
 import de.robv.android.xposed.callbacks.XC_LoadPackage;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+import java.io.IOException;
 import java.lang.reflect.Field;
 import de.robv.android.xposed.XposedBridge;
 import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.concurrent.atomic.AtomicBoolean;
+import org.json.JSONObject;
 
 public class HookInit {
     public static final AtomicBoolean IsInit = new AtomicBoolean();
+
+    private static final AtomicBoolean IsLoad = new AtomicBoolean();
+
+    public static final HashMap<String, Method> Method_Map = new HashMap<>();
 
     public HookInit(XC_LoadPackage.LoadPackageParam lpparam) {
 
@@ -59,7 +70,7 @@ public class HookInit {
                         super.afterHookedMethod(param);
                         HookEnv.put("HostContext", (Context) param.args[0]);
                         XRes.addAssetsPath(HookEnv.getContext());
-                        
+                        if (!IsLoad.getAndSet(true)) loadMethods();
                     }
                 });
         XposedHelpers.findAndHookMethod(
@@ -73,12 +84,61 @@ public class HookInit {
                         HookEnv.put("HostActivity", activity);
                     }
                 });
-        
+    }
 
+    private void loadMethods() {
         if (FileUtil.ReadFileString(PathUtil.getApkDataPath() + "Sign") == null
                 || !FileUtil.ReadFileString(PathUtil.getApkDataPath() + "Sign").equals(getSign())) {
             // Signature not found or signature does not match.
-    new PlusMenuInject().start();
+            new PlusMenuInject().start();
+        } else {
+            try {
+                // 先将QQ类放入HashMap
+                JSONObject module_class =
+                        new JSONObject(
+                                FileUtil.ReadFileString(
+                                        PathUtil.getApkDataPath() + "Module_Object_Data"));
+                JSONObject qq_class =
+                        new JSONObject(
+                                FileUtil.ReadFileString(
+                                        PathUtil.getApkDataPath() + "QQ_Object_Data"));
+                Iterator<String> keys = qq_class.keys();
+                while (keys.hasNext()) {
+                    try {
+                        String key = keys.next(); // 在这里处理每个键
+                        JSONObject json = qq_class.getJSONObject(key);
+                        Class[] clz = new Class[] {};
+                        for (int i = 0; i < (int) json.get("paramsLength"); ++i) {
+                            clz[i] = ClassUtil.get((String) json.get("params_" + i));
+                        }
+                        Method_Map.put(
+                                key,
+                                XposedHelpers.findMethodBestMatch(
+                                        ClassUtil.get((String) json.get("className")),
+                                        (String) json.get("methodName"),
+                                        clz));
+                    } catch (Exception err) {
+                        MItem.QQLog.e("HookInit-加载模块项目错误", Log.getStackTraceString(err));
+                    }
+                }
+                Iterator<String> module_keys = module_class.keys();
+                while (module_keys.hasNext()) {
+                    try {
+                        String key = module_keys.next(); // 在这里处理每个键
+                        String cl = (String) module_class.get(key);
+                        Class<?> clz = HookEnv.getSelfClassLoader().loadClass(cl);
+                        for (Method m : clz.getDeclaredMethods()) {
+                            if (m.getAnnotation(Xposed_Item_Entry.class) != null) {
+                                m.invoke(clz.newInstance());
+                            }
+                        }
+                    } catch (Exception err) {
+                        MItem.QQLog.e("HookInit-加载模块项目错误", Log.getStackTraceString(err));
+                    }
+                }
+            } catch (Exception err) {
+                MItem.QQLog.e("HookInit-加载模块项目错误", Log.getStackTraceString(err));
+            }
         }
     }
 
