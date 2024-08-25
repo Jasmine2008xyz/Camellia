@@ -8,11 +8,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.luoyu.camellia.R
 import com.luoyu.camellia.activities.support.BaseActivity
 import com.luoyu.camellia.adapters.SettingsItemAdapter
+import com.luoyu.camellia.model.SettingOpt
 import com.luoyu.camellia.utils.showToast
 
 class SettingsActivity: AppCompatActivity() {
 
-    val SettingsItemList = ArrayList<String>()
+    private val settingsItemList = ArrayList<SettingOpt>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,14 +23,15 @@ class SettingsActivity: AppCompatActivity() {
         initItems()
         initToolBar(toolbar)
         val layoutManager = LinearLayoutManager(this)
-        val adapter = SettingsItemAdapter(this, SettingsItemList)
+        val adapter = SettingsItemAdapter(this, settingsItemList)
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = adapter
     }
 
     private fun initItems() {
-        for(i in 0..19){
-            SettingsItemList.add("This is a test Item $i")
+        for(i in 1..20){
+            val settingOpt = SettingOpt(i, "This is a test Item $i", (0..1).random())
+            settingsItemList.add(settingOpt)
         }
     }
 

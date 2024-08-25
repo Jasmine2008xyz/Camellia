@@ -8,28 +8,51 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.luoyu.camellia.R
+import com.luoyu.camellia.model.SettingOpt
 import com.luoyu.camellia.utils.showToast
 
-class SettingsItemAdapter(val context: Context, val settingItemList: List<String>): RecyclerView.Adapter<SettingsItemAdapter.ViewHolder>() {
+class SettingsItemAdapter(val context: Context, val settingItemList: List<SettingOpt>): RecyclerView.Adapter<SettingViewHolder>() {
 
-    inner class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
-        val cardView: CardView = view.findViewById(R.id.setting_recyclerView_item)
-        val settingItemName: TextView = view.findViewById(R.id.setting_item_name)
+    override fun getItemViewType(position: Int): Int {
+        return settingItemList[position].type
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.setting_item, parent, false)
-        val viewHolder = ViewHolder(view)
-        viewHolder.cardView.setOnClickListener {
-            "You click RecyclerView Item".showToast()
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SettingViewHolder {
+        lateinit var viewHolder: SettingViewHolder
+        when(viewType) {
+            SettingOpt.TYPE_ITEM -> {
+                val view =
+                    LayoutInflater.from(context).inflate(R.layout.setting_item, parent, false)
+                viewHolder = SettingItemViewHolder(view)
+                viewHolder.cardView.setOnClickListener {
+                    "You click RecyclerView Item".showToast()
+                }
+            }
+            SettingOpt.TYPE_SWITCH -> {
+                val view =
+                    LayoutInflater.from(context).inflate(R.layout.setting_switch, parent, false)
+                viewHolder = SettingSwitchViewHolder(view)
+                viewHolder.itemView.setOnClickListener {
+                    viewHolder.switch.setChecked(!viewHolder.switch.isChecked)
+                }
+                viewHolder.switch.setOnCheckedChangeListener { buttonView, isChecked ->
+                    "You changed switch to $isChecked".showToast()
+                }
+            }
+            else -> {throw RuntimeException("Error setting item type!")}
         }
-        return ViewHolder(view)
+
+        return viewHolder
     }
 
     override fun getItemCount() = settingItemList.size
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.settingItemName.text= settingItemList[position]
+    override fun onBindViewHolder(holder: SettingViewHolder, position: Int) {
+        when(holder){
+            is SettingItemViewHolder -> holder.settingItemName.text= settingItemList[position].text
+            is SettingSwitchViewHolder -> holder.settingSwitchName.text = settingItemList[position].text
+        }
+
     }
 
 }
