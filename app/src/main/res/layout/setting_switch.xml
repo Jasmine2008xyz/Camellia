@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/setting_recyclerView_switch_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true"
+    android:checkable="true"
+    android:layout_margin="5dp"
+    style="?attr/materialCardViewElevatedStyle"
+    app:cardCornerRadius="10dp">
+
+
+    <TextView
+        android:id="@+id/setting_switch_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="16sp"/>
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/setting_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end|center"
+        android:padding="16dp"/>
+
+</com.google.android.material.card.MaterialCardView>
