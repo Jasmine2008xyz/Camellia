@@ -28,7 +28,7 @@
 -dontwarn edu.umd.**
 
 -keep class com.lxj.xpopup.widget.**{*;}
--keep class com.luorui.camellia.startup.Hook_Entry
+-keep class com.luoyu.camellia.startup.Hook_Entry
 -keep class net.bytebuddy.** {*;}
 
 -keepclassmembers enum * {

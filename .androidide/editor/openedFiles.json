@@ -1,0 +1,20 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/proguard-rules.pro",
+      "selection": {
+        "end": {
+          "column": 21,
+          "index": 930,
+          "line": 30
+        },
+        "start": {
+          "column": 21,
+          "index": 930,
+          "line": 30
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/proguard-rules.pro"
+}
