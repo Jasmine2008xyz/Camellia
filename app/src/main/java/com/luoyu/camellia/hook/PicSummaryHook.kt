@@ -1,5 +1,15 @@
 package com.luoyu.camellia.hook
 
+import android.content.Context
+
+import android.view.Gravity
+
+import android.widget.Button
+import android.widget.EditText
+import android.widget.LinearLayout
+import android.widget.Switch
+import android.widget.TextView
+
 import de.robv.android.xposed.XC_MethodHook
 import de.robv.android.xposed.XposedBridge
 import de.robv.android.xposed.XposedHelpers
@@ -17,8 +27,10 @@ import com.luoyu.camellia.base.HookEnv
 import com.luoyu.camellia.base.MItem
 import com.luoyu.camellia.utils.ClassUtil
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 import com.tencent.mobileqq.widget.QQToast
+
 
 /**
  * @author 小明
@@ -53,13 +65,18 @@ class PicSummaryHook {
         XposedBridge.hookMethod(method, object : XC_MethodHook() {
             override fun beforeHookedMethod(param: MethodHookParam) {
                 super.beforeHookedMethod(param)
+                val isEnabled = MItem.Config.getBooleanData("图片外显/开关", false)
+                if(!isEnabled) return
+                
                 val list: ArrayList<Any> = param.args[2] as ArrayList<Any> // 明确声明泛型类型并进行类型转换
                 val picElement: Any? = XposedHelpers.callMethod(list[0], "getPicElement")
                 if (picElement != null) {
                 // 使用反射设置字段值
                     val field = picElement.javaClass.getDeclaredField("summary")
                     field.isAccessible = true // 如果字段是私有的，需要设置可访问性
-                    field.set(picElement, "hello,kotlin.") // 注意: 这里需要确保字段类型与设置值匹配
+                    val setValue = MItem.Config.getStringData("图片外显/内容","No_Content")
+                    if(setValue!="No_Content")
+                    field.set(picElement, setValue) // 注意: 这里需要确保字段类型与设置值匹配
                 }
             }
         })
@@ -72,6 +89,34 @@ class PicSummaryHook {
     
     @Xposed_Item_UiLongClick
     fun onLongClick(){
-        QQToast.makeText(HookEnv.getActivity(),5,"Ui Long Clicked",0,0).show()
+        val context: Context = HookEnv.getActivity()
+        val layout = LinearLayout(context)
+        layout.setOrientation(LinearLayout.VERTICAL)
+        layout.setGravity(Gravity.CENTER)
+        
+        val branch1 = LinearLayout(context)
+        branch1.setOrientation(LinearLayout.HORIZONTAL)
+        
+        val edit_view = EditText(context)
+        edit_view.setHint("输入图片外显内容")
+        edit_view.setText(MItem.Config.getStringData("图片外显/内容",""))
+        
+        val btn = Button(context)
+        btn.setOnClickListener {
+            MItem.Config.putData("图片外显/内容",edit_view.getText().toString())
+        }
+        branch1.addView(edit_view)
+        branch1.addView(btn)
+        
+        layout.addView(branch1)
+        
+        MaterialAlertDialogBuilder(context) 
+            .setTitle("图片外显") 
+            .setView(layout)
+            .setPositiveButton("Leave") {
+             dialog, which ->
+              // 处理“确定”按钮的点击事件
+               }
+            .show()
     }
 }

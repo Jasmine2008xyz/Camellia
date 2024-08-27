@@ -2,6 +2,7 @@ package com.luoyu.camellia.base;
 
 import android.util.Log;
 import android.view.View;
+
 import com.luoyu.camellia.annotations.Xposed_Item_Controller;
 import com.luoyu.camellia.annotations.Xposed_Item_Entry;
 import com.luoyu.camellia.annotations.Xposed_Item_UiClick;
@@ -15,6 +16,7 @@ import org.json.JSONObject;
 public class UiClickHandler {
     @SuppressWarnings({"deprecation", "unchecked"})
     public static void onClick(String text) {
+        
         var module = FileUtil.ReadFileString(PathUtil.getApkDataPath() + "Module_Object_Data");
         try {
             JSONObject json = new JSONObject(module);

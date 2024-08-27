@@ -18,7 +18,7 @@ import com.luoyu.camellia.base.MItem
 import com.luoyu.camellia.model.SettingOpt
 import com.luoyu.camellia.utils.showToast
 import com.luoyu.camellia.utils.Util
-
+import com.luoyu.camellia.activities.helper.ActivityAttributes
 
 import com.tencent.mobileqq.widget.QQToast
 
@@ -43,6 +43,9 @@ class SettingsActivity: BaseActivity() {
         setTheme(R.style.AppTheme)
         
         setContentView(R.layout.settings_activity)
+        
+        ActivityAttributes.context = this
+        
         // 获取toolbar
         val toolbar: Toolbar = findViewById(R.id.setting_title_toolbar)
         // 获取RecyclerView

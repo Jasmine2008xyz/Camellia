@@ -73,7 +73,7 @@ class SettingsItemAdapter(val context: Context, val settingItemList: List<Settin
                 holder.switch.setChecked(boo)
                 holder.switch.setOnCheckedChangeListener { _ , isChecked ->
                     MItem.Config.putData("${item_name}/开关",isChecked)
-                    if(boo) UiClickHandler.onSwitchClick(item_name)
+                    if(isChecked) UiClickHandler.onSwitchClick(item_name)
                 }
                 holder.cardView.setOnLongClickListener {
                     UiClickHandler.onLongClick(item_name)
