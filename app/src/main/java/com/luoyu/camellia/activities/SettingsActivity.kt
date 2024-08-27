@@ -48,11 +48,11 @@ class SettingsActivity: BaseActivity() {
         // 获取RecyclerView
         val recyclerView: RecyclerView = findViewById(R.id.setting_recyclerView)
         
-        val image_view: AppCompatImageView = findViewById(R.id.setting_image_view)
+      //  val image_view: AppCompatImageView = findViewById(R.id.setting_image_view)
         // 初始化toolbar
         initToolBar(toolbar)
         
-        initBackground(image_view)
+     //   initBackground(image_view)
         // 设置RecyclerView的布局管理器
         val layoutManager = LinearLayoutManager(this)
         // 设置RecyclerView的适配器
@@ -89,7 +89,7 @@ class SettingsActivity: BaseActivity() {
             }
         }
     }
-    
+    @Deprecated(message = "暂时放弃")
     private fun initBackground(image: AppCompatImageView) {
         Glide.with(this)
                 .load(R.drawable.settingbackground)

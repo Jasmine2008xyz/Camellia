@@ -31,15 +31,13 @@ class SettingsItemAdapter(val context: Context, val settingItemList: List<Settin
                 val view =
                     LayoutInflater.from(context).inflate(R.layout.setting_item, parent, false)
                 viewHolder = SettingItemViewHolder(view)
-                
-                
             }
             SettingOpt.TYPE_SWITCH -> {
                 // 创建switch类型的ViewHolder
                 val view =
                     LayoutInflater.from(context).inflate(R.layout.setting_switch, parent, false)
                 viewHolder = SettingSwitchViewHolder(view)
-                // ？？？什么玩意
+
                 viewHolder.itemView.setOnClickListener {
                     viewHolder.switch.setChecked(!viewHolder.switch.isChecked)
                 }
@@ -64,14 +62,22 @@ class SettingsItemAdapter(val context: Context, val settingItemList: List<Settin
                 holder.cardView.setOnClickListener {
                         UiClickHandler.onClick(item_name)
                     }
+                    holder.cardView.setOnLongClickListener {
+                        UiClickHandler.onLongClick(item_name)
+                        true
+                    }
                 }
             is SettingSwitchViewHolder -> {
                 holder.settingSwitchName.text = item_name
                 val boo: Boolean = MItem.Config.getBooleanData("${item_name}/开关",false)
                 holder.switch.setChecked(boo)
                 holder.switch.setOnCheckedChangeListener { _ , isChecked ->
-                    MItem.Config.setBooleanData("${item_name}/开关",isChecked)
-                    UiClickHandler.onSWitchClick(item_name)
+                    MItem.Config.putData("${item_name}/开关",isChecked)
+                    if(boo) UiClickHandler.onSwitchClick(item_name)
+                }
+                holder.cardView.setOnLongClickListener {
+                    UiClickHandler.onLongClick(item_name)
+                    true
                 }
             }
             

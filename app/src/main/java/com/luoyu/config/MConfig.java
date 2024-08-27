@@ -53,9 +53,9 @@ public class MConfig {
     }
 
     /*
-     * void putData(String,T);
+     * void putData(String,Object);
      */
-    public synchronized <T> void putData(@NonNull String key, @Nullable T value) {
+    public synchronized void putData(@NonNull String key, @Nullable Object value) {
         try {
             this.json.put(key, value);
             FileUtil.WriteToFile(

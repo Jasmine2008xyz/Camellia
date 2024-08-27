@@ -11,6 +11,7 @@ import java.util.HashMap
 import com.luoyu.camellia.annotations.Xposed_Item_Controller
 import com.luoyu.camellia.annotations.Xposed_Item_Entry
 import com.luoyu.camellia.annotations.Xposed_Item_UiClick
+import com.luoyu.camellia.annotations.Xposed_Item_UiLongClick
 
 import com.luoyu.camellia.base.HookEnv
 import com.luoyu.camellia.base.MItem
@@ -67,5 +68,10 @@ class PicSummaryHook {
     @Xposed_Item_UiClick
     fun onClick() {
         QQToast.makeText(HookEnv.getActivity(),5,"Ui Clicked",0,0).show()
+    }
+    
+    @Xposed_Item_UiLongClick
+    fun onLongClick(){
+        QQToast.makeText(HookEnv.getActivity(),5,"Ui Long Clicked",0,0).show()
     }
 }

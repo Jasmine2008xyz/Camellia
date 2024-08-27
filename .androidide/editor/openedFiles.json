@@ -1,0 +1,65 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/PicSummaryHook.kt",
+      "selection": {
+        "end": {
+          "column": 7,
+          "index": 2537,
+          "line": 74
+        },
+        "start": {
+          "column": 7,
+          "index": 2537,
+          "line": 74
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/base/UiClickHandler.java",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/res/layout/settings_activity.xml",
+      "selection": {
+        "end": {
+          "column": 36,
+          "index": 1520,
+          "line": 36
+        },
+        "start": {
+          "column": 36,
+          "index": 1520,
+          "line": 36
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/SettingsActivity.kt",
+      "selection": {
+        "end": {
+          "column": 97,
+          "index": 951,
+          "line": 31
+        },
+        "start": {
+          "column": 97,
+          "index": 951,
+          "line": 31
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/SettingsActivity.kt"
+}
