@@ -29,6 +29,7 @@
 
 -keep class com.lxj.xpopup.widget.**{*;}
 -keep class com.luoyu.camellia.startup.Hook_Entry
+-keep class com.luoyu.camellia.hook.**{*;}
 -keep class net.bytebuddy.** {*;}
 
 -keepclassmembers enum * {

@@ -10,24 +10,29 @@ import java.util.HashMap
 
 import com.luoyu.camellia.annotations.Xposed_Item_Controller
 import com.luoyu.camellia.annotations.Xposed_Item_Entry
+import com.luoyu.camellia.annotations.Xposed_Item_UiClick
 
+import com.luoyu.camellia.base.HookEnv
 import com.luoyu.camellia.base.MItem
 import com.luoyu.camellia.utils.ClassUtil
+
+
+import com.tencent.mobileqq.widget.QQToast
 
 /**
  * @author 小明
  * @date 2024/08/26
  * @describe 
  */
-@Xposed_Item_Controller
+@Xposed_Item_Controller(itemTag = "图片外显")
 class PicSummaryHook {
     private val TAG = "PicSummaryHook"
 
     @Xposed_Item_Entry
     fun hook() {
         // 如果图片外显开关关闭，则不执行hook
-       // val isEnabled = MItem.Config.getBooleanData("图片外显/开关", false)
-        //if(!isEnabled) return
+        val isEnabled = MItem.Config.getBooleanData("图片外显/开关", false)
+        if(!isEnabled) return
 
         // 获取 sendMsg 方法
         val clazz = ClassUtil.get("com.tencent.qqnt.kernel.nativeinterface.IKernelMsgService\$CppProxy")
@@ -54,8 +59,13 @@ class PicSummaryHook {
                     val field = picElement.javaClass.getDeclaredField("summary")
                     field.isAccessible = true // 如果字段是私有的，需要设置可访问性
                     field.set(picElement, "hello,kotlin.") // 注意: 这里需要确保字段类型与设置值匹配
-                    }
+                }
             }
         })
+    }
+    
+    @Xposed_Item_UiClick
+    fun onClick() {
+        QQToast.makeText(HookEnv.getActivity(),5,"Ui Clicked",0,0).show()
     }
 }

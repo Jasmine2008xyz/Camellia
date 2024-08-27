@@ -29,10 +29,10 @@ public class PlusMenuInject {
     public static final String TAG = "PlusMenuInject(加号菜单注入)";
     private static Object ItemCache = null;
 
-    /*@Xposed_Item_Finder
+    @Xposed_Item_Finder
     public void find(IDexFinder finder){
         finder.findMethodsByPathAndUseString(new String[]{TAG},new String[]{"com.tencent.qqnt.aio.menu.ui"},new String[]{"QQCustomMenuItem{title="});
-    }*/
+    }
 
     @Xposed_Item_Entry
     public void start() {

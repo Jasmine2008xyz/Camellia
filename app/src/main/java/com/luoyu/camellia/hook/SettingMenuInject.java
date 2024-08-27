@@ -104,7 +104,6 @@ public class SettingMenuInject {
                                                 0x520a,
                                                 title,
                                                 com.luoyu.camellia.R.drawable.ic_menu_slideshow);
-                                // LogUtils.Assert(mItem.toString());
                                 Method[] setOnClickMethods =
                                         fuzzyLookupMethod(
                                                 itemClass,
@@ -199,15 +198,11 @@ public class SettingMenuInject {
                                                                                                 err));
                                                                     }
                                                                 } else {
-                                                                    // HookEnv.getActivity()
                                                                     context.startActivity(
                                                                             new Intent(
-                                                                                    /*  HookEnv
-                                                                                    .getActivity()*/ context,
+                                                                                     context,
                                                                                     SettingsActivity
                                                                                             .class));
-
-                                                                    // QQToast.makeText(HookEnv.getActivity(),5,"你好，QQ",0,0).show();
                                                                 }
                                                                 break;
                                                             }

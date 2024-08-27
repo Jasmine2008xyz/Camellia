@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.luoyu.camellia.R
 import com.luoyu.camellia.model.SettingOpt
 import com.luoyu.camellia.utils.showToast
+import com.luoyu.camellia.base.MItem
+import com.luoyu.camellia.base.UiClickHandler
 
 // 设置项适配器
 class SettingsItemAdapter(val context: Context, val settingItemList: List<SettingOpt>): RecyclerView.Adapter<SettingViewHolder>() {
@@ -29,28 +31,24 @@ class SettingsItemAdapter(val context: Context, val settingItemList: List<Settin
                 val view =
                     LayoutInflater.from(context).inflate(R.layout.setting_item, parent, false)
                 viewHolder = SettingItemViewHolder(view)
-                viewHolder.cardView.setOnClickListener {
-                    "You click RecyclerView Item".showToast()
-                }
+                
+                
             }
             SettingOpt.TYPE_SWITCH -> {
                 // 创建switch类型的ViewHolder
                 val view =
                     LayoutInflater.from(context).inflate(R.layout.setting_switch, parent, false)
                 viewHolder = SettingSwitchViewHolder(view)
+                // ？？？什么玩意
                 viewHolder.itemView.setOnClickListener {
                     viewHolder.switch.setChecked(!viewHolder.switch.isChecked)
-                }
-                viewHolder.switch.setOnCheckedChangeListener { _ , isChecked ->
-                    "You changed switch to $isChecked".showToast()
                 }
             }
             else -> {
                 // 抛出异常
                 throw RuntimeException("Error setting item type!")
-                }
+            }
         }
-
         return viewHolder
     }
 
@@ -59,9 +57,24 @@ class SettingsItemAdapter(val context: Context, val settingItemList: List<Settin
 
     // 绑定ViewHolder
     override fun onBindViewHolder(holder: SettingViewHolder, position: Int) {
+        val item_name = settingItemList[position].text
         when(holder){
-            is SettingItemViewHolder -> holder.settingItemName.text= settingItemList[position].text
-            is SettingSwitchViewHolder -> holder.settingSwitchName.text = settingItemList[position].text
+            is SettingItemViewHolder -> {
+                holder.settingItemName.text= item_name
+                holder.cardView.setOnClickListener {
+                        UiClickHandler.onClick(item_name)
+                    }
+                }
+            is SettingSwitchViewHolder -> {
+                holder.settingSwitchName.text = item_name
+                val boo: Boolean = MItem.Config.getBooleanData("${item_name}/开关",false)
+                holder.switch.setChecked(boo)
+                holder.switch.setOnCheckedChangeListener { _ , isChecked ->
+                    MItem.Config.setBooleanData("${item_name}/开关",isChecked)
+                    UiClickHandler.onSWitchClick(item_name)
+                }
+            }
+            
         }
 
     }

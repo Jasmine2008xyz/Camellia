@@ -2,7 +2,7 @@ package com.luoyu.camellia.app;
 
 import android.app.Application;
 import android.content.res.Configuration;
-
+@Deprecated
 public class App extends Application {
 
     @Override
