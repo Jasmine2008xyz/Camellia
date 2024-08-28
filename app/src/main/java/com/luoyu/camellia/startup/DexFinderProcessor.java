@@ -64,6 +64,7 @@ public class DexFinderProcessor {
         dialog.show();
     }
 
+    @SuppressWarnings("deprecation")
     private void startfindMethod() {
         try {
             sendMsg("   Success\n-> 正在创建查找器...");
@@ -106,7 +107,7 @@ public class DexFinderProcessor {
             Thread.sleep(1000);
             module_finder.keepToFile();
             qq_finder.keepToFile();
-            FileUtil.WriteToFile(PathUtil.getApkDataPath()+"Sign",HookInit.getSign());
+            FileUtil.WriteToFile(PathUtil.getApkDataPath() + "Sign", HookInit.getSign());
             ActivityUtil.killAppProcess(HookEnv.getContext());
         } catch (Exception err) {
             MItem.QQLog.e("startfindMethod()", Log.getStackTraceString(err));

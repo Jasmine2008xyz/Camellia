@@ -6,6 +6,7 @@ import android.content.Context;
 import android.app.Activity;
 
 public class HookEnv {
+    
     public static HashMap<String, Object> HookEnv = new HashMap<>();
 
     public static <Any> void put(@NonNull String need, Any value) {

@@ -1,17 +1,17 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/startup/HookInit.java",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/ShowMsgRecord.kt",
       "selection": {
         "end": {
-          "column": 60,
-          "index": 3888,
-          "line": 93
+          "column": 54,
+          "index": 2230,
+          "line": 54
         },
         "start": {
-          "column": 60,
-          "index": 3888,
-          "line": 93
+          "column": 54,
+          "index": 2230,
+          "line": 54
         }
       }
     },
@@ -19,17 +19,47 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/utils/src/main/java/com/luoyu/camellia/utils/MethodUtil.kt",
       "selection": {
         "end": {
-          "column": 30,
-          "index": 1245,
-          "line": 52
+          "column": 0,
+          "index": 0,
+          "line": 0
         },
         "start": {
-          "column": 30,
-          "index": 1245,
-          "line": 52
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/PicSummaryHook.kt",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/utils/src/main/java/com/luoyu/camellia/utils/Xposed_Bridge.kt",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 4458,
+          "line": 129
+        },
+        "start": {
+          "column": 0,
+          "index": 4458,
+          "line": 129
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/utils/src/main/java/com/luoyu/camellia/utils/MethodUtil.kt"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/ShowMsgRecord.kt"
 }

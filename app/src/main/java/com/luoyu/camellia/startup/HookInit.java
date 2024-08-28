@@ -91,9 +91,8 @@ public class HookInit {
                         HookEnv.put("HostActivity", activity);
                     }
                 });
-        MItem.QQLog.d("测试",MethodUtil.create(HookInit.class));
     }
-
+    @SuppressWarnings("deprecation")
     private void loadMethods() {
         if (FileUtil.ReadFileString(PathUtil.getApkDataPath() + "Sign") == null
                 || !FileUtil.ReadFileString(PathUtil.getApkDataPath() + "Sign").equals(getSign())) {

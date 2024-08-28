@@ -41,6 +41,7 @@ public class SettingMenuInject {
     public static Drawable RepeatIconBitmap;
 
     @Xposed_Item_Entry
+    @SuppressWarnings("unchecked")
     public void start() throws Exception {
         if (MItem.Config.getBooleanData("模块设置/关闭设置界面注入入口", false)) return;
         Method method =
@@ -67,7 +68,7 @@ public class SettingMenuInject {
                             try {
                                 // 获取包装器里实际存放的Item集合
 
-                                List<Object> itemList =
+                                List itemList =
                                         (List)
                                                 XposedHelpers.findFirstFieldByExactType(
                                                                 wrapper.getClass(), List.class)
@@ -200,7 +201,7 @@ public class SettingMenuInject {
                                                                 } else {
                                                                     context.startActivity(
                                                                             new Intent(
-                                                                                     context,
+                                                                                    context,
                                                                                     SettingsActivity
                                                                                             .class));
                                                                 }
@@ -251,8 +252,6 @@ public class SettingMenuInject {
                 }
             }
         }
-        if (methodList.isEmpty()) {}
-
         return methodList.toArray(new Method[0]);
     }
 
