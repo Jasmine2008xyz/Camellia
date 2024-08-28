@@ -20,6 +20,10 @@ class MethodUtil private constructor(clz: Class<*>) {
         fun create(clz: Class<*>): MethodUtil {
             return MethodUtil(clz)
         }
+        @JvmStatic
+        fun createByObject(clz: Any): MethodUtil {
+            return MethodUtil(clz::class.java)
+        }
     }
     
     init {
@@ -85,13 +89,14 @@ class MethodUtil private constructor(clz: Class<*>) {
     
     fun call(loader: ClassLoader, instance: Any?, vararg args: Any?): Any? {
         try {
+            if(args == null) return get(loader).invoke(instance)
             return get(loader).invoke(instance,args)
         }catch(ex: Exception) {
             throw RuntimeException("Wrong in call method"+ex)
         }
     }
     
-    fun call(loader: ClassLoader, count: Int, instance: Any?, vararg args: Any?): Any? {
+    fun callWithCount(loader: ClassLoader, count: Int, instance: Any?, vararg args: Any?): Any? {
         try {
             return get(loader,count).invoke(instance,args)
         }catch(ex: Exception) {

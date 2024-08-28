@@ -28,6 +28,8 @@ import com.luoyu.camellia.annotations.Xposed_Item_Entry
 import com.luoyu.camellia.annotations.Xposed_Item_UiClick
 import com.luoyu.camellia.annotations.Xposed_Item_UiLongClick
 
+import com.luoyu.camellia.activities.helper.ActivityAttributes
+
 import com.luoyu.camellia.base.HookEnv
 import com.luoyu.camellia.base.MItem
 import com.luoyu.camellia.utils.ClassUtil
@@ -102,7 +104,7 @@ class PicSummaryHook {
     
     @Xposed_Item_UiLongClick
     fun onLongClick(){
-        val context: Context = HookEnv.getActivity()
+        val context: Context = ActivityAttributes.context
         val layout = LinearLayout(context)
         layout.setOrientation(LinearLayout.VERTICAL)
         layout.setGravity(Gravity.CENTER)

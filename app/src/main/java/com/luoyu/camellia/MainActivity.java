@@ -1,12 +1,9 @@
 package com.luoyu.camellia;
 
-import android.app.Activity;
-import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -16,13 +13,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.luoyu.camellia.activities.ModuleIntroductionActivity;
-import com.luoyu.camellia.activities.support.BaseActivity;
 import com.luoyu.camellia.adapters.MainActivityLayoutAdapter;
 import com.luoyu.camellia.databinding.ActivityMainBinding;
 import com.luoyu.camellia.utils.IntentUtil;
 
 import java.util.ArrayList;
-import com.luoyu.camellia.R;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
@@ -92,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView recycler = (RecyclerView) binding.getRoot().getChildAt(0);
         recycler.setLayoutManager(new LinearLayoutManager(this));
         recycler.setAdapter(new MainActivityLayoutAdapter(ItemList));
-
+        
         // Set recyclerView's background
         GradientDrawable recyclerViewBackground = new GradientDrawable();
         recyclerViewBackground.setColor(Color.parseColor("#F5F5F5"));

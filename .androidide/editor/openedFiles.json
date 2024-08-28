@@ -4,14 +4,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/ShowMsgRecord.kt",
       "selection": {
         "end": {
-          "column": 54,
-          "index": 2230,
-          "line": 54
+          "column": 42,
+          "index": 4738,
+          "line": 112
         },
         "start": {
-          "column": 54,
-          "index": 2230,
-          "line": 54
+          "column": 42,
+          "index": 4738,
+          "line": 112
         }
       }
     },
@@ -19,14 +19,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/utils/src/main/java/com/luoyu/camellia/utils/MethodUtil.kt",
       "selection": {
         "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 7,
+          "index": 2920,
+          "line": 91
         },
         "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 7,
+          "index": 2920,
+          "line": 91
         }
       }
     },
@@ -34,14 +34,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/PicSummaryHook.kt",
       "selection": {
         "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 44,
+          "index": 996,
+          "line": 30
         },
         "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 44,
+          "index": 996,
+          "line": 30
         }
       }
     },
@@ -59,7 +59,97 @@
           "line": 129
         }
       }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/MainActivity.java",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/startup/HookInit.java",
+      "selection": {
+        "end": {
+          "column": 30,
+          "index": 1115,
+          "line": 30
+        },
+        "start": {
+          "column": 0,
+          "index": 1085,
+          "line": 30
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/utils/Util.java",
+      "selection": {
+        "end": {
+          "column": 39,
+          "index": 587,
+          "line": 21
+        },
+        "start": {
+          "column": 23,
+          "index": 571,
+          "line": 21
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/base/HookEnv.java",
+      "selection": {
+        "end": {
+          "column": 48,
+          "index": 754,
+          "line": 30
+        },
+        "start": {
+          "column": 30,
+          "index": 736,
+          "line": 30
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/Log.txt",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 21,
+          "line": 2
+        },
+        "start": {
+          "column": 0,
+          "index": 21,
+          "line": 2
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/helper/ActivityAttributes.java",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/ShowMsgRecord.kt"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/Log.txt"
 }
