@@ -30,7 +30,7 @@ import java.lang.reflect.Proxy;
 import java.util.ArrayList;
 import java.util.List;
 
-@Xposed_Item_Controller
+@Xposed_Item_Controller(isApi = true)
 /*
  * 思路: QStory(已经闭源)
  */

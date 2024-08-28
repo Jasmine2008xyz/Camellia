@@ -30,6 +30,7 @@ class SettingsActivity: BaseActivity() {
         
         init {
             settingsItemList.add(SettingOpt(settingsItemList.size,"图片外显",SettingOpt.TYPE_SWITCH))
+            settingsItemList.add(SettingOpt(settingsItemList.size,"长按消息菜单添加显示MsgRecord项",SettingOpt.TYPE_SWITCH))
         }
         
     }

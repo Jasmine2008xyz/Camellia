@@ -24,14 +24,17 @@ import com.luoyu.camellia.base.HookEnv;
 import com.luoyu.camellia.base.MItem;
 import com.luoyu.camellia.utils.ClassUtil;
 
-@Xposed_Item_Controller
+@Xposed_Item_Controller(isApi = true)
 public class PlusMenuInject {
     public static final String TAG = "PlusMenuInject(加号菜单注入)";
     private static Object ItemCache = null;
 
     @Xposed_Item_Finder
-    public void find(IDexFinder finder){
-        finder.findMethodsByPathAndUseString(new String[]{TAG},new String[]{"com.tencent.qqnt.aio.menu.ui"},new String[]{"QQCustomMenuItem{title="});
+    public void find(IDexFinder finder) {
+        finder.findMethodsByPathAndUseString(
+                new String[] {TAG},
+                new String[] {"com.tencent.qqnt.aio.menu.ui"},
+                new String[] {"QQCustomMenuItem{title="});
     }
 
     @Xposed_Item_Entry
@@ -99,8 +102,12 @@ public class PlusMenuInject {
                                             "DexFinderProcessor_Construction",
                                             Log.getStackTraceString(err));
                                 }
-                            }else{
-                                HookEnv.getActivity().startActivity(new Intent(HookEnv.getActivity(),SettingsActivity.class));
+                            } else {
+                                HookEnv.getActivity()
+                                        .startActivity(
+                                                new Intent(
+                                                        HookEnv.getActivity(),
+                                                        SettingsActivity.class));
                             }
                         }
                     }

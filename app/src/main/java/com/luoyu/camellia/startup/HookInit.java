@@ -7,6 +7,7 @@ import android.util.Log;
 
 import com.luoyu.camellia.BuildConfig;
 import com.luoyu.camellia.activities.support.ActivityProxyManager;
+import com.luoyu.camellia.annotations.Xposed_Item_Controller;
 import com.luoyu.camellia.annotations.Xposed_Item_Entry;
 import com.luoyu.camellia.base.HookEnv;
 import com.luoyu.camellia.base.MItem;
@@ -16,6 +17,7 @@ import com.luoyu.camellia.utils.AppUtil;
 import com.luoyu.camellia.utils.ClassUtil;
 import com.luoyu.camellia.utils.FileUtil;
 import com.luoyu.camellia.utils.MergeClassLoader;
+import com.luoyu.camellia.utils.MethodUtil;
 import com.luoyu.camellia.utils.PathUtil;
 import com.luoyu.camellia.utils.XRes;
 
@@ -89,6 +91,7 @@ public class HookInit {
                         HookEnv.put("HostActivity", activity);
                     }
                 });
+        MItem.QQLog.d("测试",MethodUtil.create(HookInit.class));
     }
 
     private void loadMethods() {
@@ -138,8 +141,11 @@ public class HookInit {
                         String cl = (String) module_class.get(key);
                         Class<?> clz = HookEnv.getSelfClassLoader().loadClass(cl);
                         for (Method m : clz.getDeclaredMethods()) {
+                            
                             if (m.getAnnotation(Xposed_Item_Entry.class) != null) {
+                               if(MItem.Config.getBooleanData(m.getDeclaringClass().getAnnotation(Xposed_Item_Controller.class).itemTag()+"/开关",false)||m.getDeclaringClass().getAnnotation(Xposed_Item_Controller.class).isApi()){
                                 m.invoke(clz.newInstance());
+                                    }
                             }
                         }
                     } catch (Exception err) {

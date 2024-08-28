@@ -1,0 +1,35 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/startup/HookInit.java",
+      "selection": {
+        "end": {
+          "column": 60,
+          "index": 3888,
+          "line": 93
+        },
+        "start": {
+          "column": 60,
+          "index": 3888,
+          "line": 93
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/utils/src/main/java/com/luoyu/camellia/utils/MethodUtil.kt",
+      "selection": {
+        "end": {
+          "column": 30,
+          "index": 1245,
+          "line": 52
+        },
+        "start": {
+          "column": 30,
+          "index": 1245,
+          "line": 52
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/utils/src/main/java/com/luoyu/camellia/utils/MethodUtil.kt"
+}
