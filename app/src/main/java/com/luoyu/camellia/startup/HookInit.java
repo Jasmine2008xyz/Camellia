@@ -11,13 +11,13 @@ import com.luoyu.camellia.annotations.Xposed_Item_Controller;
 import com.luoyu.camellia.annotations.Xposed_Item_Entry;
 import com.luoyu.camellia.base.HookEnv;
 import com.luoyu.camellia.base.MItem;
+import com.luoyu.camellia.data.module.AppInfo;
 import com.luoyu.camellia.hook.PlusMenuInject;
 import com.luoyu.camellia.hook.SettingMenuInject;
 import com.luoyu.camellia.utils.AppUtil;
 import com.luoyu.camellia.utils.ClassUtil;
 import com.luoyu.camellia.utils.FileUtil;
 import com.luoyu.camellia.utils.MergeClassLoader;
-import com.luoyu.camellia.utils.MethodUtil;
 import com.luoyu.camellia.utils.PathUtil;
 import com.luoyu.camellia.utils.XRes;
 
@@ -44,7 +44,7 @@ public class HookInit {
     public HookInit(XC_LoadPackage.LoadPackageParam lpparam) {
 
         if (IsInit.getAndSet(true)) return;
-
+   
         // Init {@link com.luoyu.camellia.base.HookEnv}
         HookEnv.put("SelfClassLoader", HookInit.class.getClassLoader());
         HookEnv.put("HostClassLoader", lpparam.classLoader);
@@ -77,7 +77,16 @@ public class HookInit {
                                 HookEnv.getContext(),
                                 PathUtil.getApkPath(),
                                 com.luoyu.camellia.R.string.app_name);
-                        if (!IsLoad.getAndSet(true)) loadMethods();
+                        // 启动需要获取到Context后才能继续进行的代码
+                        if (!IsLoad.getAndSet(true)) {
+                            // 获取QQ信息
+                            AppInfo.QQVersionName =
+                                    AppUtil.getVersionNameInt(HookEnv.getContext()) + "";
+                            AppInfo.QQVersionCode =
+                                    AppUtil.getVersionCode(HookEnv.getContext());
+                            // 加载自身类
+                            loadMethods();
+                        }
                     }
                 });
         XposedHelpers.findAndHookMethod(
@@ -92,6 +101,7 @@ public class HookInit {
                     }
                 });
     }
+
     @SuppressWarnings("deprecation")
     private void loadMethods() {
         if (FileUtil.ReadFileString(PathUtil.getApkDataPath() + "Sign") == null
@@ -140,11 +150,21 @@ public class HookInit {
                         String cl = (String) module_class.get(key);
                         Class<?> clz = HookEnv.getSelfClassLoader().loadClass(cl);
                         for (Method m : clz.getDeclaredMethods()) {
-                            
+
                             if (m.getAnnotation(Xposed_Item_Entry.class) != null) {
-                               if(MItem.Config.getBooleanData(m.getDeclaringClass().getAnnotation(Xposed_Item_Controller.class).itemTag()+"/开关",false)||m.getDeclaringClass().getAnnotation(Xposed_Item_Controller.class).isApi()){
-                                m.invoke(clz.newInstance());
-                                    }
+                                if (MItem.Config.getBooleanData(
+                                                m.getDeclaringClass()
+                                                                .getAnnotation(
+                                                                        Xposed_Item_Controller
+                                                                                .class)
+                                                                .itemTag()
+                                                        + "/开关",
+                                                false)
+                                        || m.getDeclaringClass()
+                                                .getAnnotation(Xposed_Item_Controller.class)
+                                                .isApi()) {
+                                    m.invoke(clz.newInstance());
+                                }
                             }
                         }
                     } catch (Exception err) {

@@ -8,6 +8,9 @@ import android.content.Context
 import com.luoyu.camellia.annotations.Xposed_Item_Controller
 import com.luoyu.camellia.annotations.Xposed_Item_Entry
 import com.luoyu.camellia.annotations.Xposed_Item_Finder
+
+import com.luoyu.camellia.data.module.AppInfo
+
 import com.luoyu.camellia.interfaces.IDexFinder
 import com.luoyu.camellia.utils.ClassUtil
 import com.luoyu.camellia.utils.MethodUtil
@@ -52,14 +55,14 @@ class ShowMsgRecord {
     @Xposed_Item_Entry
     fun start() {
     val AIOMSGITEM = ClassUtil.get("com.tencent.mobileqq.aio.msg.AIOMsgItem")
-    val TEXTAIO = ClassUtil.get("com.tencent.mobileqq.aio.msglist.holder.component.text.AIOTextContentComponent")
+ /* val TEXTAIO = ClassUtil.get("com.tencent.mobileqq.aio.msglist.holder.component.text.AIOTextContentComponent")
     val BASE = ClassUtil.get("com.tencent.mobileqq.aio.msglist.holder.component.BaseContentComponent")
     val GETAIO = MethodUtil.create(BASE)
         .setReturnType(AIOMSGITEM)
         .get(HookEnv.getHostClassLoader())
     val HOOK = MethodUtil.create(TEXTAIO)
         .setReturnType(List::class.java)
-        .get(HookEnv.getHostClassLoader())
+        .get(HookEnv.getHostClassLoader())*/
     val method = MethodUtil.create(ClassUtil.get("com.tencent.qqnt.aio.menu.ui.QQCustomMenuExpandableLayout"))
         .setMethodName("setMenu")
         .get(HookEnv.getHostClassLoader())
@@ -102,16 +105,12 @@ class ShowMsgRecord {
     }
 
     
-  //  @Throws(RuntimeException::class)
+    @Throws(RuntimeException::class)
     fun createAIOMenuItemQQNT(aioMsg: Any, textName: String, id: Int, callable: Callable<Any>): Any? {
     val msgClass = ClassUtil.get("com.tencent.mobileqq.aio.msg.AIOMsgItem")
     val m: Method = HookInit.Method_Map["ShowMsgRecord_1"] as Method
     val declaringClass: Class<*> = m.declaringClass
-  /*  val method: Method = MethodUtil.create(declaringClass)
-                                        .setReturnType(Void::class.java)
-                                        .get(HookEnv.getHostClassLoader())
-                                        */
-    val menuItemClass = ByteBuddy()
+    val menuItemClass: Class<*> = ByteBuddy()
         .subclass(declaringClass)
         // text (包括toString()，虽然没什么用)
         .method(ElementMatchers.returns(String::class.java))

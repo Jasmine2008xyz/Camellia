@@ -1,155 +1,50 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/ShowMsgRecord.kt",
-      "selection": {
-        "end": {
-          "column": 42,
-          "index": 4738,
-          "line": 112
-        },
-        "start": {
-          "column": 42,
-          "index": 4738,
-          "line": 112
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/utils/src/main/java/com/luoyu/camellia/utils/MethodUtil.kt",
-      "selection": {
-        "end": {
-          "column": 7,
-          "index": 2920,
-          "line": 91
-        },
-        "start": {
-          "column": 7,
-          "index": 2920,
-          "line": 91
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/PicSummaryHook.kt",
-      "selection": {
-        "end": {
-          "column": 44,
-          "index": 996,
-          "line": 30
-        },
-        "start": {
-          "column": 44,
-          "index": 996,
-          "line": 30
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/utils/src/main/java/com/luoyu/camellia/utils/Xposed_Bridge.kt",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 4458,
-          "line": 129
-        },
-        "start": {
-          "column": 0,
-          "index": 4458,
-          "line": 129
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/MainActivity.java",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/startup/HookInit.java",
       "selection": {
         "end": {
-          "column": 30,
-          "index": 1115,
-          "line": 30
+          "column": 0,
+          "index": 9437,
+          "line": 212
         },
         "start": {
           "column": 0,
-          "index": 1085,
-          "line": 30
+          "index": 9437,
+          "line": 212
         }
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/utils/Util.java",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/utils/Classes.kt",
       "selection": {
         "end": {
-          "column": 39,
-          "index": 587,
-          "line": 21
+          "column": 25,
+          "index": 236,
+          "line": 11
         },
         "start": {
-          "column": 23,
-          "index": 571,
-          "line": 21
+          "column": 25,
+          "index": 236,
+          "line": 11
         }
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/base/HookEnv.java",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/ShowMsgRecord.kt",
       "selection": {
         "end": {
-          "column": 48,
-          "index": 754,
-          "line": 30
+          "column": 51,
+          "index": 4534,
+          "line": 111
         },
         "start": {
-          "column": 30,
-          "index": 736,
-          "line": 30
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/Log.txt",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 21,
-          "line": 2
-        },
-        "start": {
-          "column": 0,
-          "index": 21,
-          "line": 2
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/helper/ActivityAttributes.java",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 51,
+          "index": 4534,
+          "line": 111
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/Log.txt"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/ShowMsgRecord.kt"
 }

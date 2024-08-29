@@ -32,6 +32,8 @@ import com.luoyu.camellia.activities.helper.ActivityAttributes
 
 import com.luoyu.camellia.base.HookEnv
 import com.luoyu.camellia.base.MItem
+
+import com.luoyu.camellia.utils.Classes
 import com.luoyu.camellia.utils.ClassUtil
 import com.luoyu.camellia.utils.Util
 
@@ -59,7 +61,7 @@ class PicSummaryHook {
 
         // 获取 sendMsg 方法
         val clazz = ClassUtil.get("com.tencent.qqnt.kernel.nativeinterface.IKernelMsgService\$CppProxy")
-        val contactClass = ClassUtil.get("com.tencent.qqnt.kernelpublic.nativeinterface.Contact")
+        val contactClass = Classes.getContactClass()
         val iOperateCallbackClass = ClassUtil.get("com.tencent.qqnt.kernel.nativeinterface.IOperateCallback")
 
         val method = XposedHelpers.findMethodBestMatch(
@@ -98,6 +100,7 @@ class PicSummaryHook {
     }
     
     @Xposed_Item_UiClick
+    @Deprecated(message = "设定上Switch不会触发onClick，所以弃用，暂时留着防止出什么bug")
     fun onClick() {
         QQToast.makeText(HookEnv.getActivity(),5,"Ui Clicked",0,0).show()
     }

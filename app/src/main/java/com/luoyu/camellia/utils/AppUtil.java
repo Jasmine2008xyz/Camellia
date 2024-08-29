@@ -234,6 +234,7 @@ public class AppUtil {
     /**
      * @Method 获取应用版本名称和版本号 @Param context 上下文 @Return String 版本名字(版本号)
      */
+    @SuppressWarnings("deprecation")
     public static String getHostInfo(Context context) {
         try {
             return context.getPackageManager()
@@ -265,7 +266,7 @@ public class AppUtil {
             throw new AssertionError("Can not get PackageInfo!");
         }
     }
-    
+    @SuppressWarnings("deprecation")
     public static int getVersionCode(Context context){
         try {
             int ver =

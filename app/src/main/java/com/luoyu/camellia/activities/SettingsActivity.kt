@@ -30,6 +30,7 @@ class SettingsActivity: BaseActivity() {
         
         init {
             settingsItemList.add(SettingOpt(settingsItemList.size,"图片外显",SettingOpt.TYPE_SWITCH))
+            settingsItemList.add(SettingOpt(settingsItemList.size,"修改图片大小",SettingOpt.TYPE_SWITCH))
             settingsItemList.add(SettingOpt(settingsItemList.size,"长按消息菜单添加显示MsgRecord项",SettingOpt.TYPE_SWITCH))
         }
         
@@ -86,7 +87,7 @@ class SettingsActivity: BaseActivity() {
         toolbar.setOnMenuItemClickListener { menuItem ->
             when(menuItem.itemId){
                 R.id.item -> {
-                    QQToast.makeText(this,5,"Clicked",0,0).show();
+                 QQToast.makeText(this,5,"Clicked",0,0).show();
                     true
                 }
                 else -> false
