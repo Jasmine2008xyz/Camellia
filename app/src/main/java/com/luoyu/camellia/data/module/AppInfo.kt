@@ -9,6 +9,7 @@ class AppInfo {
         
         @JvmField
         var QQVersionCode: Int = 0
+        
     }
     
 }

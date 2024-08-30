@@ -3,7 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/item"
-        android:title="Item"
+        android:id="@+id/setting_item_1"
+        android:title="交流讨论"
+        app:showAsAction="never"/>
+    
+    <item
+        android:id="@+id/setting_item_2"
+        android:title="更新日志"
         app:showAsAction="never"/>
 </menu>

@@ -27,7 +27,6 @@ public class ProxyHandler implements Handler.Callback {
     @Override
     public boolean handleMessage(@NonNull Message msg) {
         switch (msg.what) {
-                // LAUNCH_ACTIVITY     sdk <= 8.0
             case 100 -> {
                 try {
                     Object record = msg.obj;
@@ -54,13 +53,10 @@ public class ProxyHandler implements Handler.Callback {
                 } catch (Exception e) {
                 }
             }
-                // EXECUTE_TRANSACTION    8.0+
             case 159 -> {
                 Object clientTransaction = msg.obj;
                 try {
                     if (clientTransaction != null) {
-                        //                        Method getCallbacksMethod =
-                        // clientTransaction.getClass().getDeclaredMethod("getCallbacks");
                         Method getCallbacksMethod =
                                 Class.forName("android.app.servertransaction.ClientTransaction")
                                         .getDeclaredMethod("getCallbacks");
@@ -79,8 +75,6 @@ public class ProxyHandler implements Handler.Callback {
                 } catch (Exception e) {
                 }
             }
-                //            default:
-                //                LogUtil.log("code -> " + msg.what);
         }
         return mDefault != null && mDefault.handleMessage(msg);
     }
@@ -97,7 +91,6 @@ public class ProxyHandler implements Handler.Callback {
         Intent wrapper = (Intent) fmIntent.get(item);
         Log.d("ParasiticsUtils:", "handleMessage: target wrapper =" + wrapper);
         assert wrapper != null;
-        // 获取Bundle
         Bundle bundle = null;
         try {
             Field fExtras = Intent.class.getDeclaredField("mExtras");
@@ -105,13 +98,11 @@ public class ProxyHandler implements Handler.Callback {
             bundle = (Bundle) fExtras.get(wrapper);
         } catch (Exception e) {
         }
-        // 设置
         if (bundle != null) {
             bundle.setClassLoader(ActivityProxyManager.HostClassLoader);
             if (wrapper.hasExtra("随便填点，检测用的")) {
                 Intent realIntent = wrapper.getParcelableExtra("随便填点，检测用的");
                 fmIntent.set(item, realIntent);
-                // android 12
                 if (Build.VERSION.SDK_INT >= 31) {
                     IBinder token =
                             (IBinder)
@@ -138,7 +129,6 @@ public class ProxyHandler implements Handler.Callback {
                         }
                     } catch (NoSuchMethodException e) {
                         if (Build.VERSION.SDK_INT == 33) {
-                            // expected behavior...?!
                         } else {
                             throw e;
                         }

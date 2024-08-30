@@ -11,6 +11,13 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Proxy;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+/*
+ * 包用别人的的
+ * 自己写适配不会比这个好
+ * 看以后有时间会不会再研究
+ * 我自己略微改了一点点
+ */
+
 @SuppressLint({"DiscouragedPrivateApi", "PrivateApi"})
 public class ActivityProxyManager {
   public static final String TAG = "ActivityProxyManager(活动代理管理器)";
@@ -46,7 +53,6 @@ public class ActivityProxyManager {
       try {
         replaceIActivityTaskManager();
       } catch (Exception ignored) {
-        //
       }
     } catch (Exception e) {
       throw new RuntimeException(e);
@@ -59,7 +65,6 @@ public class ActivityProxyManager {
     try {
       packageInfo =
           packageManager.getPackageInfo(context.getPackageName(), PackageManager.GET_ACTIVITIES);
-      // 所有的Activity
       ActivityInfo[] activities = packageInfo.activities;
       return activities;
 

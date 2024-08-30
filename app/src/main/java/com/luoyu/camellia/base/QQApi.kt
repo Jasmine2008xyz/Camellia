@@ -13,6 +13,8 @@ import de.robv.android.xposed.XposedHelpers
 import java.lang.reflect.Method
 
 class QQApi {
+  companion object {
+    
   /** uin转peerUid */
   fun getUidFromUin(uin: String): String {
     val obj: Any? = QRoute.api(ClassUtil.get("com.tencent.relation.common.api.IRelationNTUinAndUidApi"))
@@ -60,7 +62,16 @@ class QQApi {
       intent.putExtra("url", "https://ti.qq.com/friends/recall?uin=" + uin);
       intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
       context.startActivity(intent);
-    } catch (ex :Exception) {
-    }
+    } catch (ex :Exception) {}
+  }
+  
+  fun openUrl(context: Context, url: String) {
+    val uri: Uri = Uri.parse(url);
+    val intent: Intent = Intent(Intent.ACTION_VIEW, uri)
+    intent.setPackage("com.tencent.mobileqq")
+    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+    context.startActivity(intent)
+  }
+  
   }
 }

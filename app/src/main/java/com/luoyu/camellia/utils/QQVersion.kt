@@ -1,7 +1,7 @@
 package com.luoyu.camellia.utils
 
 /*
- * QQ9.0及以后的正式版本
+ * QQ9.0及以后的测试版本
  */
 
 class QQVersion {

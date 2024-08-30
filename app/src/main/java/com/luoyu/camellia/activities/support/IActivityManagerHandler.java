@@ -61,7 +61,6 @@ public class IActivityManagerHandler implements InvocationHandler {
     public static boolean isModuleActivity(String className) {
         try {
             return BaseActivity.class.isAssignableFrom(ActivityProxyManager.ModuleClassLoader.loadClass(className));
-//            ClassLoaderTool.getModuleLoader().loadClass(className);
         } catch (Exception e) {
             return false;
         }

@@ -1,23 +1,35 @@
 package com.luoyu.camellia.activities
 
+import android.content.Context
+
 import android.os.Bundle
 
 import androidx.appcompat.app.AppCompatActivity
+
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.Toolbar
+
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-
 import com.bumptech.glide.Glide
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+
 import com.luoyu.camellia.R
+
 import com.luoyu.camellia.activities.support.BaseActivity
+
 import com.luoyu.camellia.adapters.SettingsItemAdapter
+
 import com.luoyu.camellia.base.MItem
+
 import com.luoyu.camellia.model.SettingOpt
+
 import com.luoyu.camellia.utils.showToast
 import com.luoyu.camellia.utils.Util
+import com.luoyu.camellia.utils.IntentUtil
+
 import com.luoyu.camellia.activities.helper.ActivityAttributes
 
 import com.tencent.mobileqq.widget.QQToast
@@ -46,6 +58,8 @@ class SettingsActivity: BaseActivity() {
         setTheme(R.style.AppTheme)
         
         setContentView(R.layout.settings_activity)
+        
+        requestHideNavigationBar()
         
         ActivityAttributes.context = this
         
@@ -87,7 +101,11 @@ class SettingsActivity: BaseActivity() {
         // 设置toolbar的菜单项点击事件
         toolbar.setOnMenuItemClickListener { menuItem ->
             when(menuItem.itemId){
-                R.id.item -> {
+                R.id.setting_item_1 -> { // 交流讨论
+                 joinGroup(toolbar.getContext())
+                    true
+                }
+                R.id.setting_item_2 -> { // 更新日志
                  QQToast.makeText(this,5,"Clicked",0,0).show();
                     true
                 }
@@ -100,5 +118,20 @@ class SettingsActivity: BaseActivity() {
         Glide.with(this)
                 .load(R.drawable.settingbackground)
                 .into(image);
+    }
+    
+    private fun joinGroup(context: Context) {
+    val items = arrayOf("加入QQ聊天群", "加入QQ通知群")
+    MaterialAlertDialogBuilder(context)
+    .setTitle("交流讨论")
+    .setItems(items) { _, which ->
+        when (which) {
+            0 -> IntentUtil.openQQGroup(context, "902327702")
+            1 -> IntentUtil.openQQGroup(context, "837012640")
+            else -> {}
+        }
+    }
+    .setPositiveButton("Leave", null)
+    .show()
     }
 }
