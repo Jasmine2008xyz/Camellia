@@ -7,7 +7,7 @@ public class QRoute {
     private QRoute() {
     }
     @NonNull
-    public static <T extends QRouteApi> T api(Class<T> cls) {
-        return (T) null;
+    public static <T /*extends QRouteApi*/> T api(Class<T> cls) {
+        throw new RuntimeException("stub!");
     }
 }

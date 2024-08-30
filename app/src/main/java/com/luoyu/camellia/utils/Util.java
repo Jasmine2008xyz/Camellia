@@ -55,4 +55,5 @@ public class Util {
     public static int parseColor(@NonNull String str) {
         return Color.parseColor(str);
     }
+    
 }
