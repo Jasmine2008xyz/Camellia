@@ -5,7 +5,7 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.widget.Button;
-
+@Deprecated
 public class EasyButton {
     private static final String TAG = "EasyButton";
     private Context act;

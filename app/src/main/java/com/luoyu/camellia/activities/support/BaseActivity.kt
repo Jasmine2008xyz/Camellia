@@ -32,7 +32,12 @@ open class BaseActivity : FragmentActivity() {
     }
 
     @Suppress("DEPRECATION")
+    /*
+     * 我系统API刚好30，所以没测试过else下的块
+     * 哪天抓个倒霉蛋试试
+     */
     protected open fun requestHideNavigationBar() {
+    // WindowInsetsController 这个东西只有系统API大于 30 才有
         val insetsController = window.insetsController
         if (insetsController != null && Build.VERSION.SDK_INT >= 30) {
             insetsController.hide(WindowInsets.Type.navigationBars())

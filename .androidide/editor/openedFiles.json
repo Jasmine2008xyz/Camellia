@@ -1,167 +1,17 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/JumpUserCard.kt",
-      "selection": {
-        "end": {
-          "column": 58,
-          "index": 1308,
-          "line": 33
-        },
-        "start": {
-          "column": 58,
-          "index": 1308,
-          "line": 33
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/PicSummaryHook.kt",
-      "selection": {
-        "end": {
-          "column": 30,
-          "index": 63,
-          "line": 2
-        },
-        "start": {
-          "column": 0,
-          "index": 33,
-          "line": 2
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/PicSizeHook.kt",
-      "selection": {
-        "end": {
-          "column": 31,
-          "index": 31,
-          "line": 0
-        },
-        "start": {
-          "column": 31,
-          "index": 31,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/base/QQApi.kt",
-      "selection": {
-        "end": {
-          "column": 3,
-          "index": 2512,
-          "line": 75
-        },
-        "start": {
-          "column": 3,
-          "index": 2512,
-          "line": 75
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/data/module/AppInfo.kt",
-      "selection": {
-        "end": {
-          "column": 8,
-          "index": 212,
-          "line": 11
-        },
-        "start": {
-          "column": 8,
-          "index": 212,
-          "line": 11
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/res/menu/setting_toolbar.xml",
-      "selection": {
-        "end": {
-          "column": 27,
-          "index": 360,
-          "line": 11
-        },
-        "start": {
-          "column": 27,
-          "index": 360,
-          "line": 11
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/utils/IntentUtil.java",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/utils/QQVersion.kt",
-      "selection": {
-        "end": {
-          "column": 24,
-          "index": 653,
-          "line": 31
-        },
-        "start": {
-          "column": 24,
-          "index": 653,
-          "line": 31
-        }
-      }
-    },
-    {
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/SettingsActivity.kt",
       "selection": {
         "end": {
-          "column": 19,
-          "index": 3919,
-          "line": 125
+          "column": 77,
+          "index": 1457,
+          "line": 46
         },
         "start": {
-          "column": 19,
-          "index": 3919,
-          "line": 125
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/MainActivity.java",
-      "selection": {
-        "end": {
-          "column": 30,
-          "index": 59,
-          "line": 2
-        },
-        "start": {
-          "column": 0,
-          "index": 29,
-          "line": 2
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/support/ActivityProxyManager.java",
-      "selection": {
-        "end": {
-          "column": 13,
-          "index": 476,
-          "line": 17
-        },
-        "start": {
-          "column": 13,
-          "index": 476,
-          "line": 17
+          "column": 77,
+          "index": 1457,
+          "line": 46
         }
       }
     },
@@ -169,197 +19,62 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/support/BaseActivity.kt",
       "selection": {
         "end": {
-          "column": 0,
-          "index": 319,
-          "line": 11
+          "column": 30,
+          "index": 1179,
+          "line": 39
         },
         "start": {
-          "column": 0,
-          "index": 319,
-          "line": 11
+          "column": 30,
+          "index": 1179,
+          "line": 39
         }
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/SettingMenuInject.java",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/FileReNameApk.kt",
       "selection": {
         "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 53,
+          "index": 2256,
+          "line": 55
         },
         "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 53,
+          "index": 2256,
+          "line": 55
         }
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/PlusMenuInject.java",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/PicSizeHook.kt",
       "selection": {
         "end": {
-          "column": 51,
-          "index": 1953,
-          "line": 50
+          "column": 71,
+          "index": 2727,
+          "line": 80
         },
         "start": {
-          "column": 40,
-          "index": 1942,
-          "line": 50
+          "column": 55,
+          "index": 2711,
+          "line": 80
         }
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/utils/FileUtil.java",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/ShowMsgRecord.kt",
       "selection": {
         "end": {
-          "column": 19,
-          "index": 54,
-          "line": 2
+          "column": 77,
+          "index": 2547,
+          "line": 72
         },
         "start": {
-          "column": 0,
-          "index": 35,
-          "line": 2
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/utils/AssetsUtil.kt",
-      "selection": {
-        "end": {
-          "column": 17,
-          "index": 680,
-          "line": 22
-        },
-        "start": {
-          "column": 17,
-          "index": 680,
-          "line": 22
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/utils/ParseUtil.java",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/utils/PathUtil.java",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/utils/ZipUtil.kt",
-      "selection": {
-        "end": {
-          "column": 8,
-          "index": 190,
-          "line": 9
-        },
-        "start": {
-          "column": 8,
-          "index": 190,
-          "line": 9
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/support/IActivityManagerHandler.java",
-      "selection": {
-        "end": {
-          "column": 116,
-          "index": 2622,
-          "line": 62
-        },
-        "start": {
-          "column": 116,
-          "index": 2622,
-          "line": 62
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/support/ProxyHandler.java",
-      "selection": {
-        "end": {
-          "column": 47,
-          "index": 4369,
-          "line": 104
-        },
-        "start": {
-          "column": 47,
-          "index": 4369,
-          "line": 104
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/support/ProxyInstrumentation.java",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/assets/更新日志.txt",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/Log.txt",
-      "selection": {
-        "end": {
-          "column": 16,
-          "index": 36,
-          "line": 1
-        },
-        "start": {
-          "column": 16,
-          "index": 36,
-          "line": 1
+          "column": 77,
+          "index": 2547,
+          "line": 72
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/Log.txt"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/FileReNameApk.kt"
 }

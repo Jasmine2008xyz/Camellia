@@ -44,6 +44,7 @@ class SettingsActivity: BaseActivity() {
             settingsItemList.add(SettingOpt(settingsItemList.size,"图片外显",SettingOpt.TYPE_SWITCH))
             settingsItemList.add(SettingOpt(settingsItemList.size,"修改图片大小",SettingOpt.TYPE_SWITCH))
             settingsItemList.add(SettingOpt(settingsItemList.size,"长按消息菜单添加显示MsgRecord项",SettingOpt.TYPE_SWITCH))
+            settingsItemList.add(SettingOpt(settingsItemList.size,"文件重命名apk.1",SettingOpt.TYPE_SWITCH))
             settingsItemList.add(SettingOpt(settingsItemList.size,"跳转网页功能",SettingOpt.TYPE_ITEM))
         }
         

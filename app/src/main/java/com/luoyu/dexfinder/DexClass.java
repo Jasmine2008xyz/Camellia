@@ -1,7 +1,7 @@
 package com.luoyu.dexfinder;
 
 import com.luoyu.camellia.interfaces.IDexMember;
-
+@Deprecated
 public class DexClass implements IDexMember {
     public static final String TAG = "DexClass";
 

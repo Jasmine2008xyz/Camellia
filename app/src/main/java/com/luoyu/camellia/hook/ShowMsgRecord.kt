@@ -70,6 +70,8 @@ class ShowMsgRecord {
     val respond = object : XC_MethodHook() {
         @Throws(Throwable::class)
         override fun beforeHookedMethod(param: MethodHookParam) {
+            val isEnabled = MItem.Config.getBooleanData("长按消息菜单添加显示MsgRecord项/开关", false)
+            if(!isEnabled) return
             val listf: Field = XposedHelpers.findFirstFieldByExactType(param.args[0]::class.java, List::class.java)
             val list: List<Any> = listf.get(param.args[0]) as List<Any>
                 val aiof: Field = XposedHelpers.findFirstFieldByExactType(list[0]::class.java, AIOMSGITEM)

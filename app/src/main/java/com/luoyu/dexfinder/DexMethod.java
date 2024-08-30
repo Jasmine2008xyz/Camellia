@@ -7,7 +7,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
-
+@Deprecated
 public final class DexMethod implements Serializable, IDexMember {
 
     public static final String TAG = "DexMethod";
