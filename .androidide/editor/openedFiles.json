@@ -1,47 +1,47 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/SettingsActivity.kt",
-      "selection": {
-        "end": {
-          "column": 77,
-          "index": 1457,
-          "line": 46
-        },
-        "start": {
-          "column": 77,
-          "index": 1457,
-          "line": 46
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/support/BaseActivity.kt",
-      "selection": {
-        "end": {
-          "column": 30,
-          "index": 1179,
-          "line": 39
-        },
-        "start": {
-          "column": 30,
-          "index": 1179,
-          "line": 39
-        }
-      }
-    },
-    {
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/FileReNameApk.kt",
       "selection": {
         "end": {
-          "column": 53,
-          "index": 2256,
-          "line": 55
+          "column": 6,
+          "index": 2807,
+          "line": 70
         },
         "start": {
-          "column": 53,
-          "index": 2256,
-          "line": 55
+          "column": 6,
+          "index": 2807,
+          "line": 70
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/stub/src/main/java/com/tencent/qqnt/kernel/nativeinterface/FileElement.java",
+      "selection": {
+        "end": {
+          "column": 22,
+          "index": 399,
+          "line": 14
+        },
+        "start": {
+          "column": 14,
+          "index": 391,
+          "line": 14
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/stub/src/main/java/com/tencent/qqnt/kernel/nativeinterface/IKernelModel.java",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
         }
       }
     },
@@ -49,29 +49,104 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/PicSizeHook.kt",
       "selection": {
         "end": {
-          "column": 71,
-          "index": 2727,
-          "line": 80
+          "column": 0,
+          "index": 0,
+          "line": 0
         },
         "start": {
-          "column": 55,
-          "index": 2711,
-          "line": 80
+          "column": 0,
+          "index": 0,
+          "line": 0
         }
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/ShowMsgRecord.kt",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/base/QQApi.kt",
       "selection": {
         "end": {
-          "column": 77,
-          "index": 2547,
-          "line": 72
+          "column": 32,
+          "index": 232,
+          "line": 8
         },
         "start": {
-          "column": 77,
-          "index": 2547,
-          "line": 72
+          "column": 32,
+          "index": 232,
+          "line": 8
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/utils/Classes.kt",
+      "selection": {
+        "end": {
+          "column": 45,
+          "index": 547,
+          "line": 23
+        },
+        "start": {
+          "column": 8,
+          "index": 462,
+          "line": 22
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/qqmanager/QQUtil.kt",
+      "selection": {
+        "end": {
+          "column": 36,
+          "index": 437,
+          "line": 12
+        },
+        "start": {
+          "column": 36,
+          "index": 437,
+          "line": 12
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/qqmessage/MsgUtil.kt",
+      "selection": {
+        "end": {
+          "column": 60,
+          "index": 535,
+          "line": 16
+        },
+        "start": {
+          "column": 60,
+          "index": 535,
+          "line": 16
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/startup/HookInit.java",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 2395,
+          "line": 63
+        },
+        "start": {
+          "column": 0,
+          "index": 2395,
+          "line": 63
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/utils/Util.java",
+      "selection": {
+        "end": {
+          "column": 44,
+          "index": 482,
+          "line": 17
+        },
+        "start": {
+          "column": 25,
+          "index": 463,
+          "line": 17
         }
       }
     }

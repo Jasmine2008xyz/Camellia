@@ -4,7 +4,13 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 
+import com.luoyu.camellia.utils.Classes
 import com.luoyu.camellia.utils.ClassUtil
+import com.luoyu.camellia.utils.Util
+
+import com.luoyu.camellia.base.MItem
+
+import com.luoyu.camellia.qqmanager.QQUtil
 
 import com.tencent.mobileqq.qroute.QRoute
         
@@ -71,6 +77,21 @@ class QQApi {
     intent.setPackage("com.tencent.mobileqq")
     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
     context.startActivity(intent)
+  }
+  
+  fun createContact(chatType: Int, uid: String): Any? {
+    val contact = Classes.getContactClass().newInstance()
+    try{
+        contact::class.java.getDeclaredField("chatType").set(contact,chatType)
+        if(chatType == 2) contact::class.java.getDeclaredField("peerUid").set(contact,uid)
+        else if (chatType == 4) contact::class.java.getDeclaredField("guildId").set(contact,uid)
+        else if(uid == QQUtil.getCurrentUin()) contact::class.java.getDeclaredField("peerUid").set(contact,getUidFromUin(uid))
+        else contact::class.java.getDeclaredField("peerUid").set(contact,uid)
+        return contact
+    }catch (ex: Exception) {
+    MItem.QQLog.e("createContact错误",Util.getStackTraceString(ex))
+        throw RuntimeException("create failed, since:"+ex)
+    }
   }
   
   }
