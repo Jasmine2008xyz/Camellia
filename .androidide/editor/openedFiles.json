@@ -4,14 +4,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/FileReNameApk.kt",
       "selection": {
         "end": {
-          "column": 6,
-          "index": 2807,
-          "line": 70
+          "column": 25,
+          "index": 5653,
+          "line": 133
         },
         "start": {
-          "column": 6,
-          "index": 2807,
-          "line": 70
+          "column": 25,
+          "index": 5653,
+          "line": 133
         }
       }
     },
@@ -19,14 +19,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/stub/src/main/java/com/tencent/qqnt/kernel/nativeinterface/FileElement.java",
       "selection": {
         "end": {
-          "column": 22,
-          "index": 399,
-          "line": 14
+          "column": 24,
+          "index": 324,
+          "line": 11
         },
         "start": {
-          "column": 14,
-          "index": 391,
-          "line": 14
+          "column": 16,
+          "index": 316,
+          "line": 11
         }
       }
     },
@@ -64,14 +64,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/base/QQApi.kt",
       "selection": {
         "end": {
-          "column": 32,
-          "index": 232,
-          "line": 8
+          "column": 42,
+          "index": 362,
+          "line": 14
         },
         "start": {
-          "column": 32,
-          "index": 232,
-          "line": 8
+          "column": 42,
+          "index": 362,
+          "line": 14
         }
       }
     },
@@ -147,6 +147,111 @@
           "column": 25,
           "index": 463,
           "line": 17
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/stub/src/main/java/com/tencent/qqnt/kernel/nativeinterface/TextElement.java",
+      "selection": {
+        "end": {
+          "column": 260,
+          "index": 2634,
+          "line": 118
+        },
+        "start": {
+          "column": 260,
+          "index": 2634,
+          "line": 118
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/qqmessage/MsgElementCreator.java",
+      "selection": {
+        "end": {
+          "column": 43,
+          "index": 167,
+          "line": 4
+        },
+        "start": {
+          "column": 43,
+          "index": 167,
+          "line": 4
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/stub/src/main/java/com/tencent/mobileqq/qroute/QRoute.java",
+      "selection": {
+        "end": {
+          "column": 2,
+          "index": 367,
+          "line": 13
+        },
+        "start": {
+          "column": 2,
+          "index": 367,
+          "line": 13
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/qqmanager/QRoute.kt",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 548,
+          "line": 21
+        },
+        "start": {
+          "column": 0,
+          "index": 548,
+          "line": 21
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/base/UiClickHandler.java",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/base/MItem.java",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/base/HookEnv.java",
+      "selection": {
+        "end": {
+          "column": 48,
+          "index": 754,
+          "line": 30
+        },
+        "start": {
+          "column": 30,
+          "index": 736,
+          "line": 30
         }
       }
     }

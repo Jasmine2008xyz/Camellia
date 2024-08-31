@@ -1,4 +1,4 @@
-package com.tencent.mobileqq.qroute;
+/*package com.tencent.mobileqq.qroute;
 import androidx.annotation.NonNull;
 
 public class QRoute {
@@ -7,7 +7,8 @@ public class QRoute {
     private QRoute() {
     }
     @NonNull
-    public static <T /*extends QRouteApi*/> T api(Class<T> cls) {
+    public static <T extends QRouteApi> T api(Class<T> cls) {
         throw new RuntimeException("stub!");
     }
 }
+*/

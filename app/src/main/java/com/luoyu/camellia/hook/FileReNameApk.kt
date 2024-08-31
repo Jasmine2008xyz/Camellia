@@ -13,8 +13,10 @@ import com.luoyu.camellia.utils.ClassUtil
 import com.luoyu.camellia.utils.Util
 
 import com.luoyu.camellia.qqmessage.MsgUtil
+import com.luoyu.camellia.qqmessage.MsgElementCreator
 
 import com.tencent.qqnt.kernel.nativeinterface.FileElement
+import com.tencent.qqnt.kernel.nativeinterface.TextElement
 
 import de.robv.android.xposed.XC_MethodHook
 import de.robv.android.xposed.XposedBridge
@@ -30,7 +32,7 @@ class FileReNameApk {
 
     @Xposed_Item_Entry
     fun start() {
-        val clazz = ClassUtil.get("com.tencent.qqnt.kernel.nativeinterface.IKernelMsgService\$CppProxy")
+       val clazz = ClassUtil.get("com.tencent.qqnt.kernel.nativeinterface.IKernelMsgService\$CppProxy")
         val contactClass = Classes.getContactClass()
         val iOperateCallbackClass = ClassUtil.get("com.tencent.qqnt.kernel.nativeinterface.IOperateCallback")
 
@@ -49,6 +51,8 @@ class FileReNameApk {
                 super.beforeHookedMethod(param)
                 val isEnabled = MItem.Config.getBooleanData("文件重命名apk.1/开关", false)
                 if(!isEnabled) return
+               // MItem.QQLog.log("测试",param.args[4])
+               // com.tencent.qqnt.kernel.api.impl.BaseService
                 val list: ArrayList<Any> = param.args[2] as ArrayList<Any>
                 val fileElement: Any? = XposedHelpers.callMethod(list[0], "getFileElement")
                 if (fileElement == null) return
@@ -69,6 +73,16 @@ class FileReNameApk {
                 
         }     
     })
+    
+  /*  XposedBridge.hookAllConstructors(ClassUtil.get("com.tencent.qqnt.kernel.nativeinterface.FileElement"), object: XC_MethodHook () {
+                    override fun afterHookedMethod(param: MethodHookParam) {
+                    super.afterHookedMethod(param)
+                    val file: FileElement = param.thisObject as FileElement
+                    if(file.fileName.endsWith(".1")) {
+                        file.fileName = file.fileName.replace("apk","APK").substringBeforeLast(".1")
+                    }
+                    }
+                })*/
    /* XposedBridge.hookAllConstructors(ClassUtil.get("com.tencent.qqnt.kernel.nativeinterface.FileElement"), object: XC_MethodHook () {
                     override fun afterHookedMethod(param: MethodHookParam) {
                     super.afterHookedMethod(param)
@@ -106,25 +120,32 @@ class FileReNameApk {
   }
   @Xposed_Item_UiLongClick
   fun click() {
-  // 发不出去，差个参数
+  // 发不出去
   try {
     val contact = QQApi.createContact(2,"240214519")
     val list: ArrayList<Any> = ArrayList()
-    val element = ClassUtil.get("com.tencent.qqnt.kernel.nativeinterface.MsgElement").newInstance()
-    val file: FileElement = FileElement()
+    
+  //  val element = ClassUtil.get("com.tencent.qqnt.kernel.nativeinterface.MsgElement").newInstance()
+   val file: FileElement = FileElement()
     file.fileName="测试文件.zip"
     file.fileMd5="666"
     file.fileBizId=102
     file.subElementType=9
-    file.transferStatus=4
+    file.transferStatus=1
     file.fileUuid="/1122"
     file.fileSize=9223372036854775807L
-    XposedHelpers.setObjectField(element,"fileElement",file)
-    list.add(element)
+   // file.filePath="/sdcard/AndroidIDEProjects/Camellia/app/build/outputs/apk/debug/Camellia(0.0.1).APK"
+    
+   // XposedHelpers.setObjectField(element,"textElement",text)
+   val msg =MsgElementCreator.createFileElement("/sdcard/Android/media/com.tencent.mobileqq/opatch/log/20240831.log")
+//   XposedHelpers.setObjectField(msg,"textElement",null)
+   XposedHelpers.setObjectField(msg,"fileElement",file)
+    list.add(msg)
     MsgUtil.sendMsg(contact,list)
     }catch (e: Exception) {
         MItem.QQLog.e("错误",Util.getStackTraceString(e))
     }
-        MItem.QQLog.d("测试","1")
+        //MItem.QQLog.d("测试","1")
   }
+  
 }
