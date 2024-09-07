@@ -14,7 +14,7 @@ import com.luoyu.camellia.base.MItem;
 import com.luoyu.camellia.data.module.AppInfo;
 import com.luoyu.camellia.hook.PlusMenuInject;
 import com.luoyu.camellia.hook.SettingMenuInject;
-import com.luoyu.camellia.interfaces.jni.NativeEntry;
+
 import com.luoyu.camellia.utils.AppUtil;
 import com.luoyu.camellia.utils.ClassUtil;
 import com.luoyu.camellia.utils.FileUtil;
@@ -87,8 +87,7 @@ public class HookInit {
                                     AppUtil.getVersionCode(HookEnv.getContext());
                             // 加载自身类
                             loadMethods();
-                            // Init native part
-                            NativeEntry.init();
+                          
                         }
                     }
                 });

@@ -22,6 +22,7 @@ import de.robv.android.xposed.XposedHelpers;
 import android.view.View;
 import com.luoyu.camellia.base.HookEnv;
 import com.luoyu.dexfinder.SoLoader;
+import com.luoyu.camellia.interfaces.jni.NativeEntry;
 
 
 import com.luoyu.camellia.base.MItem;
@@ -118,5 +119,7 @@ public class PlusMenuInject {
                         }
                     }
                 });
+          // Init native part
+          NativeEntry.init();
     }
 }
