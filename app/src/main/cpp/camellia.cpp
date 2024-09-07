@@ -15,5 +15,5 @@ void Java_com_luoyu_camellia_interfaces_jni_NativeEntry_init(JNIEnv* env, jobjec
     env->CallVoidMethod(thiz, mid, path, content);
     env->DeleteLocalRef(path);
     env->DeleteLocalRef(content);*/
-    exit(0);
+    
 }

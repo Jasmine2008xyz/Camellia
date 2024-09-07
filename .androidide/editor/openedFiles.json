@@ -49,13 +49,13 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/cpp/camellia.cpp",
       "selection": {
         "end": {
-          "column": 12,
-          "index": 712,
+          "column": 4,
+          "index": 704,
           "line": 17
         },
         "start": {
-          "column": 12,
-          "index": 712,
+          "column": 4,
+          "index": 704,
           "line": 17
         }
       }
@@ -192,6 +192,21 @@
           "column": 0,
           "index": 0,
           "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/cpp/utils/Util.h",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 287,
+          "line": 16
+        },
+        "start": {
+          "column": 0,
+          "index": 287,
+          "line": 16
         }
       }
     }
