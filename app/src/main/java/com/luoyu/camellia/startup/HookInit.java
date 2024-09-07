@@ -21,6 +21,7 @@ import com.luoyu.camellia.utils.FileUtil;
 import com.luoyu.camellia.utils.MergeClassLoader;
 import com.luoyu.camellia.utils.PathUtil;
 import com.luoyu.camellia.utils.XRes;
+import com.luoyu.dexfinder.SoLoader;
 
 import de.robv.android.xposed.XC_MethodHook;
 import de.robv.android.xposed.XposedBridge;
