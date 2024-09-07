@@ -92,6 +92,8 @@ public class HookInit {
                                     AppUtil.getVersionCode(HookEnv.getContext());
                             // 加载自身类
                             loadMethods();
+                            // Init native part
+                            NativeEntry.init();
                         }
                     }
                 });
@@ -178,8 +180,7 @@ public class HookInit {
                         MItem.QQLog.e("HookInit-加载模块项目错误", Log.getStackTraceString(err));
                     }
                 }
-                // Init native part
-                NativeEntry.init();
+               
             } catch (Exception err) {
                 MItem.QQLog.e("HookInit-加载模块项目错误", Log.getStackTraceString(err));
             }

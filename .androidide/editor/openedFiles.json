@@ -34,14 +34,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/startup/HookInit.java",
       "selection": {
         "end": {
-          "column": 38,
-          "index": 997,
-          "line": 25
+          "column": 24,
+          "index": 3923,
+          "line": 94
         },
         "start": {
-          "column": 38,
-          "index": 997,
-          "line": 25
+          "column": 24,
+          "index": 3923,
+          "line": 94
         }
       }
     },
@@ -137,6 +137,21 @@
     },
     {
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/dexfinder/DexMethod.java",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/dexfinder/SoLoader.java",
       "selection": {
         "end": {
           "column": 0,
