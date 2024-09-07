@@ -61,7 +61,7 @@
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/cpp/formula.cpp",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/cpp/camellia.cpp",
       "selection": {
         "end": {
           "column": 18,
@@ -106,5 +106,5 @@
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/cpp/formula.cpp"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/cpp/camellia.cpp"
 }
