@@ -24,15 +24,10 @@ jobs:
       run: chmod +x gradlew
 
     - name: Build with Gradle
-      run: ./gradlew assembleRelease
-
-    - name: List files in APK release directory
-      run: ls -R app/build/outputs/apk/release/
+      run: ./gradlew assembleDebug
 
     - name: Upload APK 
       uses: actions/upload-artifact@v4
       with:
-        path: app/build/outputs/apk/release/*.APK
+        path: app/build/outputs/apk/debug/*.APK
         Name: "Camellia"
-
-  

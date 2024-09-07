@@ -1,0 +1,35 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/.github/workflows/release.yml",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 634,
+          "line": 33
+        },
+        "start": {
+          "column": 0,
+          "index": 634,
+          "line": 33
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/.github/workflows/debug.yml",
+      "selection": {
+        "end": {
+          "column": 34,
+          "index": 480,
+          "line": 26
+        },
+        "start": {
+          "column": 34,
+          "index": 480,
+          "line": 26
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/.github/workflows/debug.yml"
+}
