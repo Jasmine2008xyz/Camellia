@@ -74,7 +74,37 @@
           "line": 56
         }
       }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/base/UiClickHandler.java",
+      "selection": {
+        "end": {
+          "column": 34,
+          "index": 3029,
+          "line": 71
+        },
+        "start": {
+          "column": 34,
+          "index": 3029,
+          "line": 71
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/PlusMenuInject.java",
+      "selection": {
+        "end": {
+          "column": 50,
+          "index": 4821,
+          "line": 97
+        },
+        "start": {
+          "column": 50,
+          "index": 4821,
+          "line": 97
+        }
+      }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/cpp/camellia.cpp"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/PlusMenuInject.java"
 }

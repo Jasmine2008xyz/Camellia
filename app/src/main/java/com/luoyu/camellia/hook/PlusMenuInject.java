@@ -56,8 +56,8 @@ public class PlusMenuInject {
                         super.beforeHookedMethod(param);
                         List mMenu = (List) param.args[1];
                         String title;
-                        if (FileUtil.ReadFileString(PathUtil.getApkDataPath() + "Sign") == null
-                                || !FileUtil.ReadFileString(PathUtil.getApkDataPath() + "Sign")
+                        if (FileUtil.readFileString(PathUtil.getApkDataPath() + "Sign") == null
+                                || !FileUtil.readFileString(PathUtil.getApkDataPath() + "Sign")
                                         .equals(HookInit.getSign())) title = "Camellia[未激活]";
                         else title = "Camellia";
                         Object mAddItem =
@@ -94,8 +94,8 @@ public class PlusMenuInject {
                         super.beforeHookedMethod(param);
                         View v = (View) param.args[0];
                         if (v.getId() == 815) {
-                            if (FileUtil.ReadFileString(PathUtil.getApkDataPath() + "Sign") == null
-                                    || !FileUtil.ReadFileString(PathUtil.getApkDataPath() + "Sign")
+                            if (FileUtil.readFileString(PathUtil.getApkDataPath() + "Sign") == null
+                                    || !FileUtil.readFileString(PathUtil.getApkDataPath() + "Sign")
                                             .equals(HookInit.getSign())) {
                                 try {
                                     new DexFinderProcessor();

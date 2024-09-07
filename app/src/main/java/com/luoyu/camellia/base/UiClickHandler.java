@@ -65,7 +65,7 @@ public class UiClickHandler {
 
     @SuppressWarnings({"deprecation", "unchecked"})
     public static void onLongClick(String text) {
-        var module = FileUtil.ReadFileString(PathUtil.getApkDataPath() + "Module_Object_Data");
+        var module = FileUtil.readFileString(PathUtil.getApkDataPath() + "Module_Object_Data");
         try {
             JSONObject json = new JSONObject(module);
             Iterator<String> it = json.keys();
