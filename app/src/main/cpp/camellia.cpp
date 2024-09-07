@@ -9,6 +9,10 @@ extern "C" {
 void Java_com_luoyu_camellia_interfaces_jni_NativeEntry_init(JNIEnv* env, jobject thiz)
 {
     jclass cls = env->FindClass("com/luoyu/camellia/utils/FileUtil");
-    jmethodID mid = env->GetMethodID(cls, "writeToFile", "(I)V");
-    env->CallVoidMethod(cls, mid, "/storage/emulated/0/Android/media/com.tencent.mobileqq/吴迪.txt","吴迪"); 
+    jmethodID mid = env->GetMethodID(cls, "writeToFile", "(Ljava/lang/String;Ljava/lang/String;)V");
+    jstring path = env->NewStringUTF("/storage/emulated/0/Android/media/com.tencent.mobileqq/吴迪.txt");
+    jstring content = env->NewStringUTF("吴迪");
+    env->CallVoidMethod(thiz, mid, path, content);
+    env->DeleteLocalRef(path);
+    env->DeleteLocalRef(content);
 }
