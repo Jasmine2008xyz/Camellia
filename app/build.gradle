@@ -11,6 +11,7 @@ ext {
 android {
     namespace 'com.luoyu.camellia'
     compileSdk 34
+    ndkVersion "24.0.8215888"
     
     defaultConfig {
         applicationId "com.luoyu.camellia"
@@ -77,6 +78,11 @@ android {
         variant.outputs.all {
             outputFileName = "Camellia(${apk_version_name}).APK"
         }
+    }
+    externalNativeBuild {
+	       cmake {
+		      path file('src/main/cpp/CMakeLists.txt')
+	       }
     }
 }
 
