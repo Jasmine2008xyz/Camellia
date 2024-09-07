@@ -21,6 +21,7 @@ import de.robv.android.xposed.XC_MethodHook;
 import de.robv.android.xposed.XposedHelpers;
 import android.view.View;
 import com.luoyu.camellia.base.HookEnv;
+import com.luoyu.dexfinder.SoLoader;
 
 
 import com.luoyu.camellia.base.MItem;
@@ -38,6 +39,9 @@ public class PlusMenuInject {
                 new String[] {"com.tencent.qqnt.aio.menu.ui"},
                 new String[] {"QQCustomMenuItem{title="});
     }*/
+    static {
+        SoLoader.loadByName("libcamellia.so");
+    }
 
     @Xposed_Item_Entry
     public void start() {

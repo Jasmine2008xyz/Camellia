@@ -21,7 +21,6 @@ import com.luoyu.camellia.utils.FileUtil;
 import com.luoyu.camellia.utils.MergeClassLoader;
 import com.luoyu.camellia.utils.PathUtil;
 import com.luoyu.camellia.utils.XRes;
-import com.luoyu.dexfinder.SoLoader;
 
 import de.robv.android.xposed.XC_MethodHook;
 import de.robv.android.xposed.XposedBridge;
@@ -42,10 +41,6 @@ public class HookInit {
     private static final AtomicBoolean IsLoad = new AtomicBoolean();
 
     public static final HashMap<String, Method> Method_Map = new HashMap<>();
-    
-    static {
-        System.loadLibrary("camellia");
-    }
 
     public HookInit(XC_LoadPackage.LoadPackageParam lpparam) {
 
