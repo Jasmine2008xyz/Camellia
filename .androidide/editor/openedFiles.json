@@ -34,14 +34,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/startup/HookInit.java",
       "selection": {
         "end": {
-          "column": 24,
-          "index": 3923,
-          "line": 94
+          "column": 36,
+          "index": 1643,
+          "line": 46
         },
         "start": {
-          "column": 24,
-          "index": 3923,
-          "line": 94
+          "column": 36,
+          "index": 1643,
+          "line": 46
         }
       }
     },

@@ -44,7 +44,7 @@ public class HookInit {
     public static final HashMap<String, Method> Method_Map = new HashMap<>();
     
     static {
-        SoLoader.loadByName("libcamellia.so");
+        System.loadLibrary("camellia");
     }
 
     public HookInit(XC_LoadPackage.LoadPackageParam lpparam) {
