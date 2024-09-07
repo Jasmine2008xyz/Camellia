@@ -28,12 +28,12 @@ public class MConfig {
             this.config = this;
             this.ConfigPath = ConfigPath;
             var read =
-                    FileUtil.ReadFileString(
+                    FileUtil.readFileString(
                             PathUtil.getApkDataPath() + "config/" + this.ConfigPath);
             if (read == null) {
-                FileUtil.WriteToFile(PathUtil.getApkDataPath() + "config/" + this.ConfigPath, "{}");
+                FileUtil.writeToFile(PathUtil.getApkDataPath() + "config/" + this.ConfigPath, "{}");
             }
-            read = FileUtil.ReadFileString(PathUtil.getApkDataPath() + "config/" + this.ConfigPath);
+            read = FileUtil.readFileString(PathUtil.getApkDataPath() + "config/" + this.ConfigPath);
             this.json = new JSONObject(read);
         } catch (Exception e) {
             MItem.QQLog.e(TAG, e);
@@ -58,7 +58,7 @@ public class MConfig {
     public synchronized void putData(@NonNull String key, @Nullable Object value) {
         try {
             this.json.put(key, value);
-            FileUtil.WriteToFile(
+            FileUtil.writeToFile(
                     PathUtil.getApkDataPath() + "config/" + ConfigPath, json.toString());
         } catch (Exception e) {
             MItem.QQLog.e(TAG, e);

@@ -7,13 +7,13 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 /*
- * https://github.com/Hicores/QTool
- * 包偷懒的
+ * 来自https://github.com/Hicores/QTool
+ * 简化了一些无用操作
  */
 
 public class FileUtil {
     
-    public static void WriteToFile(String File, String FileContent) {
+    public static synchronized void writeToFile(String File, String FileContent) {
         try {
             File parent = new File(File).getParentFile();
             if (!parent.exists()) parent.mkdirs();
@@ -24,7 +24,7 @@ public class FileUtil {
         }
     }
 
-    public static long getDirSize(File file) {
+    public static synchronized long getDirSize(File file) {
         // 判断文件是否存在
         if (file.exists()) {
             // 如果是目录则递归计算其内容的总大小
@@ -43,7 +43,7 @@ public class FileUtil {
         }
     }
 
-    public static void WriteToFile(String File, byte[] FileContent) {
+    public static synchronized void writeToFile(String File, byte[] FileContent) {
         try {
             File parent = new File(File).getParentFile();
             if (!parent.exists()) parent.mkdirs();
@@ -54,7 +54,7 @@ public class FileUtil {
         }
     }
 
-    public static String ReadFileString(File f) {
+    public static synchronized String readFileString(File f) {
         try {
             FileInputStream fInp = new FileInputStream(f);
             String Content = new String(DataUtil.readAllBytes(fInp), StandardCharsets.UTF_8);
@@ -65,7 +65,7 @@ public class FileUtil {
         }
     }
 
-    public static byte[] ReadFile(File f) {
+    public static synchronized byte[] readFile(File f) {
         try {
             FileInputStream fInp = new FileInputStream(f);
             byte[] Content = DataUtil.readAllBytes(fInp);
@@ -76,11 +76,11 @@ public class FileUtil {
         }
     }
 
-    public static String ReadFileString(String f) {
-        return ReadFileString(new File(f));
+    public static String readFileString(String f) {
+        return readFileString(new File(f));
     }
 
-    public static void deleteFile(File file) {
+    public static synchronized void deleteFile(File file) {
         if (file == null) {
             return;
         }
@@ -97,7 +97,7 @@ public class FileUtil {
         file.delete();
     }
 
-    public static void copy(String source, String dest) {
+    public static synchronized void copyFile(String source, String dest) {
 
         try {
 
@@ -118,7 +118,7 @@ public class FileUtil {
             in.close();
             out.close();
         } catch (Exception e) {
-        } finally {
         }
     }
+    
 }

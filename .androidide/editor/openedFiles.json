@@ -29,7 +29,52 @@
           "line": 26
         }
       }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/startup/HookInit.java",
+      "selection": {
+        "end": {
+          "column": 53,
+          "index": 664,
+          "line": 16
+        },
+        "start": {
+          "column": 53,
+          "index": 664,
+          "line": 16
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/cpp/camellia.cpp",
+      "selection": {
+        "end": {
+          "column": 12,
+          "index": 50,
+          "line": 3
+        },
+        "start": {
+          "column": 12,
+          "index": 50,
+          "line": 3
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/utils/FileUtil.java",
+      "selection": {
+        "end": {
+          "column": 52,
+          "index": 1748,
+          "line": 56
+        },
+        "start": {
+          "column": 38,
+          "index": 1734,
+          "line": 56
+        }
+      }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/.github/workflows/debug.yml"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/cpp/camellia.cpp"
 }

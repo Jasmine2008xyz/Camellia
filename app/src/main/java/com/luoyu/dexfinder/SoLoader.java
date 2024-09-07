@@ -35,11 +35,11 @@ public class SoLoader {
             while ((entry = zInp.getNextEntry()) != null) {
                 if (android.os.Process.is64Bit()
                         && entry.getName().startsWith("lib/arm64-v8a/" + name)) {
-                    FileUtil.WriteToFile(cachePath, DataUtil.readAllBytes(zInp));
+                    FileUtil.writeToFile(cachePath, DataUtil.readAllBytes(zInp));
                     break;
                 } else if (!android.os.Process.is64Bit()
                         && entry.getName().startsWith("lib/armeabi-v7a/" + name)) {
-                    FileUtil.WriteToFile(cachePath, DataUtil.readAllBytes(zInp));
+                    FileUtil.writeToFile(cachePath, DataUtil.readAllBytes(zInp));
                     break;
                 }
             }

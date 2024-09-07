@@ -100,7 +100,7 @@ public class DexKitFinder implements IDexFinder {
 
                         }
                     });
-            FileUtil.WriteToFile(PathUtil.getApkDataPath() + "QQ_Object_Data", root.toString());
+            FileUtil.writeToFile(PathUtil.getApkDataPath() + "QQ_Object_Data", root.toString());
         }
         if (Module_Object_List.size() != 0) {
             JSONObject root = new JSONObject();
@@ -111,7 +111,7 @@ public class DexKitFinder implements IDexFinder {
 
                 }
             }
-            FileUtil.WriteToFile(PathUtil.getApkDataPath() + "Module_Object_Data", root.toString());
+            FileUtil.writeToFile(PathUtil.getApkDataPath() + "Module_Object_Data", root.toString());
         }
     }
 

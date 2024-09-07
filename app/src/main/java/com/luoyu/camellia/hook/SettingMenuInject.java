@@ -84,11 +84,11 @@ public class SettingMenuInject {
                                 final Class<?> itemClass = itemList.get(0).getClass();
                                 // 新建自己的Item
                                 String title;
-                                if (FileUtil.ReadFileString(PathUtil.getApkDataPath() + "Sign")
+                                if (FileUtil.readFileString(PathUtil.getApkDataPath() + "Sign")
                                                 == null
                                         || !HookInit.getSign()
                                                 .equals(
-                                                        FileUtil.ReadFileString(
+                                                        FileUtil.readFileString(
                                                                 PathUtil.ApkDataPath + "Sign")))
                                     title = "Camellia[未激活]";
                                 else title = "Camellia";
@@ -177,12 +177,12 @@ public class SettingMenuInject {
                                                                             .equals("onClick")) {
 
                                                                 // 点击逻辑
-                                                                if (FileUtil.ReadFileString(
+                                                                if (FileUtil.readFileString(
                                                                                         PathUtil
                                                                                                         .getApkDataPath()
                                                                                                 + "Sign")
                                                                                 == null
-                                                                        || !FileUtil.ReadFileString(
+                                                                        || !FileUtil.readFileString(
                                                                                         PathUtil
                                                                                                         .getApkDataPath()
                                                                                                 + "Sign")

@@ -27,12 +27,12 @@ public class QLog implements ILog {
         sb.append(TAG);
         sb.append("\n");
         sb.append(String.valueOf(ex));
-        String content = FileUtil.ReadFileString(QLogPath);
+        String content = FileUtil.readFileString(QLogPath);
         if (content == null) {
             content = "";
             sb = new StringBuilder(sb.substring(1));
         }
-        FileUtil.WriteToFile(QLogPath, "" + content + "\n" + sb.toString());
+        FileUtil.writeToFile(QLogPath, "" + content + "\n" + sb.toString());
     }
 
     @Override

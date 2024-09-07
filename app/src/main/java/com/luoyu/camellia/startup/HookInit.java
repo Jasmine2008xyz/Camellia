@@ -14,6 +14,7 @@ import com.luoyu.camellia.base.MItem;
 import com.luoyu.camellia.data.module.AppInfo;
 import com.luoyu.camellia.hook.PlusMenuInject;
 import com.luoyu.camellia.hook.SettingMenuInject;
+import com.luoyu.camellia.interfaces.jni.NativeEntry;
 import com.luoyu.camellia.utils.AppUtil;
 import com.luoyu.camellia.utils.ClassUtil;
 import com.luoyu.camellia.utils.FileUtil;
@@ -61,6 +62,7 @@ public class HookInit {
 
         // Init {@link com.luoyu.camellia.logging.QLog#setQLogPath(String)}
         MItem.QQLog.setQLogPath(PathUtil.getApkDataPath() + "Log.txt");
+        
         // Start hook operations
         XposedHelpers.findAndHookMethod(
                 ClassUtil.load("com.tencent.mobileqq.qfix.QFixApplication"),
@@ -104,8 +106,8 @@ public class HookInit {
 
     @SuppressWarnings("deprecation")
     private void loadMethods() {
-        if (FileUtil.ReadFileString(PathUtil.getApkDataPath() + "Sign") == null
-                || !FileUtil.ReadFileString(PathUtil.getApkDataPath() + "Sign").equals(getSign())) {
+        if (FileUtil.readFileString(PathUtil.getApkDataPath() + "Sign") == null
+                || !FileUtil.readFileString(PathUtil.getApkDataPath() + "Sign").equals(getSign())) {
             // Signature not found or signature does not match.
             try {
                 new PlusMenuInject().start();
@@ -118,11 +120,11 @@ public class HookInit {
                 // 先将QQ类放入HashMap
                 JSONObject module_class =
                         new JSONObject(
-                                FileUtil.ReadFileString(
+                                FileUtil.readFileString(
                                         PathUtil.getApkDataPath() + "Module_Object_Data"));
                 JSONObject qq_class =
                         new JSONObject(
-                                FileUtil.ReadFileString(
+                                FileUtil.readFileString(
                                         PathUtil.getApkDataPath() + "QQ_Object_Data"));
                 Iterator<String> keys = qq_class.keys();
                 while (keys.hasNext()) {
@@ -171,6 +173,8 @@ public class HookInit {
                         MItem.QQLog.e("HookInit-加载模块项目错误", Log.getStackTraceString(err));
                     }
                 }
+                // Init native part
+                NativeEntry.init();
             } catch (Exception err) {
                 MItem.QQLog.e("HookInit-加载模块项目错误", Log.getStackTraceString(err));
             }
