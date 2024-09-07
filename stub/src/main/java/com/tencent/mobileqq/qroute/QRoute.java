@@ -1,4 +1,4 @@
-/*package com.tencent.mobileqq.qroute;
+package com.tencent.mobileqq.qroute;
 import androidx.annotation.NonNull;
 
 public class QRoute {
@@ -11,4 +11,3 @@ public class QRoute {
         throw new RuntimeException("stub!");
     }
 }
-*/
