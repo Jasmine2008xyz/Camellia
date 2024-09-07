@@ -49,14 +49,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/cpp/camellia.cpp",
       "selection": {
         "end": {
-          "column": 1,
-          "index": 697,
-          "line": 17
+          "column": 35,
+          "index": 699,
+          "line": 16
         },
         "start": {
-          "column": 1,
-          "index": 697,
-          "line": 17
+          "column": 35,
+          "index": 699,
+          "line": 16
         }
       }
     },
@@ -179,7 +179,22 @@
           "line": 0
         }
       }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/cpp/CMakeLists.txt",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/PlusMenuInject.java"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/cpp/camellia.cpp"
 }
