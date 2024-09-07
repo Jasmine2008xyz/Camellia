@@ -39,9 +39,9 @@ class LinkInfo {
     
     @Xposed_Item_Entry
     fun start() {
-    val m: Method = HookInit.Method_Map.get("LinkInfo_1") as Method
+  //  val m: Method = HookInit.Method_Map.get("LinkInfo_1") as Method
     // 借助查找到的方法做跳板反射获取所需方法
-    val m2 = XposedHelpers.findMethodsByExactParameters(m.getDeclaringClass(),ArrayList::class.java,ArrayList::class.java)[0]
+  //  val m2 = XposedHelpers.findMethodsByExactParameters(m.getDeclaringClass(),ArrayList::class.java,ArrayList::class.java)[0]
     /*MethodUtil.create(m.getDeclaringClass())
                             .setReturnType(ArrayList::class.java)
                             .setParams(ArrayList::class.java)
@@ -64,5 +64,11 @@ class LinkInfo {
               }
             })
             */
+            XposedBridge.hookAllConstructors(ClassUtil.get("com.tencent.qqnt.kernel.nativeinterface.LinkInfo"),object : XC_MethodHook() {
+            override fun afterHookedMethod(param: MethodHookParam) {
+                super.afterHookedMethod(param)
+                 param.thisObject = null
+                }
+            })
     }
 }
