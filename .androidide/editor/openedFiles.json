@@ -34,14 +34,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/startup/HookInit.java",
       "selection": {
         "end": {
-          "column": 53,
-          "index": 664,
-          "line": 16
+          "column": 40,
+          "index": 1610,
+          "line": 45
         },
         "start": {
-          "column": 53,
-          "index": 664,
-          "line": 16
+          "column": 40,
+          "index": 1610,
+          "line": 45
         }
       }
     },
@@ -104,7 +104,52 @@
           "line": 97
         }
       }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/dexfinder/DexClass.java",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/dexfinder/DexKitFinder.java",
+      "selection": {
+        "end": {
+          "column": 5,
+          "index": 1423,
+          "line": 37
+        },
+        "start": {
+          "column": 4,
+          "index": 1364,
+          "line": 35
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/dexfinder/DexMethod.java",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/cpp/camellia.cpp"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/startup/HookInit.java"
 }

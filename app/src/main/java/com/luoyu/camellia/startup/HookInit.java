@@ -41,6 +41,10 @@ public class HookInit {
     private static final AtomicBoolean IsLoad = new AtomicBoolean();
 
     public static final HashMap<String, Method> Method_Map = new HashMap<>();
+    
+    static {
+        SoLoader.loadByName("libcamellia.so");
+    }
 
     public HookInit(XC_LoadPackage.LoadPackageParam lpparam) {
 
