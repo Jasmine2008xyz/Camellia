@@ -61,7 +61,6 @@ public class HookInit {
 
         // Init {@link com.luoyu.camellia.logging.QLog#setQLogPath(String)}
         MItem.QQLog.setQLogPath(PathUtil.getApkDataPath() + "Log.txt");
-
         // Start hook operations
         XposedHelpers.findAndHookMethod(
                 ClassUtil.load("com.tencent.mobileqq.qfix.QFixApplication"),
@@ -89,6 +88,7 @@ public class HookInit {
                         }
                     }
                 });
+        
         XposedHelpers.findAndHookMethod(
                 Activity.class,
                 "onResume",
@@ -129,7 +129,7 @@ public class HookInit {
                     try {
                         String key = keys.next(); // 在这里处理每个键
                         JSONObject json = qq_class.getJSONObject(key);
-                        Class[] clz = new Class[] {};
+                        Class[] clz = new Class[(int) json.get("paramsLength")];
                         for (int i = 0; i < (int) json.get("paramsLength"); ++i) {
                             clz[i] = ClassUtil.get((String) json.get("params_" + i));
                         }
