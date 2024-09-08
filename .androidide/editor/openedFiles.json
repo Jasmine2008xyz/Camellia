@@ -34,14 +34,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/cpp/camellia.cpp",
       "selection": {
         "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 4,
+          "index": 582,
+          "line": 14
         },
         "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 4,
+          "index": 582,
+          "line": 14
         }
       }
     },
@@ -76,5 +76,5 @@
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/MainActivity.java"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/cpp/camellia.cpp"
 }
