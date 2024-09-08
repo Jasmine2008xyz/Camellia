@@ -19,6 +19,8 @@ import com.luoyu.camellia.utils.IntentUtil;
 
 import java.util.ArrayList;
 
+import com.luoyu.camellia.interfaces.jni.NativeEntry;
+
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     private static final ArrayList<MainActivityLayoutAdapter.Item> ItemList = new ArrayList<>();
@@ -97,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
         recycler.setBackground(recyclerViewBackground);
 
         recycler.setY(-500);
+        
+        NativeEntry.init();
     }
 
     @Override

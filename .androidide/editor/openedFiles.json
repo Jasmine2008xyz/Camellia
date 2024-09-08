@@ -1,21 +1,6 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/cpp/camellia.cpp",
-      "selection": {
-        "end": {
-          "column": 29,
-          "index": 609,
-          "line": 14
-        },
-        "start": {
-          "column": 29,
-          "index": 609,
-          "line": 14
-        }
-      }
-    },
-    {
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/cpp/CMakeLists.txt",
       "selection": {
         "end": {
@@ -29,7 +14,52 @@
           "line": 1
         }
       }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/utils/FileUtil.java",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/cpp/camellia.cpp",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/MainActivity.java",
+      "selection": {
+        "end": {
+          "column": 27,
+          "index": 4278,
+          "line": 102
+        },
+        "start": {
+          "column": 27,
+          "index": 4278,
+          "line": 102
+        }
+      }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/cpp/camellia.cpp"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/MainActivity.java"
 }
