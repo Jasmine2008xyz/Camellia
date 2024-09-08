@@ -49,14 +49,29 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/MainActivity.java",
       "selection": {
         "end": {
-          "column": 27,
-          "index": 4278,
-          "line": 102
+          "column": 39,
+          "index": 1049,
+          "line": 29
         },
         "start": {
-          "column": 27,
-          "index": 4278,
-          "line": 102
+          "column": 39,
+          "index": 1049,
+          "line": 29
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/hook/PlusMenuInject.java",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
         }
       }
     }

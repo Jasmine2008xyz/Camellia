@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private static Context act;
 
     static {
+        System.loadLibrary("camellia");
         ItemList.add(
                 new MainActivityLayoutAdapter.Item(
                         "Camellia(" + BuildConfig.VERSION_NAME + ")", () -> {}));
