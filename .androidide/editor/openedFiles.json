@@ -34,14 +34,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/cpp/camellia.cpp",
       "selection": {
         "end": {
-          "column": 4,
-          "index": 582,
-          "line": 14
+          "column": 5,
+          "index": 437,
+          "line": 12
         },
         "start": {
-          "column": 4,
-          "index": 582,
-          "line": 14
+          "column": 5,
+          "index": 437,
+          "line": 12
         }
       }
     },
