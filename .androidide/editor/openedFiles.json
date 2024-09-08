@@ -4,14 +4,29 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/cpp/camellia.cpp",
       "selection": {
         "end": {
-          "column": 27,
-          "index": 607,
+          "column": 29,
+          "index": 609,
           "line": 14
         },
         "start": {
-          "column": 27,
-          "index": 607,
+          "column": 29,
+          "index": 609,
           "line": 14
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/cpp/CMakeLists.txt",
+      "selection": {
+        "end": {
+          "column": 9,
+          "index": 48,
+          "line": 1
+        },
+        "start": {
+          "column": 9,
+          "index": 48,
+          "line": 1
         }
       }
     }
