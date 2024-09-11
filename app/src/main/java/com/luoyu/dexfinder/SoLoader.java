@@ -13,38 +13,40 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
 public class SoLoader {
-    public static final String TAG = "SoLoader(So加载器)";
+  public static final String TAG = "SoLoader(So加载器)";
 
-    public static void loadByName(@NonNull String name) {
-        String cachePath =
-                HookEnv.getContext().getCacheDir()
-                        + "/"
-                        + DataUtil.getStrMD5(Settings.Secure.ANDROID_ID + "_").substring(0, 8)
-                        + "/";
-        String tempName = "" + name.hashCode();
-        FileUtil.deleteFile(new File(cachePath + tempName));
-        outputLibToCache(cachePath + tempName, name);
-        System.load(cachePath + tempName);
-    }
+  public static void loadByName(@NonNull String name) {
+    String cachePath =
+        HookEnv.getContext().getCacheDir()
+            + "/"
+            + DataUtil.getStrMD5(Settings.Secure.ANDROID_ID + "_").substring(0, 8)
+            + "/";
+    String tempName = "" + name.hashCode();
+    FileUtil.deleteFile(new File(cachePath + tempName));
+    outputLibToCache(cachePath + tempName, name);
+    System.load(cachePath + tempName);
+  }
 
-    private static void outputLibToCache(String cachePath, String name) {
-        String apkPath = PathUtil.getModuleApkPath();
-        try {
-            ZipInputStream zInp = new ZipInputStream(new FileInputStream(apkPath));
-            ZipEntry entry;
-            while ((entry = zInp.getNextEntry()) != null) {
-                if (android.os.Process.is64Bit()
-                        && entry.getName().startsWith("lib/arm64-v8a/" + name)) {
-                    FileUtil.writeToFile(cachePath, DataUtil.readAllBytes(zInp));
-                    break;
-                } else if (!android.os.Process.is64Bit()
-                        && entry.getName().startsWith("lib/armeabi-v7a/" + name)) {
-                    FileUtil.writeToFile(cachePath, DataUtil.readAllBytes(zInp));
-                    break;
-                }
-            }
-        } catch (Exception ignored) {
-            MItem.QQLog.log(TAG, ignored);
+  private static void outputLibToCache(String cachePath, String name) {
+    String apkPath = PathUtil.getModuleApkPath();
+    try {
+      ZipInputStream zInp = new ZipInputStream(new FileInputStream(apkPath));
+      ZipEntry entry;
+      while ((entry = zInp.getNextEntry()) != null) {
+        if (android.os.Process.is64Bit() && entry.getName().startsWith("lib/arm64-v8a/" + name)) {
+          FileUtil.writeToFile(cachePath, DataUtil.readAllBytes(zInp));
+          break;
+        } else if (!android.os.Process.is64Bit()
+            && entry.getName().startsWith("lib/armeabi-v7a/" + name)) {
+          FileUtil.writeToFile(cachePath, DataUtil.readAllBytes(zInp));
+          break;
+        } else if (entry.getName().startsWith("assets/native/" + name)) {
+          FileUtil.writeToFile(cachePath, DataUtil.readAllBytes(zInp));
+          break;
         }
+      }
+    } catch (Exception ignored) {
+      MItem.QQLog.log(TAG, ignored);
     }
+  }
 }
