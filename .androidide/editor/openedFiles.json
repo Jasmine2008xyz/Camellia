@@ -19,14 +19,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/build.gradle",
       "selection": {
         "end": {
-          "column": 16,
-          "index": 216,
-          "line": 13
+          "column": 8,
+          "index": 1872,
+          "line": 86
         },
         "start": {
-          "column": 6,
-          "index": 206,
-          "line": 13
+          "column": 8,
+          "index": 1872,
+          "line": 86
         }
       }
     },
@@ -136,5 +136,5 @@
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/cpp/CMakeLists.txt"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/build.gradle"
 }

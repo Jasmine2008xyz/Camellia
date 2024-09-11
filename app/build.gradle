@@ -11,7 +11,7 @@ ext {
 android {
     namespace 'com.luoyu.camellia'
     compileSdk 34
-   // ndkVersion "24.0.8215888"
+    ndkVersion "24.0.8215888"
     
     defaultConfig {
         applicationId "com.luoyu.camellia"
@@ -84,7 +84,7 @@ android {
     
     externalNativeBuild {
 	       cmake {
-		      //path file('src/main/cpp/CMakeLists.txt')
+		      path file('src/main/cpp/CMakeLists.txt')
 	       }
     }
 }
