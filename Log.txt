@@ -4,3 +4,6 @@
 2024/09/11 22:27 周三 晴
 不要闲着没事动app/build.gradle下的ndk启用，默认用关加速debug构建
 改了以后把so放到assets/native/ 下，SoLoader在libs下找不着会尝试在这个目录查找
+
+2024/09/14 18:33 周六 晴
+我打算把寄生相关内容移到com.luoyu.xposed类下，com.luoyu.camellia下同时放下app和xposed似乎有点臃肿

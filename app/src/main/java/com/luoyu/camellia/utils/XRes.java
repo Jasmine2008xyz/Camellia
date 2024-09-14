@@ -4,7 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.content.res.Resources;
-import com.luoyu.camellia.base.MItem;
+import com.luoyu.xposed.logging.LogCat;
 import java.lang.reflect.Method;
 
 public class XRes {
@@ -20,7 +20,7 @@ public class XRes {
             method.setAccessible(true);
             method.invoke(resources.getAssets(), str);
         } catch (Exception unused) {
-            MItem.QQLog.e("注入资源错误", unused);
+            LogCat.e("注入资源错误", unused);
         }
     }
 }

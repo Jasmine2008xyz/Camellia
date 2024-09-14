@@ -1,6 +1,6 @@
 package com.luoyu.camellia.utils
 
-import com.luoyu.camellia.data.module.AppInfo
+import com.luoyu.xposed.data.module.HostInfo
 
 import com.luoyu.camellia.utils.ClassUtil
 
@@ -20,7 +20,7 @@ class Classes {
      */
      
     fun getContactClass(): Class<*> {
-        val versionCode = AppInfo.QQVersionCode
+        val versionCode = HostInfo.QQVersionCode
         if(versionCode >= 6676)/* QQ9.0.70 */
         return ClassUtil.get("com.tencent.qqnt.kernelpublic.nativeinterface.Contact")
         return ClassUtil.get("com.tencent.qqnt.kernel.nativeinterface.Contact")

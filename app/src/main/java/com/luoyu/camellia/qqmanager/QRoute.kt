@@ -4,7 +4,7 @@ import java.lang.reflect.Method
 import com.luoyu.camellia.utils.ClassUtil
 import com.luoyu.camellia.utils.MethodUtil
 
-import com.luoyu.camellia.base.HookEnv
+import com.luoyu.xposed.base.HookEnv
 
 class QRoute {
     companion object {

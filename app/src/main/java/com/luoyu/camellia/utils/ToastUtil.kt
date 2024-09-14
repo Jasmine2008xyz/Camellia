@@ -3,7 +3,7 @@ package com.luoyu.camellia.utils
 import android.widget.Toast
 import com.luoyu.camellia.app.CamelliaApp
 
-import com.luoyu.camellia.base.HookEnv
+import com.luoyu.xposed.base.HookEnv
 
 import com.tencent.mobileqq.widget.QQToast
 

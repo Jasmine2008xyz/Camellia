@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import com.luoyu.camellia.base.HookEnv;
+import com.luoyu.xposed.base.HookEnv;
 import com.luoyu.camellia.ui.base.EasyButton;
 import com.luoyu.camellia.utils.ScreenUtil;
 

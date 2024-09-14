@@ -2,10 +2,10 @@ package com.luoyu.dexfinder;
 
 import android.provider.Settings;
 import androidx.annotation.NonNull;
-import com.luoyu.camellia.base.HookEnv;
-import com.luoyu.camellia.base.MItem;
+import com.luoyu.xposed.base.HookEnv;
 import com.luoyu.camellia.utils.DataUtil;
 import com.luoyu.camellia.utils.PathUtil;
+import com.luoyu.xposed.logging.LogCat;
 import java.io.File;
 import com.luoyu.camellia.utils.FileUtil;
 import java.io.FileInputStream;
@@ -46,7 +46,7 @@ public class SoLoader {
         }
       }
     } catch (Exception ignored) {
-      MItem.QQLog.log(TAG, ignored);
+      LogCat.log(TAG, ignored);
     }
   }
 }

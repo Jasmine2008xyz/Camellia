@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.luoyu.camellia.R
 import com.luoyu.camellia.model.SettingOpt
 import com.luoyu.camellia.utils.showToast
-import com.luoyu.camellia.base.MItem
-import com.luoyu.camellia.base.UiClickHandler
+import com.luoyu.xposed.ModuleController
+import com.luoyu.xposed.base.UiClickHandler
 
 // 设置项适配器
 class SettingsItemAdapter(val context: Context, val settingItemList: List<SettingOpt>): RecyclerView.Adapter<SettingViewHolder>() {
@@ -69,10 +69,10 @@ class SettingsItemAdapter(val context: Context, val settingItemList: List<Settin
                 }
             is SettingSwitchViewHolder -> {
                 holder.settingSwitchName.text = item_name
-                val boo: Boolean = MItem.Config.getBooleanData("${item_name}/开关",false)
+                val boo: Boolean = ModuleController.Config.getBooleanData("${item_name}/开关",false)
                 holder.switch.setChecked(boo)
                 holder.switch.setOnCheckedChangeListener { _ , isChecked ->
-                    MItem.Config.putData("${item_name}/开关",isChecked)
+                    ModuleController.Config.putData("${item_name}/开关",isChecked)
                     if(isChecked) UiClickHandler.onSwitchClick(item_name)
                 }
                 holder.cardView.setOnLongClickListener {

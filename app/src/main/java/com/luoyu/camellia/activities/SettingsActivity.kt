@@ -22,7 +22,7 @@ import com.luoyu.camellia.activities.support.BaseActivity
 
 import com.luoyu.camellia.adapters.SettingsItemAdapter
 
-import com.luoyu.camellia.base.MItem
+import com.luoyu.xposed.ModuleController
 
 import com.luoyu.camellia.model.SettingOpt
 

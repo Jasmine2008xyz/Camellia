@@ -10,7 +10,7 @@ import android.content.Intent;
 import android.app.ActivityManager;
 import android.util.Log;
 import androidx.annotation.NonNull;
-import com.luoyu.camellia.base.HookEnv;
+import com.luoyu.xposed.base.HookEnv;
 import java.util.List;
 
 public class Util {
