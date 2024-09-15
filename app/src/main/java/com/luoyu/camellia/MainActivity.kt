@@ -1,6 +1,6 @@
 package com.luoyu.camellia
 
-import android.content.Context
+import android.app.Activity
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
@@ -15,6 +15,9 @@ import com.luoyu.camellia.activities.ModuleIntroductionActivity
 import com.luoyu.camellia.adapters.MainActivityLayoutAdapter
 import com.luoyu.camellia.databinding.ActivityMainBinding
 import com.luoyu.camellia.utils.IntentUtil
+import com.luoyu.utils.Update
+import com.luoyu.utils.FileUtil
+import java.io.File
 
 class MainActivity : BaseActivity() {
 
@@ -41,13 +44,15 @@ class MainActivity : BaseActivity() {
                     .show()
             },
             MainActivityLayoutAdapter.Item("检测更新") {
-                Toast.makeText(act, "江西第一纯情男高 拒绝为您服务。", Toast.LENGTH_SHORT).show()
+            Update.create(act)
+            // Clean up cache
+            FileUtil.deleteFile(File("/storage/emulated/0/Android/data/com.luoyu.camellia/cache"))
             },
             MainActivityLayoutAdapter.Item("查看作者哔哩哔哩动态") {
                 IntentUtil.openBilibili(act)
             }
         )
-        private lateinit var act: Context
+        private lateinit var act: Activity
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

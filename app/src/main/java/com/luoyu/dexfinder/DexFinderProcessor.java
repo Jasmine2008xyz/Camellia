@@ -1,4 +1,4 @@
-package com.luoyu.xposed.startup;
+package com.luoyu.dexfinder;
 
 import android.graphics.Typeface;
 import android.util.Log;
@@ -23,6 +23,7 @@ import com.luoyu.utils.PathUtil;
 import com.luoyu.utils.Util;
 import com.luoyu.dexfinder.DexKitFinder;
 
+import com.luoyu.xposed.core.HookInstaller;
 import com.luoyu.xposed.logging.LogCat;
 import java.lang.reflect.Method;
 
@@ -101,7 +102,7 @@ public class DexFinderProcessor {
       Thread.sleep(1000);
       module_finder.keepToFile();
       qq_finder.keepToFile();
-      FileUtil.writeToFile(PathUtil.getApkDataPath() + "Sign", HookInit.getSign());
+      FileUtil.writeToFile(PathUtil.getApkDataPath() + "Sign", HookInstaller.getSign());
       ActivityUtil.killAppProcess(HookEnv.getContext());
     } catch (Exception err) {
       LogCat.e("startfindMethod()", Log.getStackTraceString(err));

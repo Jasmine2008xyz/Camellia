@@ -104,6 +104,7 @@ public class AppUtil {
     try {
       context.startActivity(intent);
     } catch (Exception e) {
+      Toast.makeText(context, "拉起安装错误\n" + e, 0).show();
       //  ToastUtils.Toast(context, "拉起安装错误\n" + e);
       e.printStackTrace();
     }

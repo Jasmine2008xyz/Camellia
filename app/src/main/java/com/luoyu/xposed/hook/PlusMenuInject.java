@@ -15,8 +15,9 @@ import com.luoyu.xposed.ModuleController;
 import com.luoyu.xposed.base.HookEnv;
 import com.luoyu.xposed.base.annotations.Xposed_Item_Controller;
 import com.luoyu.xposed.base.annotations.Xposed_Item_Entry;
+import com.luoyu.xposed.core.HookInstaller;
 import com.luoyu.xposed.logging.LogCat;
-import com.luoyu.xposed.startup.DexFinderProcessor;
+import com.luoyu.dexfinder.DexFinderProcessor;
 import com.luoyu.xposed.startup.HookInit;
 import de.robv.android.xposed.XC_MethodHook;
 import de.robv.android.xposed.XposedHelpers;
@@ -54,7 +55,7 @@ public class PlusMenuInject {
             String title;
             if (FileUtil.readFileString(PathUtil.getApkDataPath() + "Sign") == null
                 || !FileUtil.readFileString(PathUtil.getApkDataPath() + "Sign")
-                    .equals(HookInit.getSign())) title = "Camellia[未激活]";
+                    .equals(HookInstaller.getSign())) title = "Camellia[未激活]";
             else title = "Camellia";
             Object mAddItem =
                 XposedHelpers.findConstructorBestMatch(
@@ -88,7 +89,7 @@ public class PlusMenuInject {
             if (v.getId() == 815) {
               if (FileUtil.readFileString(PathUtil.getApkDataPath() + "Sign") == null
                   || !FileUtil.readFileString(PathUtil.getApkDataPath() + "Sign")
-                      .equals(HookInit.getSign())) {
+                      .equals(HookInstaller.getSign())) {
                 try {
                   new DexFinderProcessor();
                 } catch (Exception err) {

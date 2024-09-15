@@ -17,7 +17,7 @@ import com.luoyu.utils.XRes
 
 open class BaseActivity : FragmentActivity() {
 
-    private val mLoader = MergeClassLoader(BaseActivity::class.java.classLoader,ActivityProxyManager.HostClassLoader)
+    private val mLoader = BaseActivityClassLoader(BaseActivity::class.java.classLoader)
 
     override fun getClassLoader(): ClassLoader = mLoader
 
@@ -53,7 +53,7 @@ open class BaseActivity : FragmentActivity() {
         }
     }
 
- /*   private class BaseActivityClassLoader(referencer: ClassLoader) : ClassLoader() {
+  private class BaseActivityClassLoader(referencer: ClassLoader) : ClassLoader() {
         private val mBaseReferencer: ClassLoader = referencer
         private val mHostReferencer: ClassLoader = ActivityProxyManager.HostClassLoader
 
@@ -78,6 +78,6 @@ open class BaseActivity : FragmentActivity() {
             }
             return mBaseReferencer.loadClass(name)
         }
-    }*/
+    }
 }
 

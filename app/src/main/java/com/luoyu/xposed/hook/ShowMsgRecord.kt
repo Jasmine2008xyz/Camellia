@@ -19,7 +19,7 @@ import com.luoyu.utils.Util
 import com.luoyu.xposed.base.HookEnv
 import com.luoyu.xposed.ModuleController
 
-import com.luoyu.xposed.startup.HookInit
+import com.luoyu.xposed.core.HookInstaller
 
 import de.robv.android.xposed.XC_MethodHook
 import de.robv.android.xposed.XposedBridge
@@ -108,7 +108,7 @@ class ShowMsgRecord {
     @Throws(RuntimeException::class)
     fun createAIOMenuItemQQNT(aioMsg: Any, textName: String, id: Int, callable: Callable<Any>): Any? {
     val msgClass = ClassUtil.get("com.tencent.mobileqq.aio.msg.AIOMsgItem")
-    val m: Method = HookInit.Method_Map["ShowMsgRecord_1"] as Method
+    val m: Method = HookInstaller.Method_Map["ShowMsgRecord_1"] as Method
     val declaringClass: Class<*> = m.declaringClass
     val menuItemClass: Class<*> = ByteBuddy()
         .subclass(declaringClass)

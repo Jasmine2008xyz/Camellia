@@ -11,4 +11,9 @@
         android:id="@+id/setting_item_2"
         android:title="更新日志"
         app:showAsAction="never"/>
+    
+    <item
+        android:id="@+id/setting_item_3"
+        android:title="检测更新"
+        app:showAsAction="never"/>
 </menu>

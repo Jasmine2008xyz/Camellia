@@ -1,6 +1,7 @@
 package com.luoyu.camellia.activities
 
 import android.content.Context
+import android.app.Activity
 
 import android.os.Bundle
 
@@ -28,11 +29,16 @@ import com.luoyu.camellia.model.SettingOpt
 
 import com.luoyu.camellia.utils.showToast
 import com.luoyu.utils.Util
+import com.luoyu.utils.Update
+import com.luoyu.utils.FileUtil
+import com.luoyu.utils.PathUtil
 import com.luoyu.camellia.utils.IntentUtil
 
 import com.luoyu.camellia.activities.helper.ActivityAttributes
 
 import com.tencent.mobileqq.widget.QQToast
+
+import java.io.File
 
 class SettingsActivity: BaseActivity() {
 
@@ -109,6 +115,15 @@ class SettingsActivity: BaseActivity() {
                 }
                 R.id.setting_item_2 -> { // 更新日志
                  QQToast.makeText(this,5,"Clicked",0,0).show();
+                    true
+                }
+                R.id.setting_item_3 -> { //检测更新
+                    val a=Update.create(ActivityAttributes.context as Activity)
+                    // Clean up cache
+                    val file = File(PathUtil.getApkDataPath() + "cache")
+                    if (file.exists()) {
+                        file.delete()
+                    }
                     true
                 }
                 else -> false
