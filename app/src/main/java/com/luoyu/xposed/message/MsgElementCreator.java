@@ -1,8 +1,8 @@
-package com.luoyu.camellia.qqmessage;
+package com.luoyu.xposed.message;
 
-import com.luoyu.camellia.utils.ClassUtil;
-import com.luoyu.camellia.utils.PathUtil;
-import com.luoyu.camellia.qqmanager.QRoute;
+import com.luoyu.utils.ClassUtil;
+import com.luoyu.utils.PathUtil;
+import com.luoyu.xposed.base.QRoute;
 import java.lang.reflect.InvocationTargetException;
 import de.robv.android.xposed.XposedHelpers;
 import java.io.File;

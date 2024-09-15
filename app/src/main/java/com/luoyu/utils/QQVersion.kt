@@ -1,4 +1,4 @@
-package com.luoyu.camellia.utils
+package com.luoyu.utils
 
 /*
  * QQ9.0及以后的测试版本

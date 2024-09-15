@@ -33,9 +33,9 @@ import com.luoyu.camellia.activities.helper.ActivityAttributes
 import com.luoyu.xposed.base.HookEnv
 import com.luoyu.xposed.ModuleController
 
-import com.luoyu.camellia.utils.Classes
-import com.luoyu.camellia.utils.ClassUtil
-import com.luoyu.camellia.utils.Util
+import com.luoyu.utils.Classes
+import com.luoyu.utils.ClassUtil
+import com.luoyu.utils.Util
 
 import com.luoyu.http.HttpSender
 

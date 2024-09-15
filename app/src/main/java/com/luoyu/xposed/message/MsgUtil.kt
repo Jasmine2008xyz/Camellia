@@ -1,8 +1,8 @@
-package com.luoyu.camellia.qqmessage
+package com.luoyu.xposed.message
 
 import java.util.ArrayList
 import java.lang.reflect.InvocationTargetException
-import com.luoyu.camellia.utils.ClassUtil
+import com.luoyu.utils.ClassUtil
 import de.robv.android.xposed.XposedHelpers
 
 class MsgUtil {

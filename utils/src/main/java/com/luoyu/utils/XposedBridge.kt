@@ -1,11 +1,11 @@
-package com.luoyu.camellia.utils
+package com.luoyu.utils
 
 import de.robv.android.xposed.XC_MethodHook
 import de.robv.android.xposed.XposedBridge
 import java.lang.reflect.Member
 import java.util.concurrent.atomic.AtomicReference
 
-object Xposed_Bridge {
+object XposedBridge {
     const val Xposed_Bridge_Version=1;
 
     @JvmStatic

@@ -1,4 +1,4 @@
-package com.luoyu.camellia.utils;
+package com.luoyu.utils;
 
 public class CheckClassType {
     public static boolean CheckClass(Class<?> clz, Class<?> convert) {

@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import com.luoyu.xposed.base.HookEnv;
 import com.luoyu.camellia.ui.base.EasyButton;
-import com.luoyu.camellia.utils.ScreenUtil;
+import com.luoyu.utils.ScreenUtil;
 
 
 

@@ -4,16 +4,15 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 
-import com.luoyu.camellia.utils.Classes
-import com.luoyu.camellia.utils.ClassUtil
-import com.luoyu.camellia.utils.Util
+import com.luoyu.utils.Classes
+import com.luoyu.utils.ClassUtil
+import com.luoyu.utils.Util
 import com.luoyu.xposed.logging.LogCat
 
 import com.luoyu.xposed.ModuleController
 
-import com.luoyu.camellia.qqmanager.QQUtil
+import com.luoyu.xposed.utils.QQUtil
 
-import com.luoyu.camellia.qqmanager.QRoute
         
 import de.robv.android.xposed.XposedHelpers
 

@@ -4,7 +4,7 @@ import de.robv.android.xposed.IXposedHookLoadPackage
 import de.robv.android.xposed.IXposedHookZygoteInit
 import de.robv.android.xposed.callbacks.XC_LoadPackage
 
-import com.luoyu.camellia.utils.PathUtil
+import com.luoyu.utils.PathUtil
 
 class Hook_Entry : IXposedHookLoadPackage, IXposedHookZygoteInit {
 

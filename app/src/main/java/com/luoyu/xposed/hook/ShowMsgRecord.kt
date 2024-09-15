@@ -11,12 +11,10 @@ import com.luoyu.xposed.base.annotations.Xposed_Item_Finder
 
 import com.luoyu.xposed.data.module.HostInfo
 
-import com.luoyu.camellia.interfaces.IDexFinder
-import com.luoyu.camellia.utils.ClassUtil
-import com.luoyu.camellia.utils.MethodUtil
-import com.luoyu.camellia.utils.Util
-
-import com.luoyu.camellia.utils.Xposed_Bridge
+import com.luoyu.dexfinder.IDexFinder
+import com.luoyu.utils.ClassUtil
+import com.luoyu.utils.MethodUtil
+import com.luoyu.utils.Util
 
 import com.luoyu.xposed.base.HookEnv
 import com.luoyu.xposed.ModuleController

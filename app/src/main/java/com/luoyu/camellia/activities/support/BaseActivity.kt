@@ -12,11 +12,12 @@ import android.view.WindowManager
 
 import androidx.fragment.app.FragmentActivity
 
-import com.luoyu.camellia.utils.XRes
+import com.luoyu.utils.MergeClassLoader
+import com.luoyu.utils.XRes
 
 open class BaseActivity : FragmentActivity() {
 
-    private val mLoader = BaseActivityClassLoader(BaseActivity::class.java.classLoader)
+    private val mLoader = MergeClassLoader(BaseActivity::class.java.classLoader,ActivityProxyManager.HostClassLoader)
 
     override fun getClassLoader(): ClassLoader = mLoader
 
@@ -52,7 +53,7 @@ open class BaseActivity : FragmentActivity() {
         }
     }
 
-    private class BaseActivityClassLoader(referencer: ClassLoader) : ClassLoader() {
+ /*   private class BaseActivityClassLoader(referencer: ClassLoader) : ClassLoader() {
         private val mBaseReferencer: ClassLoader = referencer
         private val mHostReferencer: ClassLoader = ActivityProxyManager.HostClassLoader
 
@@ -77,6 +78,6 @@ open class BaseActivity : FragmentActivity() {
             }
             return mBaseReferencer.loadClass(name)
         }
-    }
+    }*/
 }
 

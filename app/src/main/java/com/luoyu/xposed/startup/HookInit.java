@@ -15,12 +15,12 @@ import com.luoyu.xposed.data.module.HostInfo;
 import com.luoyu.xposed.hook.PlusMenuInject;
 import com.luoyu.xposed.hook.SettingMenuInject;
 
-import com.luoyu.camellia.utils.AppUtil;
-import com.luoyu.camellia.utils.ClassUtil;
-import com.luoyu.camellia.utils.FileUtil;
-import com.luoyu.camellia.utils.MergeClassLoader;
-import com.luoyu.camellia.utils.PathUtil;
-import com.luoyu.camellia.utils.XRes;
+import com.luoyu.utils.AppUtil;
+import com.luoyu.utils.ClassUtil;
+import com.luoyu.utils.FileUtil;
+import com.luoyu.utils.MergeClassLoader;
+import com.luoyu.utils.PathUtil;
+import com.luoyu.utils.XRes;
 
 import com.luoyu.xposed.logging.LogCat;
 import de.robv.android.xposed.XC_MethodHook;

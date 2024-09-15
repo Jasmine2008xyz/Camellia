@@ -16,7 +16,7 @@ import android.os.PersistableBundle;
 import android.os.TestLooperManager;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
-import com.luoyu.camellia.utils.XRes;
+import com.luoyu.utils.XRes;
 
 public class ProxyInstrumentation extends Instrumentation {
     private final Instrumentation mBase;

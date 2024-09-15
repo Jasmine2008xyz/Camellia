@@ -1,4 +1,4 @@
-package com.luoyu.camellia.utils;
+package com.luoyu.utils;
 
 import android.content.Context;
 import android.content.res.Configuration;

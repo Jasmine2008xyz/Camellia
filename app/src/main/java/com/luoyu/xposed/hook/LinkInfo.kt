@@ -9,11 +9,11 @@ import com.luoyu.xposed.base.annotations.Xposed_Item_UiLongClick
 import com.luoyu.xposed.base.HookEnv
 import com.luoyu.xposed.ModuleController
 
-import com.luoyu.camellia.interfaces.IDexFinder
+import com.luoyu.dexfinder.IDexFinder
 import com.luoyu.xposed.startup.HookInit
 
-import com.luoyu.camellia.utils.ClassUtil
-import com.luoyu.camellia.utils.MethodUtil
+import com.luoyu.utils.ClassUtil
+import com.luoyu.utils.MethodUtil
 
 import de.robv.android.xposed.XC_MethodHook
 import de.robv.android.xposed.XposedBridge

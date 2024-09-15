@@ -2,7 +2,7 @@ package com.luoyu.xposed.logging;
 
 import androidx.annotation.NonNull;
 import java.io.File;
-import com.luoyu.camellia.utils.FileUtil;
+import com.luoyu.utils.FileUtil;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 

@@ -1,4 +1,4 @@
-package com.luoyu.camellia.utils;
+package com.luoyu.utils;
 
 import android.graphics.Color;
 import android.os.Build;
@@ -6,7 +6,9 @@ import android.text.Html;
 import android.text.Spanned;
 
 public final class ParseUtil {
-    private ParseUtil() {}
+    private ParseUtil() {
+        throw new RuntimeException("No instance for you!");
+    }
 
     public static int parseColor(String color) {
         return Color.parseColor(color);

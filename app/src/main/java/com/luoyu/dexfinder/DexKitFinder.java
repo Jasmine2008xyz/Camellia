@@ -1,8 +1,7 @@
 package com.luoyu.dexfinder;
 
-import com.luoyu.camellia.interfaces.IDexFinder;
-import com.luoyu.camellia.utils.FileUtil;
-import com.luoyu.camellia.utils.PathUtil;
+import com.luoyu.utils.FileUtil;
+import com.luoyu.utils.PathUtil;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,6 +1,6 @@
-package com.luoyu.camellia.qqmanager
+package com.luoyu.xposed.utils
 
-import com.luoyu.camellia.utils.ClassUtil
+import com.luoyu.utils.ClassUtil
 import de.robv.android.xposed.XposedHelpers
 
 class QQUtil {

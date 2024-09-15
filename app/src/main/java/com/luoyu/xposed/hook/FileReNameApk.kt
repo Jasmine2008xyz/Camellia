@@ -10,13 +10,13 @@ import com.luoyu.xposed.base.QQApi
 import com.luoyu.xposed.base.HookEnv
 import com.luoyu.xposed.ModuleController
 
-import com.luoyu.camellia.utils.Classes
-import com.luoyu.camellia.utils.ClassUtil
-import com.luoyu.camellia.utils.MethodUtil
-import com.luoyu.camellia.utils.Util
+import com.luoyu.utils.Classes
+import com.luoyu.utils.ClassUtil
+import com.luoyu.utils.MethodUtil
+import com.luoyu.utils.Util
 
-import com.luoyu.camellia.qqmessage.MsgUtil
-import com.luoyu.camellia.qqmessage.MsgElementCreator
+import com.luoyu.xposed.message.MsgUtil
+import com.luoyu.xposed.message.MsgElementCreator
 
 import com.tencent.qqnt.kernel.nativeinterface.FileElement
 import com.tencent.qqnt.kernel.nativeinterface.TextElement

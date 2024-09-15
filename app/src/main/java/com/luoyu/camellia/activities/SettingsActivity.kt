@@ -27,7 +27,7 @@ import com.luoyu.xposed.ModuleController
 import com.luoyu.camellia.model.SettingOpt
 
 import com.luoyu.camellia.utils.showToast
-import com.luoyu.camellia.utils.Util
+import com.luoyu.utils.Util
 import com.luoyu.camellia.utils.IntentUtil
 
 import com.luoyu.camellia.activities.helper.ActivityAttributes

@@ -1,14 +1,13 @@
 package com.luoyu.dexfinder;
 
 import androidx.annotation.NonNull;
-import com.luoyu.camellia.interfaces.IDexMember;
 import java.io.Serializable;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 @Deprecated
-public final class DexMethod implements Serializable, IDexMember {
+public final class DexMethod implements Serializable {
 
     public static final String TAG = "DexMethod";
 

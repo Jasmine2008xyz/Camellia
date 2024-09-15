@@ -14,11 +14,11 @@ import com.luoyu.xposed.ModuleController;
 import com.luoyu.xposed.logging.LogCat;
 import com.luoyu.xposed.startup.DexFinderProcessor;
 import com.luoyu.xposed.startup.HookInit;
-import com.luoyu.camellia.utils.ClassUtil;
-import com.luoyu.camellia.utils.ConstructorUtil;
-import com.luoyu.camellia.utils.FileUtil;
-import com.luoyu.camellia.utils.PathUtil;
-import com.luoyu.camellia.utils.XRes;
+import com.luoyu.utils.ClassUtil;
+import com.luoyu.utils.ConstructorUtil;
+import com.luoyu.utils.FileUtil;
+import com.luoyu.utils.PathUtil;
+import com.luoyu.utils.XRes;
 
 import com.luoyu.xposed.ModuleController;
 import de.robv.android.xposed.XC_MethodHook;
@@ -91,7 +91,7 @@ public class SettingMenuInject {
                                         || !HookInit.getSign()
                                                 .equals(
                                                         FileUtil.readFileString(
-                                                                PathUtil.ApkDataPath + "Sign")))
+                                                                PathUtil.getApkDataPath() + "Sign")))
                                     title = "Camellia[未激活]";
                                 else title = "Camellia";
                                 Object mItem =

@@ -1,8 +1,7 @@
-package com.luoyu.camellia.utils
+package com.luoyu.utils
 
 import com.luoyu.xposed.data.module.HostInfo
 
-import com.luoyu.camellia.utils.ClassUtil
 
 class Classes {
     

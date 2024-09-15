@@ -2,8 +2,8 @@ package com.luoyu.config;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.luoyu.camellia.utils.FileUtil;
-import com.luoyu.camellia.utils.PathUtil;
+import com.luoyu.utils.FileUtil;
+import com.luoyu.utils.PathUtil;
 import com.luoyu.xposed.logging.LogCat;
 import java.util.List;
 import org.json.JSONObject;

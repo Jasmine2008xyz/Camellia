@@ -1,4 +1,4 @@
-package com.luoyu.camellia.utils;
+package com.luoyu.utils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;

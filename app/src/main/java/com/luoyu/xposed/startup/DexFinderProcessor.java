@@ -14,13 +14,13 @@ import com.luoyu.xposed.base.annotations.Xposed_Item_Controller;
 import com.luoyu.xposed.base.annotations.Xposed_Item_Finder;
 import com.luoyu.xposed.base.HookEnv;
 
-import com.luoyu.camellia.interfaces.IDexFinder;
+import com.luoyu.dexfinder.IDexFinder;
 import com.luoyu.camellia.ui.widget.RDialog;
-import com.luoyu.camellia.utils.ActivityUtil;
-import com.luoyu.camellia.utils.AppUtil;
-import com.luoyu.camellia.utils.FileUtil;
-import com.luoyu.camellia.utils.PathUtil;
-import com.luoyu.camellia.utils.Util;
+import com.luoyu.utils.ActivityUtil;
+import com.luoyu.utils.AppUtil;
+import com.luoyu.utils.FileUtil;
+import com.luoyu.utils.PathUtil;
+import com.luoyu.utils.Util;
 import com.luoyu.dexfinder.DexKitFinder;
 
 import com.luoyu.xposed.logging.LogCat;
