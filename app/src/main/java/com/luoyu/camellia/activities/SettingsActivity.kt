@@ -122,7 +122,7 @@ class SettingsActivity: BaseActivity() {
                     // Clean up cache
                     val file = File(PathUtil.getApkDataPath() + "cache")
                     if (file.exists()) {
-                        file.delete()
+                        FileUtil.deleteFile(file)
                     }
                     true
                 }

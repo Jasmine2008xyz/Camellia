@@ -69,7 +69,7 @@ public class HookInit {
     // Clean up cache
     File file = new File(PathUtil.getApkDataPath() + "cache");
     if (file.exists()) {
-      file.delete();
+      FileUtil.deleteFile(file);
     }
 
     // Start hook operations
