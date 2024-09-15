@@ -2,42 +2,29 @@ package com.luoyu.camellia.activities
 
 import android.content.Context
 import android.app.Activity
-
 import android.os.Bundle
-
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.Toolbar
-
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-
 import com.bumptech.glide.Glide
-
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-
 import com.luoyu.camellia.R
-
 import com.luoyu.camellia.activities.support.BaseActivity
-
 import com.luoyu.camellia.adapters.SettingsItemAdapter
-
 import com.luoyu.xposed.ModuleController
-
 import com.luoyu.camellia.model.SettingOpt
-
 import com.luoyu.camellia.utils.showToast
 import com.luoyu.utils.Util
 import com.luoyu.utils.Update
 import com.luoyu.utils.FileUtil
 import com.luoyu.utils.PathUtil
+import com.luoyu.xposed.utils.QQUtil
 import com.luoyu.camellia.utils.IntentUtil
-
 import com.luoyu.camellia.activities.helper.ActivityAttributes
-
 import com.tencent.mobileqq.widget.QQToast
-
 import java.io.File
 
 class SettingsActivity: BaseActivity() {
@@ -65,22 +52,24 @@ class SettingsActivity: BaseActivity() {
          */
         setTheme(R.style.AppTheme)
         
-        setContentView(R.layout.settings_activity)
+        setContentView(R.layout.setting_activity_v2)
         
         requestHideNavigationBar()
+        
+        initUserInfo()
         
         ActivityAttributes.context = this
         
         // 获取toolbar
-        val toolbar: Toolbar = findViewById(R.id.setting_title_toolbar)
+        val toolbar: Toolbar = findViewById(R.id.setting_v2_title_toolbar)
         // 获取RecyclerView
-        val recyclerView: RecyclerView = findViewById(R.id.setting_recyclerView)
+        val recyclerView: RecyclerView = findViewById(R.id.setting_v2_recyclerView)
         
-      //  val image_view: AppCompatImageView = findViewById(R.id.setting_image_view)
+    //    val image_view: AppCompatImageView = findViewById(R.id.setting_v2_background)
         // 初始化toolbar
         initToolBar(toolbar)
         
-     //   initBackground(image_view)
+      //  initBackground(image_view)
         // 设置RecyclerView的布局管理器
         val layoutManager = LinearLayoutManager(this)
         // 设置RecyclerView的适配器
@@ -150,5 +139,11 @@ class SettingsActivity: BaseActivity() {
     }
     .setPositiveButton("Leave", null)
     .show()
+    }
+    
+    private fun initUserInfo() {
+        val textview: TextView = findViewById(R.id.module_user_info_textview)
+        val qqUin = QQUtil.getCurrentUin()
+        textview.text = "-> 用户信息\n-> 登录账号：$qqUin"
     }
 }

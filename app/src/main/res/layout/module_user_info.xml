@@ -4,19 +4,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    android:checkable="true"
-    android:clickable="true"
-    android:layout_margin="5dp"
+    android:checkable="false"
+    android:clickable="false"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="5dp"
     style="?attr/materialCardViewElevatedStyle"
     app:cardCornerRadius="10dp"
+    android:minHeight="200dp"
     android:focusable="true"
-    android:id="@+id/setting_recyclerView_item">
+    android:id="@+id/module_user_info_cardview">
 
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_margin="16dp"
         android:textSize="16sp"
-        android:id="@+id/setting_item_name" />
+        android:textStyle="bold"
+        android:text="阿巴阿巴阿巴"
+        android:id="@+id/module_user_info_textview" />
 
 </com.google.android.material.card.MaterialCardView>

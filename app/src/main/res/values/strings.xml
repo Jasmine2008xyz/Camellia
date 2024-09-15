@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Camellia</string>
-    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_settings">Camellia Setting</string>
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>

@@ -16,62 +16,32 @@
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/LinkInfo.kt",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/res/layout/settings_activity.xml",
       "selection": {
         "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 54,
+          "index": 1257,
+          "line": 29
         },
         "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 54,
+          "index": 1257,
+          "line": 29
         }
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/assets/更新日志.txt",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/res/layout/setting_activity_v2.xml",
       "selection": {
         "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 45,
+          "index": 1002,
+          "line": 24
         },
         "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/assets/xposed_init",
-      "selection": {
-        "end": {
-          "column": 35,
-          "index": 35,
-          "line": 0
-        },
-        "start": {
-          "column": 35,
-          "index": 35,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/support/BaseActivity.kt",
-      "selection": {
-        "end": {
-          "column": 86,
-          "index": 570,
-          "line": 19
-        },
-        "start": {
-          "column": 86,
-          "index": 570,
-          "line": 19
+          "column": 45,
+          "index": 1002,
+          "line": 24
         }
       }
     },
@@ -79,89 +49,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/MainActivity.kt",
       "selection": {
         "end": {
-          "column": 19,
-          "index": 798,
-          "line": 19
+          "column": 46,
+          "index": 2371,
+          "line": 60
         },
         "start": {
-          "column": 19,
-          "index": 798,
-          "line": 19
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/http/HttpSender.java",
-      "selection": {
-        "end": {
-          "column": 42,
-          "index": 3813,
-          "line": 110
-        },
-        "start": {
-          "column": 42,
-          "index": 3813,
-          "line": 110
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/utils/Update.kt",
-      "selection": {
-        "end": {
-          "column": 12,
-          "index": 1605,
-          "line": 46
-        },
-        "start": {
-          "column": 12,
-          "index": 1605,
-          "line": 46
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/AndroidManifest.xml",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 109,
-          "line": 2
-        },
-        "start": {
-          "column": 0,
-          "index": 109,
-          "line": 2
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/utils/CheckClassType.java",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/utils/AppUtil.java",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 573,
-          "line": 19
-        },
-        "start": {
-          "column": 0,
-          "index": 573,
-          "line": 19
+          "column": 46,
+          "index": 2371,
+          "line": 60
         }
       }
     },
@@ -169,77 +64,152 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/SettingsActivity.kt",
       "selection": {
         "end": {
-          "column": 49,
-          "index": 4167,
-          "line": 124
-        },
-        "start": {
-          "column": 49,
-          "index": 4167,
-          "line": 124
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/res/menu/setting_toolbar.xml",
-      "selection": {
-        "end": {
-          "column": 27,
-          "index": 480,
-          "line": 16
-        },
-        "start": {
-          "column": 27,
-          "index": 480,
-          "line": 16
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/core/BaseHook.java",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/core/HookInstaller.java",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/startup/HookInit.java",
-      "selection": {
-        "end": {
           "column": 32,
-          "index": 2498,
-          "line": 71
+          "index": 5223,
+          "line": 146
         },
         "start": {
-          "column": 6,
-          "index": 2472,
-          "line": 71
+          "column": 32,
+          "index": 5223,
+          "line": 146
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/support/BaseActivity.kt",
+      "selection": {
+        "end": {
+          "column": 5,
+          "index": 1870,
+          "line": 54
+        },
+        "start": {
+          "column": 5,
+          "index": 1870,
+          "line": 54
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/res/layout/setting_item.xml",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 812,
+          "line": 22
+        },
+        "start": {
+          "column": 0,
+          "index": 812,
+          "line": 22
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/res/layout/setting_switch.xml",
+      "selection": {
+        "end": {
+          "column": 31,
+          "index": 459,
+          "line": 9
+        },
+        "start": {
+          "column": 31,
+          "index": 459,
+          "line": 9
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/res/values/colors.xml",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/res/layout/module_user_info.xml",
+      "selection": {
+        "end": {
+          "column": 50,
+          "index": 972,
+          "line": 25
+        },
+        "start": {
+          "column": 25,
+          "index": 947,
+          "line": 25
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/res/values/strings.xml",
+      "selection": {
+        "end": {
+          "column": 59,
+          "index": 156,
+          "line": 3
+        },
+        "start": {
+          "column": 59,
+          "index": 156,
+          "line": 3
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/utils/QQUtil.kt",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/ui/widget/RDialog.java",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/ui/base/EasyButton.java",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 224,
+          "line": 7
+        },
+        "start": {
+          "column": 0,
+          "index": 224,
+          "line": 7
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/startup/HookInit.java"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/SettingsActivity.kt"
 }

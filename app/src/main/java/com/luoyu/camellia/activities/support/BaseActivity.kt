@@ -51,6 +51,7 @@ open class BaseActivity : FragmentActivity() {
                     View.SYSTEM_UI_FLAG_FULLSCREEN
             decorView.systemUiVisibility = uiOptions
         }
+        
     }
 
   private class BaseActivityClassLoader(referencer: ClassLoader) : ClassLoader() {
