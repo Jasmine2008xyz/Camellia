@@ -29,8 +29,8 @@ import net.bytebuddy.implementation.FixedValue
 import net.bytebuddy.implementation.MethodCall
 import net.bytebuddy.android.AndroidClassLoadingStrategy
 
-@Xposed_Item_Controller(itemTag = "展示链接信息")
-class LinkInfo {
+@Xposed_Item_Controller(itemTag = "屏蔽链接信息")
+class FuckLinkInfo {
 
     @Xposed_Item_Finder
     fun find(finder: IDexFinder) {
@@ -65,9 +65,9 @@ class LinkInfo {
             })
             */
             XposedBridge.hookAllConstructors(ClassUtil.get("com.tencent.qqnt.kernel.nativeinterface.LinkInfo"),object : XC_MethodHook() {
-            override fun afterHookedMethod(param: MethodHookParam) {
-                super.afterHookedMethod(param)
-                 param.thisObject = null
+            override fun beforeHookedMethod(param: MethodHookParam) {
+                super.beforeHookedMethod(param)
+                 if(param.args[0]!=null) param.setResult(null)
                 }
             })
     }

@@ -21,9 +21,12 @@ import com.luoyu.utils.Util
 import com.luoyu.utils.Update
 import com.luoyu.utils.FileUtil
 import com.luoyu.utils.PathUtil
+import com.luoyu.utils.AppUtil
 import com.luoyu.xposed.utils.QQUtil
+import com.luoyu.xposed.data.module.HostInfo
 import com.luoyu.camellia.utils.IntentUtil
 import com.luoyu.camellia.activities.helper.ActivityAttributes
+import com.luoyu.camellia.BuildConfig
 import com.tencent.mobileqq.widget.QQToast
 import java.io.File
 
@@ -38,7 +41,9 @@ class SettingsActivity: BaseActivity() {
             settingsItemList.add(SettingOpt(settingsItemList.size,"修改图片大小",SettingOpt.TYPE_SWITCH))
             settingsItemList.add(SettingOpt(settingsItemList.size,"长按消息菜单添加显示MsgRecord项",SettingOpt.TYPE_SWITCH))
             settingsItemList.add(SettingOpt(settingsItemList.size,"文件重命名apk.1",SettingOpt.TYPE_SWITCH))
-            settingsItemList.add(SettingOpt(settingsItemList.size,"展示链接信息",SettingOpt.TYPE_SWITCH))
+            settingsItemList.add(SettingOpt(settingsItemList.size,"屏蔽链接信息",SettingOpt.TYPE_SWITCH))
+            settingsItemList.add(SettingOpt(settingsItemList.size,"屏蔽拍一拍Timing",SettingOpt.TYPE_SWITCH))
+            settingsItemList.add(SettingOpt(settingsItemList.size,"一键20赞",SettingOpt.TYPE_SWITCH))
             settingsItemList.add(SettingOpt(settingsItemList.size,"跳转网页功能",SettingOpt.TYPE_ITEM))
         }
         
@@ -144,6 +149,9 @@ class SettingsActivity: BaseActivity() {
     private fun initUserInfo() {
         val textview: TextView = findViewById(R.id.module_user_info_textview)
         val qqUin = QQUtil.getCurrentUin()
-        textview.text = "-> 用户信息\n-> 登录账号：$qqUin"
+        val qqVersionName = AppUtil.getHostInfo(this)
+        val moduleVersionName = BuildConfig.VERSION_NAME
+        val moduleVersionCode = BuildConfig.VERSION_CODE
+        textview.text = "-> 登录账号：${qqUin}\n-> 用户身份：普通用户\n-> QQ版本：${qqVersionName}\n-> 模块版本：${moduleVersionName}(${moduleVersionCode})\n-> 版本一言：月光太冷真的难入喉。"
     }
 }

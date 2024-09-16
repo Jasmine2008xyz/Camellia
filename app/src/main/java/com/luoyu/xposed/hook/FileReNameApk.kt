@@ -9,14 +9,17 @@ import com.luoyu.xposed.base.annotations.Xposed_Item_UiLongClick
 import com.luoyu.xposed.base.QQApi
 import com.luoyu.xposed.base.HookEnv
 import com.luoyu.xposed.ModuleController
+import com.luoyu.xposed.base.QRoute
 
 import com.luoyu.utils.Classes
 import com.luoyu.utils.ClassUtil
 import com.luoyu.utils.MethodUtil
 import com.luoyu.utils.Util
+import com.luoyu.xposed.logging.LogCat
 
 import com.luoyu.xposed.message.MsgUtil
 import com.luoyu.xposed.message.MsgElementCreator
+import com.luoyu.utils.Hooker
 
 import com.tencent.qqnt.kernel.nativeinterface.FileElement
 import com.tencent.qqnt.kernel.nativeinterface.TextElement
@@ -126,11 +129,31 @@ class FileReNameApk {
                     super.beforeHookedMethod(param)
                     param.args[0] = 4
                     }})*/
-                  /*  XposedBridge.hookAllConstructors(ClassUtil.get("com.tencent.qqnt.kernel.nativeinterface.FileElement"), object: XC_MethodHook () {
+               /*    XposedBridge.hookAllConstructors(ClassUtil.get("com.tencent.qqnt.kernel.nativeinterface.FileElement"), object: XC_MethodHook () {
                     override fun afterHookedMethod(param: MethodHookParam) {
                     super.afterHookedMethod(param)
+                  //  LogCat.d("测试溯源",Hooker.getStackData())
                     val file: FileElement = param.thisObject as FileElement
-                    file.transferStatus=5
+                /*  file.fileName="测试文件.apk"
+                    file.fileMd5="123456"
+                    file.fileBizId=102
+                    file.subElementType=15
+                    file.transferStatus=4
+                    file.fileUuid="/1122"
+                    file.fileSize=9223372036854775807L
+                    file.picHeight=1024
+                    file.picWidth=1024
+                    file.filePath=""*/
+                    }
+                })
+                
+                XposedBridge.hookMethod(MethodUtil.create(ClassUtil.get("com.tencent.mobileqq.filemanager.nt.bi")).setMethodName("j0").get(HookEnv.getHostClassLoader()), object: XC_MethodHook () {
+                    override fun beforeHookedMethod(param: MethodHookParam) {
+                    super.beforeHookedMethod(param)
+                //    param.args[0].javaClass.getSuperclass().getDeclaredField("LocalFile").set(param.args[0],"")
+                    param.args[0].javaClass.getSuperclass().getDeclaredField("ProgressTotal").set(param.args[0],1000000L)
+                    param.args[0].javaClass.getSuperclass().getDeclaredField("Md5").set(param.args[0],"123456".toByteArray())
+                    
                     }
                 })*/
              //   val m = XposedHelpers.
@@ -149,7 +172,6 @@ class FileReNameApk {
                    // param.setResult(null)
                     }})
                     */
-                    
   }
  /* @Xposed_Item_UiLongClick
   fun click() {

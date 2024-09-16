@@ -1,42 +1,17 @@
 package com.luoyu.xposed.startup;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.Context;
-import android.util.Log;
-
-import com.luoyu.camellia.BuildConfig;
-import com.luoyu.camellia.activities.support.ActivityProxyManager;
-import com.luoyu.xposed.ModuleController;
-import com.luoyu.xposed.base.annotations.Xposed_Item_Controller;
-import com.luoyu.xposed.base.annotations.Xposed_Item_Entry;
-import com.luoyu.xposed.base.HookEnv;
-import com.luoyu.xposed.core.BaseHook;
-import com.luoyu.xposed.core.HookInstaller;
-
-import com.luoyu.xposed.hook.PlusMenuInject;
-import com.luoyu.xposed.hook.SettingMenuInject;
-
-import com.luoyu.utils.AppUtil;
 import com.luoyu.utils.ClassUtil;
 import com.luoyu.utils.FileUtil;
 import com.luoyu.utils.MergeClassLoader;
 import com.luoyu.utils.PathUtil;
-import com.luoyu.utils.XRes;
-
+import com.luoyu.xposed.base.HookEnv;
+import com.luoyu.xposed.core.BaseHook;
 import com.luoyu.xposed.logging.LogCat;
-import de.robv.android.xposed.XC_MethodHook;
 import de.robv.android.xposed.XposedBridge;
-import de.robv.android.xposed.XposedHelpers;
 import de.robv.android.xposed.callbacks.XC_LoadPackage;
-
 import java.io.File;
-import org.json.JSONObject;
-
 import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class HookInit {
