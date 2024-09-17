@@ -51,6 +51,7 @@ public class OpenRedPacket {
       String groupuin,
       String SenderUin,
       String Desc) {
+        InitKeyIndex();
     try {
       StringBuilder postData = new StringBuilder();
       postData
@@ -79,7 +80,7 @@ public class OpenRedPacket {
           .append(SenderUin);
       // true
       String data = EncText(postData.toString(), "hb_pre_grapver=2.0&chv=3");
-            LogCat.d("加密",data);
+         //   LogCat.d("加密",data);
       Intent NewIntent =
           ConstructorUtil.callConstrutor(
               ClassUtil.load("mqq.app.NewIntent"),
@@ -108,15 +109,16 @@ public class OpenRedPacket {
           "set",
           void.class,
           new Class[] {String.class},
-          Integer.toString(KeyIndex));
+         /* Integer.toString(KeyIndex)*/KeyIndex+"");
   /*    MMethod.CallMethod(
           MField.GetField(QQHBRequest, "reqBody"), "set", void.class, new Class[] {ClassUtil.get("com.tencent.mobileqq.pb.ByteStringMicro")}, new Object[]{ConstructorUtil.callConstrutor(ClassUtil.get("com.tencent.mobileqq.pb.ByteStringMicro"),new Class[]{byte[].class},new byte[]{1})});
+            */
     MMethod.CallMethod(
           MField.GetField(QQHBRequest, "enType"), "set", void.class, new Class[] {int.class}, new Object[]{0});
-            */
+            
       NewIntent.putExtra(
           "data", a(MMethod.CallMethod(QQHBRequest, "toByteArray", byte[].class, new Class[0])));
-
+//LogCat.d("data", a(MMethod.CallMethod(QQHBRequest, "toByteArray", byte[].class, new Class[0])));
       MMethod.CallMethod(
           NewIntent,
           "setObserver",
@@ -127,7 +129,9 @@ public class OpenRedPacket {
               new Class[] {ClassUtil.load("mqq.observer.BusinessObserver")},
               (proxy, method, args) -> {
                 Bundle bundle = (Bundle) args[2];
-                byte[] dataaaa = bundle.getByteArray("data");
+            //            LogCat.d("bundle",bundle.toString());
+                byte[] dataaaa = bundle.getByteArray("rsp_bytes");
+                     //   LogCat.d("data",dataaaa);
                 Object HBReply =
                     ConstructorUtil.callConstrutor(
                         ClassUtil.load("tencent.im.qqwallet.QWalletHbPreGrab$QQHBReply"),
@@ -144,7 +148,7 @@ public class OpenRedPacket {
                 Result = DecText(Result, "hb_pre_grap");
                 JSONObject grapJSON = new JSONObject(Result);
                 // MLogCat.Print_Debug(Result);
-
+LogCat.d("调试grapJSON",grapJSON.toString());
                 if (grapJSON.optString("retcode").equals("0") && grapJSON.has("pre_grap_token")) {
                   String preCode = grapJSON.getString("pre_grap_token");
 
@@ -154,6 +158,7 @@ public class OpenRedPacket {
                       .append(AuthKey)
                       .append("&hb_from=0")
                       .append("&groupid=")
+                         //   .append("&groupuin=")
                       .append(groupuin)
                       .append("&agreement=")
                       .append(0)
@@ -238,6 +243,7 @@ public class OpenRedPacket {
 
       String decResult =
           DecText(ret, "https://mqq.tenpay.com/cgi-bin/hongbao/qpay_hb_na_grap.cgi?");
+          //  LogCat.d("Result",decResult);
       return decResult;
     } catch (Exception e) {
       return null;
@@ -247,6 +253,7 @@ public class OpenRedPacket {
   public static void DecodeJson(String JSONData, String TroopUin, String SenderUin, String Desc) {
     try {
       JSONObject json = new JSONObject(JSONData);
+            LogCat.d("json",json.toString());
       try {
         String skey = json.getString("skey");
         String skeyTime = json.getString("skey_expire");
@@ -339,11 +346,11 @@ public class OpenRedPacket {
               new Class[] {String.class, String.class, int.class, String.class, String.class,String.class},
               QQUtil.getCurrentUin(),
               URL,
-              6,
+              KeyIndex,
               text,
               "0C7pJeOaKNhgMmQWl0dhkxobtQCQVh97Sv7ebxugbCw_",
                 "F3CF43293EFA13ED060E89DC0F4A6712");
-            LogCat.d("获取对象",encResult.toString());
+         //   LogCat.d("获取对象",encResult.toString());
       return (String)XposedHelpers.getObjectField(encResult,"encText");
             //MField.GetField(encResult, "encText");
 
@@ -362,7 +369,7 @@ public class OpenRedPacket {
 
   private static int getKeyIndex() {
     int index = (int) ModuleController.Config.getData("keyIndex", -1);
-    long time = (Long) ModuleController.Config.getData("SkeyTime", 0);
+    long time = (int) ModuleController.Config.getData("SkeyTime", 0);
     if (time < System.currentTimeMillis()) return new Random().nextInt(16);
     if (index > -1) return index;
     return new Random().nextInt(16);
