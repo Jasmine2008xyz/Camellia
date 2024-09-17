@@ -52,5 +52,17 @@ public class BaseHook {
             HookEnv.put("HostActivity", activity);
           }
         });
+
+    XposedHelpers.findAndHookConstructor(
+        ClassUtil.load("com.tencent.mobileqq.app.QQAppInterface"),
+        ClassUtil.load("com.tencent.common.app.BaseApplicationImpl"),
+        String.class,
+        new XC_MethodHook() {
+          @Override
+          protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+            super.beforeHookedMethod(param);
+            HookEnv.put("AppInterFace", param.thisObject);
+          }
+        });
   }
 }

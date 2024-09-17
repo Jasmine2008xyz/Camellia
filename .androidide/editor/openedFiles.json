@@ -1,107 +1,17 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/startup/Hook_Entry.kt",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/redpacket/OpenRedPacket.java",
       "selection": {
         "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 47,
+          "index": 2692,
+          "line": 84
         },
         "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/FileReNameApk.kt",
-      "selection": {
-        "end": {
-          "column": 20,
-          "index": 7451,
-          "line": 157
-        },
-        "start": {
-          "column": 20,
-          "index": 7451,
-          "line": 157
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/module/ModuleInjectSetting.java",
-      "selection": {
-        "end": {
-          "column": 25,
-          "index": 308,
-          "line": 8
-        },
-        "start": {
-          "column": 25,
-          "index": 308,
-          "line": 8
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/FuckPaiYiPaiLimit.kt",
-      "selection": {
-        "end": {
-          "column": 163,
-          "index": 949,
-          "line": 21
-        },
-        "start": {
-          "column": 163,
-          "index": 949,
-          "line": 21
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/SettingsActivity.kt",
-      "selection": {
-        "end": {
-          "column": 72,
-          "index": 2066,
-          "line": 45
-        },
-        "start": {
-          "column": 72,
-          "index": 2066,
-          "line": 45
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/MainActivity.kt",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/Send20Zan.kt",
-      "selection": {
-        "end": {
-          "column": 68,
-          "index": 4046,
-          "line": 103
-        },
-        "start": {
-          "column": 68,
-          "index": 4046,
-          "line": 103
+          "column": 30,
+          "index": 2675,
+          "line": 84
         }
       }
     },
@@ -109,47 +19,17 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/PlusMenuInject.java",
       "selection": {
         "end": {
-          "column": 35,
-          "index": 3345,
-          "line": 75
+          "column": 157,
+          "index": 5189,
+          "line": 119
         },
         "start": {
-          "column": 35,
-          "index": 3345,
-          "line": 75
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/startup/HookInit.java",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/ModuleController.java",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 157,
+          "index": 5189,
+          "line": 119
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/Send20Zan.kt"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/redpacket/OpenRedPacket.java"
 }
