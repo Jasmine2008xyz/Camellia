@@ -40,7 +40,7 @@ public class OpenRedPacket {
   private static final String hb_pre_grap =
       "https://mqq.tenpay.com/cgi-bin/hongbao/hb_pre_grap.cgi?ver=2.0&chv=3";
   static int KeyIndex = -1;
-   public static String str5="";
+  public static String str5 = "";
 
   public static void OpenLuckyRedPack(
       String AuthKey,
@@ -51,7 +51,7 @@ public class OpenRedPacket {
       String groupuin,
       String SenderUin,
       String Desc) {
-        InitKeyIndex();
+    InitKeyIndex();
     try {
       StringBuilder postData = new StringBuilder();
       postData
@@ -80,13 +80,14 @@ public class OpenRedPacket {
           .append(SenderUin);
       // true
       String data = EncText(postData.toString(), "hb_pre_grapver=2.0&chv=3");
-         //   LogCat.d("加密",data);
+      //   LogCat.d("加密",data);
       Intent NewIntent =
           ConstructorUtil.callConstrutor(
               ClassUtil.load("mqq.app.NewIntent"),
               new Class[] {Context.class, Class.class},
               MField.GetField(null, ClassUtil.load("mqq.app.MobileQQ"), "sMobileQQ", 1),
-              ClassUtil.load(/*"com.tencent.mobileqq.qwallet.servlet.GdtAdServlet"*/"com.tencent.mobileqq.qwallet.e.g"));
+              ClassUtil.load(
+                  /*"com.tencent.mobileqq.qwallet.servlet.GdtAdServlet"*/ "com.tencent.mobileqq.qwallet.e.b"));
       NewIntent.putExtra("cmd", "trpc.qqhb.qqhb_proxy.Handler.sso_handle");
 
       Object QQHBRequest =
@@ -109,16 +110,21 @@ public class OpenRedPacket {
           "set",
           void.class,
           new Class[] {String.class},
-         /* Integer.toString(KeyIndex)*/KeyIndex+"");
-  /*    MMethod.CallMethod(
-          MField.GetField(QQHBRequest, "reqBody"), "set", void.class, new Class[] {ClassUtil.get("com.tencent.mobileqq.pb.ByteStringMicro")}, new Object[]{ConstructorUtil.callConstrutor(ClassUtil.get("com.tencent.mobileqq.pb.ByteStringMicro"),new Class[]{byte[].class},new byte[]{1})});
-            */
-    MMethod.CallMethod(
-          MField.GetField(QQHBRequest, "enType"), "set", void.class, new Class[] {int.class}, new Object[]{0});
-            
+          /* Integer.toString(KeyIndex)*/ KeyIndex + "");
+      /*    MMethod.CallMethod(
+      MField.GetField(QQHBRequest, "reqBody"), "set", void.class, new Class[] {ClassUtil.get("com.tencent.mobileqq.pb.ByteStringMicro")}, new Object[]{ConstructorUtil.callConstrutor(ClassUtil.get("com.tencent.mobileqq.pb.ByteStringMicro"),new Class[]{byte[].class},new byte[]{1})});
+        */
+      MMethod.CallMethod(
+          MField.GetField(QQHBRequest, "enType"),
+          "set",
+          void.class,
+          new Class[] {int.class},
+          new Object[] {0});
+
       NewIntent.putExtra(
           "data", a(MMethod.CallMethod(QQHBRequest, "toByteArray", byte[].class, new Class[0])));
-//LogCat.d("data", a(MMethod.CallMethod(QQHBRequest, "toByteArray", byte[].class, new Class[0])));
+      // LogCat.d("data", a(MMethod.CallMethod(QQHBRequest, "toByteArray", byte[].class, new
+      // Class[0])));
       MMethod.CallMethod(
           NewIntent,
           "setObserver",
@@ -129,9 +135,9 @@ public class OpenRedPacket {
               new Class[] {ClassUtil.load("mqq.observer.BusinessObserver")},
               (proxy, method, args) -> {
                 Bundle bundle = (Bundle) args[2];
-            //            LogCat.d("bundle",bundle.toString());
-                byte[] dataaaa = bundle.getByteArray("rsp_bytes");
-                     //   LogCat.d("data",dataaaa);
+                //            LogCat.d("bundle",bundle.toString());
+                byte[] dataaaa = bundle.getByteArray(/*"rsp_bytes"*/ "data");
+                //   LogCat.d("data",dataaaa);
                 Object HBReply =
                     ConstructorUtil.callConstrutor(
                         ClassUtil.load("tencent.im.qqwallet.QWalletHbPreGrab$QQHBReply"),
@@ -148,7 +154,7 @@ public class OpenRedPacket {
                 Result = DecText(Result, "hb_pre_grap");
                 JSONObject grapJSON = new JSONObject(Result);
                 // MLogCat.Print_Debug(Result);
-LogCat.d("调试grapJSON",grapJSON.toString());
+                LogCat.d("调试grapJSON", grapJSON.toString());
                 if (grapJSON.optString("retcode").equals("0") && grapJSON.has("pre_grap_token")) {
                   String preCode = grapJSON.getString("pre_grap_token");
 
@@ -158,7 +164,7 @@ LogCat.d("调试grapJSON",grapJSON.toString());
                       .append(AuthKey)
                       .append("&hb_from=0")
                       .append("&groupid=")
-                         //   .append("&groupuin=")
+                      //   .append("&groupuin=")
                       .append(groupuin)
                       .append("&agreement=")
                       .append(0)
@@ -211,7 +217,7 @@ LogCat.d("调试grapJSON",grapJSON.toString());
             new Thread(
                 () -> {
                   builder.append(POSTForGrapCgi(PostData, skey));
-                });
+              });
         newThread.start();
         newThread.join();
         return builder.toString();
@@ -243,7 +249,7 @@ LogCat.d("调试grapJSON",grapJSON.toString());
 
       String decResult =
           DecText(ret, "https://mqq.tenpay.com/cgi-bin/hongbao/qpay_hb_na_grap.cgi?");
-          //  LogCat.d("Result",decResult);
+      //  LogCat.d("Result",decResult);
       return decResult;
     } catch (Exception e) {
       return null;
@@ -253,7 +259,7 @@ LogCat.d("调试grapJSON",grapJSON.toString());
   public static void DecodeJson(String JSONData, String TroopUin, String SenderUin, String Desc) {
     try {
       JSONObject json = new JSONObject(JSONData);
-            LogCat.d("json",json.toString());
+      LogCat.d("json", json.toString());
       try {
         String skey = json.getString("skey");
         String skeyTime = json.getString("skey_expire");
@@ -330,29 +336,31 @@ LogCat.d("调试grapJSON",grapJSON.toString());
   // true
   private static String EncText(String text, String URL) {
     try {
-            
+
       Object EncRequest =
           ConstructorUtil.callConstrutor(
               ClassUtil.load("com.tenpay.sdk.basebl.EncryptRequest"),
               new Class[] {Context.class},
               HookEnv.getContext());
       String psKey = QQKeys.getPsKey("tenpay.com");
-           // LogCat.d("获取str5",""+text+"|"+URL);
+      // LogCat.d("获取str5",""+text+"|"+URL);
       Object encResult =
           MMethod.CallMethod(
               EncRequest,
               "encypt",
               ClassUtil.load("com.tenpay.sdk.basebl.EncryptRequest$Encrypt"),
-              new Class[] {String.class, String.class, int.class, String.class, String.class,String.class},
+              new Class[] {
+                String.class, String.class, int.class, String.class, String.class, String.class
+              },
               QQUtil.getCurrentUin(),
               URL,
               KeyIndex,
               text,
-              "0C7pJeOaKNhgMmQWl0dhkxobtQCQVh97Sv7ebxugbCw_",
-                "F3CF43293EFA13ED060E89DC0F4A6712");
-         //   LogCat.d("获取对象",encResult.toString());
-      return (String)XposedHelpers.getObjectField(encResult,"encText");
-            //MField.GetField(encResult, "encText");
+              getPskeyV2("tenpay.com"),
+              "F3CF43293EFA13ED060E89DC0F4A6712");
+      //   LogCat.d("获取对象",encResult.toString());
+      return (String) XposedHelpers.getObjectField(encResult, "encText");
+      // MField.GetField(encResult, "encText");
 
     } catch (Throwable th) {
       LogCat.e("RequestEncoder", th);
@@ -458,6 +466,19 @@ LogCat.d("调试grapJSON",grapJSON.toString());
       } catch (Exception unused3) {
         return null;
       }
+    }
+  }
+
+  @SuppressWarnings("deprecation")
+  public static String getPskeyV2(String url) {
+    try {
+      return (String)
+          XposedHelpers.callMethod(
+              ClassUtil.get("com.tenpay.sdk.net.core.processor.PsKeyProcessor").newInstance(),
+              "getPsKey",
+              url);
+    } catch (Exception err) {
+      throw new RuntimeException("获取Pskey错误:" + err);
     }
   }
 }
