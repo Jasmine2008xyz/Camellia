@@ -238,4 +238,9 @@ public class Reflex {
       this.paramsLength = paramsLength;
     }
   }
+  @Override
+    public String toString () {
+      return null;
+    }
+
 }
