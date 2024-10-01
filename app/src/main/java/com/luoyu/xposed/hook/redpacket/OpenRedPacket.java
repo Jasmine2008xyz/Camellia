@@ -17,6 +17,7 @@ import com.luoyu.xposed.base.HookEnv;
 import com.luoyu.xposed.logging.LogCat;
 import com.luoyu.xposed.manager.QQKeys;
 import com.luoyu.xposed.utils.QQUtil;
+import com.luoyu.xposed.base.QRoute;
 import de.robv.android.xposed.XposedHelpers;
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
@@ -357,7 +358,7 @@ public class OpenRedPacket {
               KeyIndex,
               text,
               getPskeyV2("tenpay.com"),
-              "F3CF43293EFA13ED060E89DC0F4A6712");
+              /*"F3CF43293EFA13ED060E89DC0F4A6712"*/(String) XposedHelpers.callMethod(QRoute.api(ClassUtil.get("com.tencent.mobileqq.qwallet.api.INewQWalletApi")), "hexGuid", new Object[0]));
       //   LogCat.d("获取对象",encResult.toString());
       return (String) XposedHelpers.getObjectField(encResult, "encText");
       // MField.GetField(encResult, "encText");
