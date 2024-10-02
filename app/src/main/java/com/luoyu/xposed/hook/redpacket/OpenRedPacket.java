@@ -357,7 +357,7 @@ public class OpenRedPacket {
               URL,
               KeyIndex,
               text,
-              getPskeyV2("tenpay.com"),
+              QQKeys.getPsKey("tenpay.com"),
               /*"F3CF43293EFA13ED060E89DC0F4A6712"*/(String) XposedHelpers.callMethod(QRoute.api(ClassUtil.get("com.tencent.mobileqq.qwallet.api.INewQWalletApi")), "hexGuid", new Object[0]));
       //   LogCat.d("获取对象",encResult.toString());
       return (String) XposedHelpers.getObjectField(encResult, "encText");
