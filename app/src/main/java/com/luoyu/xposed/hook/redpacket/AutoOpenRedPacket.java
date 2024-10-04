@@ -11,7 +11,9 @@ import com.luoyu.xposed.base.QQApi;
 import com.luoyu.utils.ClassUtil;
 import de.robv.android.xposed.XposedHelpers;
 import java.lang.reflect.Method;
+import com.luoyu.xposed.utils.QQUtil;
 
+import com.luoyu.utils.Classes;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 @Xposed_Item_Controller(itemTag = "自动抢红包")
