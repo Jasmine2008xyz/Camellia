@@ -11,13 +11,15 @@ import com.luoyu.xposed.base.QQApi;
 import com.luoyu.utils.ClassUtil;
 import de.robv.android.xposed.XposedHelpers;
 import java.lang.reflect.Method;
+
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 @Xposed_Item_Controller(itemTag = "自动抢红包")
 public class AutoOpenRedPacket {
     @Xposed_Item_UiLongClick
     public void onLongClick() {
         /*OpenRedPacket.OpenLuckyRedPack("ac202b77be50886b35b5286237187dcb8w","1","10000452012409163700114624310700",OpenRedPacket.getSkey(),1,"240214519","2968447202","[QQ红包]大吉大利");*/
-        Object contact = QQApi.createContact(2, "646945623");
+        Object contact = createContact(2, "646945623");
         ArrayList list = new ArrayList();
         try {
         Object msgElement = ClassUtil.get("com.tencent.qqnt.kernel.nativeinterface.MsgElement").newInstance();
@@ -64,4 +66,39 @@ public class AutoOpenRedPacket {
                 }
         });
     }
+    
+    public Object createContact(int chatType, String uid) {
+    Object contact;
+    try {
+        contact = Classes.getContactClass().newInstance();
+        Class<?> contactClass = contact.getClass();
+        
+        // 设置 chatType
+        Field chatTypeField = contactClass.getDeclaredField("chatType");
+        chatTypeField.setAccessible(true);
+        chatTypeField.set(contact, chatType);
+        
+        if (chatType == 2) {
+            Field peerUidField = contactClass.getDeclaredField("peerUid");
+            peerUidField.setAccessible(true);
+            peerUidField.set(contact, uid);
+        } else if (chatType == 4) {
+            Field guildIdField = contactClass.getDeclaredField("guildId");
+            guildIdField.setAccessible(true);
+            guildIdField.set(contact, uid);
+        } else if (uid.equals(QQUtil.getCurrentUin())) {
+            Field peerUidField = contactClass.getDeclaredField("peerUid");
+            peerUidField.setAccessible(true);
+       //     peerUidField.set(contact, getUidFromUin(uid));
+        } else {
+            Field peerUidField = contactClass.getDeclaredField("peerUid");
+            peerUidField.setAccessible(true);
+            peerUidField.set(contact, uid);
+        }
+        return contact;
+    } catch (Exception ex) {
+      //  LogCat.e("createContact错误", Util.getStackTraceString(ex));
+        throw new RuntimeException("create failed, since:" + ex);
+    }
+}
 }
