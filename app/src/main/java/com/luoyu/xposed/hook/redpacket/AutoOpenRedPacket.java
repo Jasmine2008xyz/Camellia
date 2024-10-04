@@ -12,7 +12,8 @@ import com.luoyu.utils.ClassUtil;
 import de.robv.android.xposed.XposedHelpers;
 import java.lang.reflect.Method;
 import com.luoyu.xposed.utils.QQUtil;
-
+import com.luoyu.xposed.logging.LogCat;
+import com.luoyu.utils.Util;
 import com.luoyu.utils.Classes;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -41,6 +42,7 @@ public class AutoOpenRedPacket {
        list.add(msgElement);
         MsgUtil.sendMsg(contact, list);
         }catch(Exception e){ 
+        LogCat.e("err",Util.getStackTraceString(e));
         }
     }
     @Xposed_Item_Finder
