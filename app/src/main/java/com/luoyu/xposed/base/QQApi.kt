@@ -18,7 +18,7 @@ import de.robv.android.xposed.XposedHelpers
 
 import java.lang.reflect.Method
 
-class QQApi {
+public class QQApi {
   companion object {
     
   /** uin转peerUid */

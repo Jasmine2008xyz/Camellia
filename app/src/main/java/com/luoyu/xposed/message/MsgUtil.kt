@@ -5,7 +5,7 @@ import java.lang.reflect.InvocationTargetException
 import com.luoyu.utils.ClassUtil
 import de.robv.android.xposed.XposedHelpers
 
-class MsgUtil {
+public class MsgUtil {
     companion object {
         @Throws(
             ClassNotFoundException::class,
