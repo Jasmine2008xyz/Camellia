@@ -26,9 +26,11 @@ public class AutoOpenRedPacket {
         ArrayList list = new ArrayList();
         try {
         Object msgElement = ClassUtil.get("com.tencent.qqnt.kernel.nativeinterface.MsgElement").newInstance();
-       XposedHelpers.setIntField(msgElement, "elementType", 18);
+       XposedHelpers.setIntField(msgElement, "elementType", 1);
+       
        Object textgift = ClassUtil.get("com.tencent.qqnt.kernelpublic.nativeinterface.TextGiftElement").newInstance();
-       XposedHelpers.setLongField(textgift, "giftId", 300434L);
+       XposedHelpers.callMethod(textgift, "setContent", "测试");
+   /*    XposedHelpers.setLongField(textgift, "giftId", 300434L);
        XposedHelpers.setObjectField(textgift, "giftName", "一个大逼斗");
        XposedHelpers.setLongField(textgift, "receiverUin", 7278121L);
        XposedHelpers.setLongField(textgift, "senderUin", 2968447202L);
@@ -38,7 +40,9 @@ public class AutoOpenRedPacket {
        XposedHelpers.setObjectField(textgift, "paddingTop", "  a");
        XposedHelpers.setLongField(textgift, "tianquanId", 9221120237041091000L);
        XposedHelpers.setIntField(textgift, "level", 1);
-       XposedHelpers.callMethod(msgElement, "setTextGiftElement", textgift);
+       XposedHelpers.callMethod(msgElement, "setTextGiftElement", textgift);*/
+       XposedHelpers.callMethod(msgElement, "setTextElement", textgift);
+  /*     Object textgift = ClassUtil.get("com.tencent.qqnt.kernelpublic.nativeinterface.TextElement").newInstance();*/
        list.add(msgElement);
         MsgUtil.sendMsg(contact, list);
         }catch(Exception e){ 
