@@ -72,7 +72,7 @@ public class AutoOpenRedPacket {
     public Object createContact(int chatType, String uid) {
     Object contact;
     try {
-        contact = Classes.getContactClass().newInstance();
+        contact = new Classes().getContactClass().newInstance();
         Class<?> contactClass = contact.getClass();
         
         // 设置 chatType
