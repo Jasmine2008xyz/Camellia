@@ -6,6 +6,9 @@ import com.luoyu.xposed.base.annotations.Xposed_Item_Entry;
 import com.luoyu.xposed.base.annotations.Xposed_Item_Finder;
 import com.luoyu.xposed.base.annotations.Xposed_Item_UiLongClick;
 import com.luoyu.xposed.core.HookInstaller;
+import com.luoyu.xposed.message.MsgUtil;
+import com.luoyu.xposed.base.QQApi;
+import com.luoyu.utils.ClassUtil;
 import de.robv.android.xposed.XposedHelpers;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -13,7 +16,28 @@ import java.util.ArrayList;
 public class AutoOpenRedPacket {
     @Xposed_Item_UiLongClick
     public void onLongClick() {
-        OpenRedPacket.OpenLuckyRedPack("ac202b77be50886b35b5286237187dcb8w","1","10000452012409163700114624310700",OpenRedPacket.getSkey(),1,"240214519","2968447202","[QQ红包]大吉大利");
+        /*OpenRedPacket.OpenLuckyRedPack("ac202b77be50886b35b5286237187dcb8w","1","10000452012409163700114624310700",OpenRedPacket.getSkey(),1,"240214519","2968447202","[QQ红包]大吉大利");*/
+        Object contact = QQApi.createContact(2, "646945623");
+        ArrayList list = new ArrayList();
+        try {
+        Object msgElement = ClassUtil.get("com.tencent.qqnt.kernel.nativeinterface.MsgElement").newInstance();
+       XposedHelpers.setIntField(msgElement, "elementType", 18);
+       Object textgift = ClassUtil.get("com.tencent.qqnt.kernelpublic.nativeinterface.TextGiftElement").newInstance();
+       XposedHelpers.setLongField(textgift, "giftId", 300434L);
+       XposedHelpers.setObjectField(textgift, "giftName", "一个大逼斗");
+       XposedHelpers.setLongField(textgift, "receiverUin", 7278121L);
+       XposedHelpers.setLongField(textgift, "senderUin", 2968447202L);
+       XposedHelpers.setObjectField(textgift, "receiverNick", "小星");
+       XposedHelpers.setObjectField(textgift, "senderNick", "小明");
+       XposedHelpers.setLongField(textgift, "price", 10086L);
+       XposedHelpers.setObjectField(textgift, "paddingTop", "  a");
+       XposedHelpers.setLongField(textgift, "tianquanId", 9221120237041091000L);
+       XposedHelpers.setIntField(textgift, "level", 1);
+       XposedHelpers.callMethod(msgElement, "setTextGiftElement", textgift);
+       list.add(msgElement);
+        MsgUtil.sendMsg(contact, list);
+        }catch(Exception e){ 
+        }
     }
     @Xposed_Item_Finder
     public void find(IDexFinder finder) {
