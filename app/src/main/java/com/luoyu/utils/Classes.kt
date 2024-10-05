@@ -8,7 +8,7 @@ class Classes {
     companion object {
     
     fun getContactClass(): Class<*> {
-        return Classes().getContactClass()
+        return Classes()._getContactClass()
     }
     
     }
@@ -18,7 +18,7 @@ class Classes {
      * 所以nativeinterface.Cotact在9.0.70上下分别有两个位置
      */
      
-    fun getContactClass(): Class<*> {
+    fun _getContactClass(): Class<*> {
         val versionCode = HostInfo.QQVersionCode
         if(versionCode >= 6676)/* QQ9.0.70 */
         return ClassUtil.get("com.tencent.qqnt.kernelpublic.nativeinterface.Contact")
