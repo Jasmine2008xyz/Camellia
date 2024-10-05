@@ -28,7 +28,7 @@ public class AutoOpenRedPacket {
         Object msgElement = ClassUtil.get("com.tencent.qqnt.kernel.nativeinterface.MsgElement").newInstance();
        XposedHelpers.setIntField(msgElement, "elementType", 1);
        
-       Object textgift = ClassUtil.get("com.tencent.qqnt.kernelpublic.nativeinterface.TextElement").newInstance();
+       Object textgift = ClassUtil.get("com.tencent.qqnt.kernel.nativeinterface.TextElement").newInstance();
        XposedHelpers.callMethod(textgift, "setContent", "测试");
    /*    XposedHelpers.setLongField(textgift, "giftId", 300434L);
        XposedHelpers.setObjectField(textgift, "giftName", "一个大逼斗");
