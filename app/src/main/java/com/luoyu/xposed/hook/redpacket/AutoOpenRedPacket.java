@@ -22,9 +22,16 @@ public class AutoOpenRedPacket {
     @Xposed_Item_UiLongClick
     public void onLongClick() {
         /*OpenRedPacket.OpenLuckyRedPack("ac202b77be50886b35b5286237187dcb8w","1","10000452012409163700114624310700",OpenRedPacket.getSkey(),1,"240214519","2968447202","[QQ红包]大吉大利");*/
+        
+        
         Object contact = createContact(2, "646945623");
         ArrayList list = new ArrayList();
         try {
+        Object chatUtil = ClassUtil.get("com.tencent.qqnt.chats.api.impl.ChatsUtilImpl").newInstance();
+        chatUtil.class.getMethod("clearUnreadCount").invoke(chatUtil);
+        
+        
+        
         Object msgElement = ClassUtil.get("com.tencent.qqnt.kernel.nativeinterface.MsgElement").newInstance();
        XposedHelpers.setIntField(msgElement, "elementType", 18);
        
