@@ -28,7 +28,7 @@ public class AutoOpenRedPacket {
         ArrayList list = new ArrayList();
         try {
         Object chatUtil = ClassUtil.get("com.tencent.qqnt.chats.api.impl.ChatsUtilImpl").newInstance();
-        chatUtil.class.getMethod("clearUnreadCount").invoke(chatUtil);
+        chatUtil.getClass().getMethod("clearUnreadCount").invoke(chatUtil);
         
         
         
