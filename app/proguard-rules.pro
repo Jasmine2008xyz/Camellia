@@ -28,8 +28,8 @@
 -dontwarn edu.umd.**
 
 -keep class com.lxj.xpopup.widget.**{*;}
--keep class com.luoyu.camellia.startup.Hook_Entry
--keep class com.luoyu.camellia.hook.**{*;}
+-keep class com.luoyu.xposed.startup.Hook_Entry
+-keep class com.luoyu.xposed.hook.**{*;}
 -keep class com.luoyu.camellia.interfaces.jni.**{*;}
 -keep class net.bytebuddy.** {*;}
 
