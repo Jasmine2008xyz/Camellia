@@ -8,6 +8,6 @@ import com.luoyu.dexfinder.IDexFinder
 class QQNTOnMessage {
     @Xposed_Item_Finder
     fun findMethod(finder: IDexFinder) {
-        finder.findMethodsByPathAndUseString(arrayOf("AutoOpenRedPacket_1"),arrayOf("com.tencent.qqnt.msg"),arrayOf("[不支持的元素类型]", "[图片]", "[文件]", "[emoji]"));
+        finder.findMethodsByPathAndUseString(arrayOf("AutoOpenRedPacket_1"),arrayOf("com.tencent.qqnt.msg"),arrayOf("[不支持的元素类型]", "[图片]", "[文件]", "[emoji]"))
     }
 }
