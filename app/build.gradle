@@ -4,8 +4,8 @@ plugins {
     id 'kotlin-android'
 }
 ext {
-    apk_version_name = '0.0.1'
-    apk_version_code = '1'
+    apk_version_name = '0.0.2'
+    apk_version_code = '2'
 }
 
 android {
