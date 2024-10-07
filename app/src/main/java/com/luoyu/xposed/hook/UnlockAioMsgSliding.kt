@@ -13,13 +13,18 @@ class UnlockAioMsgSliding {
 
     @Xposed_Item_Entry
     fun start() {
-        XposedHelpers.findAndHookMethod(ClassUtil.get("com.tencent.mobileqq.ark.api.impl.ArkHelperImpl"), "isSupportReply", String.class,
-                    String.class, String.class, new XC_MethodHook() {
-                        @Override
-                        protected void beforeHookedMethod(MethodHookParam param) {
-                            param.setResult(true);
-                        }
-                    });
+        XposedHelpers.findAndHookMethod(
+    ClassUtil.get("com.tencent.mobileqq.ark.api.impl.ArkHelperImpl"),
+    "isSupportReply",
+    String::class.java,
+    String::class.java,
+    String::class.java,
+    object : XC_MethodHook() {
+        override fun beforeHookedMethod(param: MethodHookParam) {
+            param.result = true
+        }
+    }
+)
     }
     
 }
