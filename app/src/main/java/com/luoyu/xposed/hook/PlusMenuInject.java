@@ -66,12 +66,12 @@ public class PlusMenuInject {
                 XposedHelpers.findConstructorBestMatch(
                         ClassUtil.get("com.tencent.widget.PopupMenuDialog$MenuItem"),
                         new Class[] {int.class, String.class, String.class, int.class})
-                    .newInstance(815, title, "介绍随便摸个鱼啦", 0);
-            Drawable drawable =
+                    .newInstance(815, title, "介绍随便摸个鱼啦", com.luoyu.camellia.R.drawable.topic);
+           /* Drawable drawable =
                 HookEnv.getContext()
                     .getResources()
                     .getDrawable(com.luoyu.camellia.R.drawable.topic);
-            XposedHelpers.findField(mAddItem.getClass(), "drawable").set(mAddItem, drawable);
+            XposedHelpers.findField(mAddItem.getClass(), "drawable").set(mAddItem, drawable);*/
             XposedHelpers.findField(mAddItem.getClass(), "titleColorRes")
                 .set(mAddItem, com.luoyu.camellia.R.color.QQBlue);
             //  FieldUtils.setField(mAddItem, "drawable", drawable);
