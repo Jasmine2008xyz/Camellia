@@ -44,7 +44,7 @@ class SettingsActivity: BaseActivity() {
             settingsItemList.add(SettingOpt(settingsItemList.size,"屏蔽链接信息",SettingOpt.TYPE_SWITCH))
             settingsItemList.add(SettingOpt(settingsItemList.size,"屏蔽拍一拍Timing",SettingOpt.TYPE_SWITCH))
             settingsItemList.add(SettingOpt(settingsItemList.size,"一键20赞",SettingOpt.TYPE_SWITCH))
-            settingsItemList.add(SettingOpt(settingsItemList.size,"解锁所有消息左滑",SettingOpt.TYPE_SWITCH))
+            settingsItemList.add(SettingOpt(settingsItemList.size,"解锁卡片消息左滑",SettingOpt.TYPE_SWITCH))
             settingsItemList.add(SettingOpt(settingsItemList.size,"自动抢红包",SettingOpt.TYPE_SWITCH))
             settingsItemList.add(SettingOpt(settingsItemList.size,"跳转网页功能",SettingOpt.TYPE_ITEM))
         }

@@ -8,7 +8,7 @@ import de.robv.android.xposed.XposedHelpers
 import de.robv.android.xposed.XposedBridge
 import java.lang.reflect.Method
 
-@Xposed_Item_Controller(itemTag = "解锁所有消息左滑")
+@Xposed_Item_Controller(itemTag = "解锁卡片消息左滑")
 class UnlockAioMsgSliding {
 
     @Xposed_Item_Entry
