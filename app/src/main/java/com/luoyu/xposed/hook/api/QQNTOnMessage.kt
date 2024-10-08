@@ -19,12 +19,12 @@ class QQNTOnMessage {
     }
     @Xposed_Item_Entry
     fun entry() {
-        val m: Method = HookInstaller.Method_Map.get("QQNTOnMessage_1")
-        val method = XposedHelpers.findMethodsByExactParameters(m.declaringClass, m.returnType, m.parameterTypes)[0]
+        /*val m: Method? = HookInstaller.Method_Map.get("QQNTOnMessage_1")
+        val method = XposedHelpers.findMethodsByExactParameters(m.declaringClass, ArrayList::class, ArrayList::class)[0]
         XposedBridge.hookMethod(method, object : XC_MethodHook() {
             override fun afterHookedMethod(param: MethodHookParam) {
                 
             }
-        })
+        })*/
     }
 }
