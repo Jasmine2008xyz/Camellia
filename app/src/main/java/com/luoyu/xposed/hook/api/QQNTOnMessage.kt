@@ -8,7 +8,7 @@ import com.luoyu.dexfinder.IDexFinder
 
 import de.robv.android.xposed.XposedHelpers
 import de.robv.android.xposed.XposedBridge
-import de.robv.android.xposed.callbacks.XC_MethodHook
+import de.robv.android.xposed.XC_MethodHook
 import java.lang.reflect.Method
 
 @Xposed_Item_Controller(itemTag = "QQNTOnMessage(QQNT消息监听)", isApi = true)
