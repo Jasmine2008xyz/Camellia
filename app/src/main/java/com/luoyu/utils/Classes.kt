@@ -6,7 +6,7 @@ import com.luoyu.xposed.data.module.HostInfo
 class Classes {
     
     companion object {
-    
+    @JvmStatic
     fun getContactClass(): Class<*> {
         return Classes()._getContactClass()
     }

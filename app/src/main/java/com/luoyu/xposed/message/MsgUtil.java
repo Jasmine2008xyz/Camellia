@@ -54,7 +54,7 @@ public class MsgUtil {
         Object msgServiceImplInstance = msgServiceImplClass.getDeclaredConstructor().newInstance();
 
         // 获取 Contact 和 IOperateCallback 的类对象
-        Class<?> contactClass = ClassUtil.load("com.tencent.qqnt.kernelpublic.nativeinterface.Contact");
+        Class<?> contactClass =/*  ClassUtil.load("com.tencent.qqnt.kernelpublic.nativeinterface.Contact");*/new Classes()._getContactClass();
         Class<?> ioOperateCallbackClass = ClassUtil.load("com.tencent.qqnt.kernel.nativeinterface.IOperateCallback");
 
         // 调用 sendMsg 方法
