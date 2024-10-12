@@ -1,7 +1,9 @@
 package com.luoyu.dexfinder;
 
+import android.util.Log;
 import com.luoyu.utils.FileUtil;
 import com.luoyu.utils.PathUtil;
+import com.luoyu.xposed.logging.LogCat;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -55,6 +57,7 @@ public class DexKitFinder implements IDexFinder {
             //   }
 
         } catch (Exception err) {
+            LogCat.e("findMethodsByPathAndUseString",Log.getStackTraceString(err));
             throw new RuntimeException(err);
         }
     }
@@ -74,6 +77,7 @@ public class DexKitFinder implements IDexFinder {
                 Module_Object_List.add(data.getInstance(loader));
             }
         } catch (Exception err) {
+            LogCat.e("findSelfClassesByUseAnnotation",Log.getStackTraceString(err));
             throw new RuntimeException(err);
         }
     }

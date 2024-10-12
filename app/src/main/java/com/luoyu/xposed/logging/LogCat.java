@@ -52,7 +52,7 @@ public class LogCat {
     log(String.format("w-%s", TAG), String.valueOf(ex));
   }
 
-  private static String GetNowTime() {
+  public static String GetNowTime() {
     SimpleDateFormat sdf = new SimpleDateFormat("MM月dd日 HH:mm:ss");
     Calendar calendar = Calendar.getInstance();
     String nowtime = sdf.format(calendar.getTime());

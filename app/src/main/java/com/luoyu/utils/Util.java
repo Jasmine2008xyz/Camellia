@@ -9,6 +9,7 @@ import android.os.Looper;
 import android.content.Intent;
 import android.app.ActivityManager;
 import android.util.Log;
+import android.widget.Toast;
 import androidx.annotation.NonNull;
 import com.luoyu.xposed.base.HookEnv;
 import java.util.List;
@@ -56,4 +57,8 @@ public class Util {
         return Color.parseColor(str);
     }
     
+    public static boolean simulateNullPointerCrash(){
+        Toast.makeText(null,"Crash Test",Toast.LENGTH_LONG);
+        return true;
+    }
 }

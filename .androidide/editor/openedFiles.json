@@ -1,7 +1,7 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/dexfinder/DexFinderProcessor.java",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/utils/QQUtil.kt",
       "selection": {
         "end": {
           "column": 0,
@@ -16,7 +16,22 @@
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/dexfinder/DexKitFinder.java",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/crash/PreventCrash_Entry.java",
+      "selection": {
+        "end": {
+          "column": 47,
+          "index": 784,
+          "line": 19
+        },
+        "start": {
+          "column": 47,
+          "index": 784,
+          "line": 19
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/startup/HookInit.java",
       "selection": {
         "end": {
           "column": 0,
@@ -31,20 +46,20 @@
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/api/QQNTOnMessage.kt",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/utils/Util.java",
       "selection": {
         "end": {
-          "column": 29,
-          "index": 416,
-          "line": 10
+          "column": 17,
+          "index": 533,
+          "line": 19
         },
         "start": {
-          "column": 29,
-          "index": 416,
-          "line": 10
+          "column": 17,
+          "index": 533,
+          "line": 19
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/api/QQNTOnMessage.kt"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/crash/PreventCrash_Entry.java"
 }

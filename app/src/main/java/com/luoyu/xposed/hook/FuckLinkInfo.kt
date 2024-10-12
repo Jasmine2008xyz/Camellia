@@ -34,7 +34,7 @@ class FuckLinkInfo {
 
     @Xposed_Item_Finder
     fun find(finder: IDexFinder) {
-        finder.findMethodsByPathAndUseString(arrayOf("LinkInfo_1"),arrayOf("com.tencent.qqnt.msg"),arrayOf("[不支持的元素类型]", "[图片]", "[文件]", "[emoji]"))
+    //    finder.findMethodsByPathAndUseString(arrayOf("LinkInfo_1"),arrayOf("com.tencent.qqnt.msg"),arrayOf("[不支持的元素类型]", "[图片]", "[文件]", "[emoji]"))
     }
     
     @Xposed_Item_Entry

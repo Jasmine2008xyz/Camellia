@@ -1,4 +1,5 @@
 package com.luoyu.xposed;
+import android.os.HandlerThread;
 import com.luoyu.config.MConfig;
 
 /*
@@ -7,4 +8,6 @@ import com.luoyu.config.MConfig;
  */
 public class ModuleController {
     public static MConfig Config = new MConfig("Camellia");
+    
+    public static HandlerThread mTasker = new HandlerThread("Camellia_Handler_Main");
 }
