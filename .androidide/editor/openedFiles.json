@@ -1,0 +1,20 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/api/QQNTOnMessage.kt",
+      "selection": {
+        "end": {
+          "column": 3,
+          "index": 1248,
+          "line": 32
+        },
+        "start": {
+          "column": 3,
+          "index": 1248,
+          "line": 32
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/api/QQNTOnMessage.kt"
+}

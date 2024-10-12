@@ -41,6 +41,7 @@ package com.luoyu.xposed.message;
 import java.util.ArrayList;
 import java.lang.reflect.InvocationTargetException;
 import com.luoyu.utils.ClassUtil;
+import com.luoyu.utils.Classes;
 import de.robv.android.xposed.XposedHelpers;
 
 public class MsgUtil {
@@ -54,7 +55,7 @@ public class MsgUtil {
         Object msgServiceImplInstance = msgServiceImplClass.getDeclaredConstructor().newInstance();
 
         // 获取 Contact 和 IOperateCallback 的类对象
-        Class<?> contactClass = ClassUtil.load("com.tencent.qqnt.kernelpublic.nativeinterface.Contact");
+        Class<?> contactClass =/*  ClassUtil.load("com.tencent.qqnt.kernelpublic.nativeinterface.Contact");*/new Classes()._getContactClass();
         Class<?> ioOperateCallbackClass = ClassUtil.load("com.tencent.qqnt.kernel.nativeinterface.IOperateCallback");
 
         // 调用 sendMsg 方法
