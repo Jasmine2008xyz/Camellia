@@ -47,6 +47,7 @@ class SettingsActivity: BaseActivity() {
             settingsItemList.add(SettingOpt(settingsItemList.size,"解锁卡片消息左滑",SettingOpt.TYPE_SWITCH))
             settingsItemList.add(SettingOpt(settingsItemList.size,"自动抢红包",SettingOpt.TYPE_SWITCH))
             settingsItemList.add(SettingOpt(settingsItemList.size,"阻止Java层闪退",SettingOpt.TYPE_SWITCH))
+            settingsItemList.add(SettingOpt(settingsItemList.size,"长按文本修改内容(慎)",SettingOpt.TYPE_SWITCH))
             settingsItemList.add(SettingOpt(settingsItemList.size,"跳转网页功能",SettingOpt.TYPE_ITEM))
         }
         
