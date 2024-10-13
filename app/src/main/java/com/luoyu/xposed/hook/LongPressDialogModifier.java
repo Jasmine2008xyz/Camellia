@@ -51,7 +51,7 @@ public class LongPressDialogModifier {
                             .asInputConfirm(
                                 "长按文本修改内容",
                                 null,
-                                ((TextView)param.thisObject).getText(),
+                              /*  ((TextView)param.thisObject).getText()*/null,
                                 "输入要修改成的内容",
                                 new OnInputConfirmListener() {
                                   @Override
