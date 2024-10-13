@@ -4,13 +4,13 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/LongPressDialogModifier.java",
       "selection": {
         "end": {
-          "column": 78,
-          "index": 2537,
+          "column": 69,
+          "index": 2535,
           "line": 53
         },
         "start": {
-          "column": 78,
-          "index": 2537,
+          "column": 69,
+          "index": 2535,
           "line": 53
         }
       }

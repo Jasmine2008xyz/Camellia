@@ -22,7 +22,7 @@ public class LongPressDialogModifier {
         new XC_MethodHook() {
           @Override
           public void afterHookedMethod(MethodHookParam param) {
-          boolean boo =ModuleController.Config.getBooleanData("图片外显/开关", false);
+          boolean boo =ModuleController.Config.getBooleanData("长按文本修改内容(慎)/开关", false);
           if(!boo) return;
             ((TextView) param.thisObject)
                 .setOnLongClickListener(
@@ -51,7 +51,7 @@ public class LongPressDialogModifier {
                             .asInputConfirm(
                                 "长按文本修改内容",
                                 null,
-                              /*  ((TextView)param.thisObject).getText()*/null,
+                               ((TextView)param.thisObject).getText(),
                                 "输入要修改成的内容",
                                 new OnInputConfirmListener() {
                                   @Override
