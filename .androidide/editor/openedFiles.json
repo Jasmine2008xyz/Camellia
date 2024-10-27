@@ -19,13 +19,13 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/proguard-rules.pro",
       "selection": {
         "end": {
-          "column": 35,
-          "index": 992,
+          "column": 36,
+          "index": 993,
           "line": 31
         },
         "start": {
-          "column": 35,
-          "index": 992,
+          "column": 36,
+          "index": 993,
           "line": 31
         }
       }
