@@ -1,16 +1,22 @@
 package com.luoyu.xposed.message;
 
+import android.os.Environment;
+import com.luoyu.http.HttpSender;
 import com.luoyu.utils.ClassUtil;
+import com.luoyu.utils.FileUtil;
 import com.luoyu.utils.PathUtil;
 import com.luoyu.xposed.base.QRoute;
+import com.luoyu.xposed.utils.QQUtil;
 import java.lang.reflect.InvocationTargetException;
 import de.robv.android.xposed.XposedHelpers;
 import java.io.File;
 import android.media.MediaMetadataRetriever;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MsgElementCreator {
-    public static Object createTextElement(String text)
+  public static Object createTextElement(String text)
       throws ClassNotFoundException,
           InvocationTargetException,
           IllegalAccessException,
@@ -19,7 +25,6 @@ public class MsgElementCreator {
     return XposedHelpers.callMethod(o, "createTextElement", new Class[] {String.class}, text);
   }
 
-  
   public static Object createAtTextElement(String text, String uin, int atType)
       throws ClassNotFoundException,
           InvocationTargetException,
@@ -86,6 +91,51 @@ public class MsgElementCreator {
       //	ForLogUtils.Error("createArkElement",e);
       return null;
     }
+  }
+
+  public static Object createPttElement(String url)
+      throws ClassNotFoundException,
+          InvocationTargetException,
+          IllegalAccessException,
+          IllegalArgumentException {
+    String path = url;
+    Object o = QRoute.api(ClassUtil.load("com.tencent.qqnt.msg.api.IMsgUtilApi"));
+    ArrayList<Byte> myList =
+        new ArrayList<>(
+            Arrays.asList(
+                new Byte[] {
+                  28, 26, 43, 29, 31, 61, 34, 49, 51, 56, 52, 74, 41, 62, 66, 46, 25, 57, 51, 70,
+                  33, 45, 39, 27, 68, 58, 46, 59, 59, 63
+                }));
+    return XposedHelpers.callMethod(
+        o,
+        "createPttElement",
+        new Class[] {String.class, int.class, ArrayList.class},
+        path,
+        (int) getDuration(path),
+        myList);
+  }
+
+  public static String cachePttPath(String url) {
+    String copyTo =
+        Environment.getExternalStorageDirectory()
+            + "/Android/data/com.tencent.mobileqq/Tencent/MobileQQ/"
+            + QQUtil.getCurrentUin()
+            + "/ptt/";
+    // url
+    if (url.toLowerCase().startsWith("http:") || url.toLowerCase().startsWith("https:")) {
+      String mRandomPathName = (String.valueOf(Math.random())).substring(2);
+      HttpSender.downloadToFileFromQQ(url, copyTo + mRandomPathName + ".aac");
+      copyTo += mRandomPathName + ".aac";
+    } else {
+      copyTo += new File(url).getName();
+      try {
+        FileUtil.copyFile(url, copyTo);
+      } catch (Exception e) {
+
+      }
+    }
+    return copyTo;
   }
 
   public static String getModuleCachePath(String dirName) {

@@ -1,4 +1,4 @@
-package com.luoyu.xposed.data.module
+package com.luoyu.xposed.data.table
 
 class HostInfo {
 

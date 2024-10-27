@@ -1,6 +1,6 @@
 package com.luoyu.utils
 
-import com.luoyu.xposed.data.module.HostInfo
+import com.luoyu.xposed.data.table.HostInfo
 
 
 class Classes {

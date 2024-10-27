@@ -16,17 +16,20 @@ import com.luoyu.camellia.activities.support.BaseActivity
 import com.luoyu.camellia.adapters.SettingsItemAdapter
 import com.luoyu.xposed.ModuleController
 import com.luoyu.camellia.model.SettingOpt
-import com.luoyu.camellia.utils.showToast
+//import com.luoyu.camellia.utils.showToast
 import com.luoyu.utils.Util
 import com.luoyu.utils.Update
 import com.luoyu.utils.FileUtil
 import com.luoyu.utils.PathUtil
 import com.luoyu.utils.AppUtil
 import com.luoyu.xposed.utils.QQUtil
-import com.luoyu.xposed.data.module.HostInfo
+import com.luoyu.xposed.data.table.HostInfo
 import com.luoyu.camellia.utils.IntentUtil
 import com.luoyu.camellia.activities.helper.ActivityAttributes
 import com.luoyu.camellia.BuildConfig
+import com.lxj.xpopup.XPopup
+import com.lxj.xpopup.interfaces.OnCancelListener
+import com.lxj.xpopup.interfaces.OnConfirmListener
 import com.tencent.mobileqq.widget.QQToast
 import java.io.File
 
@@ -49,6 +52,7 @@ class SettingsActivity: BaseActivity() {
             settingsItemList.add(SettingOpt(settingsItemList.size,"阻止Java层闪退",SettingOpt.TYPE_SWITCH))
             settingsItemList.add(SettingOpt(settingsItemList.size,"长按文本修改内容(慎)",SettingOpt.TYPE_SWITCH))
           //  settingsItemList.add(SettingOpt(settingsItemList.size,"屏蔽回复表情展示",SettingOpt.TYPE_SWITCH))
+            settingsItemList.add(SettingOpt(settingsItemList.size,"语音面板",SettingOpt.TYPE_SWITCH))
             settingsItemList.add(SettingOpt(settingsItemList.size,"跳转网页功能",SettingOpt.TYPE_ITEM))
         }
         
@@ -86,6 +90,33 @@ class SettingsActivity: BaseActivity() {
         val adapter = SettingsItemAdapter(this, settingsItemList)
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = adapter
+        
+        val file = File(PathUtil.getApkDataPath() + ".nomedia")
+        if(!file.exists()) {
+        val onCancelListener = object : OnCancelListener {
+          override fun onCancel() {
+          // 用户点击取消后执行的操作
+          System.exit(1);
+          }
+        }
+        val onConfirmListener = object : OnConfirmListener {
+          override fun onConfirm() {
+          // 用户点击确定后执行的操作
+          file.createNewFile()
+          }
+        }
+
+        XPopup.Builder(this)
+                          .isDestroyOnDismiss(true) // 确保对话框在消失时被销毁
+                          .asConfirm(
+                                          "使用须知", // 标题
+                                          "看起来你是第一次使用本模块，所以我觉得你需要知道以下几点：\n第一，本模块完全免费，任何收费情况均属于盗卖，冒充。\n第二，本模块可能具有部分风险功能，作为经验丰富的用户您需要自行负责使用风险。\n第三，本模块仅供学习参考，请勿用于非法用途。", // 内容
+                                          "拒绝", // 取消按钮文本
+                                          "同意", // 确定按钮文本
+                                          onConfirmListener,
+                                          onCancelListener,
+                                          false).show() // false 表示点击外部不取消
+        }
     }
 
     // 初始化设置项列表

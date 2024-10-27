@@ -78,7 +78,7 @@ public class QQApi {
     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
     context.startActivity(intent)
   }
-  
+  @JvmStatic
   fun createContact(chatType: Int, uid: String): Any? {
     val contact = Classes.getContactClass().newInstance()
     try{

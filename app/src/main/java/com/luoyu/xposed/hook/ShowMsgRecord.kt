@@ -9,7 +9,7 @@ import com.luoyu.xposed.base.annotations.Xposed_Item_Controller
 import com.luoyu.xposed.base.annotations.Xposed_Item_Entry
 import com.luoyu.xposed.base.annotations.Xposed_Item_Finder
 
-import com.luoyu.xposed.data.module.HostInfo
+import com.luoyu.xposed.data.table.HostInfo
 
 import com.luoyu.dexfinder.IDexFinder
 import com.luoyu.utils.ClassUtil

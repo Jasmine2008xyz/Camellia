@@ -6,7 +6,7 @@ import com.luoyu.utils.AppUtil;
 import com.luoyu.utils.PathUtil;
 import com.luoyu.utils.XRes;
 import com.luoyu.xposed.base.HookEnv;
-import com.luoyu.xposed.data.module.HostInfo;
+import com.luoyu.xposed.data.table.HostInfo;
 import de.robv.android.xposed.XC_MethodHook;
 import de.robv.android.xposed.XposedHelpers;
 import com.luoyu.utils.ClassUtil;
