@@ -121,15 +121,16 @@ class PicSummaryHook {
         edit_view.setText(ModuleController.Config.getStringData("图片外显/内容",""))
         edit_view.setGravity(Gravity.CENTER)
         
-        val btn = MaterialButton(context)
+        // 这里有人反馈说文本长了按钮会被吞掉，那为了省事就把这个按钮移到操作栏吧
+      /*  val btn = MaterialButton(context)
         btn.setOnClickListener {
             ModuleController.Config.putData("图片外显/内容",edit_view.getText().toString())
         }
         btn.setText("保存")
         btn.setGravity(Gravity.CENTER)
-        
+        */
         branch1.addView(edit_view)
-        branch1.addView(btn)
+       // branch1.addView(btn)
         
         val branch2 = LinearLayout(context)
         branch2.setOrientation(LinearLayout.HORIZONTAL)
@@ -159,6 +160,10 @@ class PicSummaryHook {
              _ , _ ->
               // Do nothing
                }
+            .setNeutralButton("Keep") {
+             _ , _ ->
+              ModuleController.Config.putData("图片外显/内容",edit_view.getText().toString())
+            }
             .show()
     }
 }

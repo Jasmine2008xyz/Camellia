@@ -14,6 +14,16 @@ class QQUtil {
                 ""
             }
         }
+        
+        @JvmStatic
+        fun getCurrentNick(): String {
+            return try {
+                val appRuntime = getAppRuntime() ?: return ""
+                XposedHelpers.callMethod(appRuntime, "getCurrentNickname") as? String ?: ""
+            } catch (e: Exception) {
+                ""
+            }
+        }
 
         @Throws(Exception::class)
         @JvmStatic

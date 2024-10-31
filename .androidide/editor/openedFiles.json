@@ -1,35 +1,50 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/build.gradle",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/SettingsActivity.kt",
       "selection": {
         "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 57,
+          "index": 7918,
+          "line": 196
         },
         "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 57,
+          "index": 7918,
+          "line": 196
         }
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/proguard-rules.pro",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/utils/QQUtil.kt",
       "selection": {
         "end": {
-          "column": 36,
-          "index": 993,
-          "line": 31
+          "column": 26,
+          "index": 520,
+          "line": 18
         },
         "start": {
-          "column": 36,
-          "index": 993,
-          "line": 31
+          "column": 26,
+          "index": 520,
+          "line": 18
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/utils/ProcessUinUtil.java",
+      "selection": {
+        "end": {
+          "column": 41,
+          "index": 307,
+          "line": 8
+        },
+        "start": {
+          "column": 41,
+          "index": 307,
+          "line": 8
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/proguard-rules.pro"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/SettingsActivity.kt"
 }

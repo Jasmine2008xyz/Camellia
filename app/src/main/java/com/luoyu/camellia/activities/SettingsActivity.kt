@@ -18,11 +18,13 @@ import com.luoyu.xposed.ModuleController
 import com.luoyu.camellia.model.SettingOpt
 //import com.luoyu.camellia.utils.showToast
 import com.luoyu.utils.Util
+import com.luoyu.http.HttpSender
 import com.luoyu.utils.Update
 import com.luoyu.utils.FileUtil
 import com.luoyu.utils.PathUtil
 import com.luoyu.utils.AppUtil
 import com.luoyu.xposed.utils.QQUtil
+import com.luoyu.xposed.utils.ProcessUinUtil
 import com.luoyu.xposed.data.table.HostInfo
 import com.luoyu.camellia.utils.IntentUtil
 import com.luoyu.camellia.activities.helper.ActivityAttributes
@@ -168,13 +170,14 @@ class SettingsActivity: BaseActivity() {
     }
     
     private fun joinGroup(context: Context) {
-    val items = arrayOf("加入QQ聊天群", "加入QQ通知群")
+    val items = arrayOf("加入QQ聊天群", "加入QQ通知群", "加入QQ备用交流群")
     MaterialAlertDialogBuilder(context)
     .setTitle("交流讨论")
     .setItems(items) { _, which ->
         when (which) {
             0 -> IntentUtil.openQQGroup(context, "902327702")
             1 -> IntentUtil.openQQGroup(context, "837012640")
+            2 -> IntentUtil.openQQGroup(context, "859184034")
             else -> {}
         }
     }
@@ -185,9 +188,19 @@ class SettingsActivity: BaseActivity() {
     private fun initUserInfo() {
         val textview: TextView = findViewById(R.id.module_user_info_textview)
         val qqUin = QQUtil.getCurrentUin()
+        val qqNick = QQUtil.getCurrentNick()
+        val qqUinProcessed = ProcessUinUtil.process(qqUin)
         val qqVersionName = AppUtil.getHostInfo(this)
         val moduleVersionName = BuildConfig.VERSION_NAME
         val moduleVersionCode = BuildConfig.VERSION_CODE
-        textview.text = "-> 登录账号：${qqUin}\n-> 用户身份：普通用户\n-> QQ版本：${qqVersionName}\n-> 模块版本：${moduleVersionName}(${moduleVersionCode})\n-> 版本一言：月光太冷真的难入喉。"
+        val userIdentity = getUserIdentity(qqUin)
+        textview.text = "-> 登录账号：$qqNick(${qqUinProcessed})\n-> 用户身份：$userIdentity\n-> QQ版本：${qqVersionName}\n-> 模块版本：${moduleVersionName}(${moduleVersionCode})\n-> 版本一言：你就是我的希望，信仰，与救赎。"
     }
+    
+    private fun getUserIdentity(QQUin: String): String {
+      val result = HttpSender.get("http://103.24.204.23/identity.php?uin=$QQUin")
+      if(result == "黑名单用户") System.exit(-6)
+      return result
+    }
+    
 }

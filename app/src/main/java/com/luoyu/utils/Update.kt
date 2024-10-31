@@ -13,12 +13,12 @@ class Update(private val context: Activity) {
     }
 
     private fun checkForUpdate() {
-        Toast.makeText(context, "正在检测更新...(确保挂好梯子)", Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, "正在检测更新...", Toast.LENGTH_SHORT).show()
 
-        val versionCodeStr = HttpSender.get("https://jasmine2008xyz.github.io/Jasemine2008xyz.github.io/version")
+        val versionCodeStr = HttpSender.get("http://103.24.204.23/update.php")
 
         if (versionCodeStr.isEmpty()) {
-            Toast.makeText(context, "创建连接失败，检查您的网络状况", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "创建连接失败，检查您的网络状况(部分地区无法访问)", Toast.LENGTH_SHORT).show()
             return
         }
 
@@ -30,7 +30,7 @@ class Update(private val context: Activity) {
         }
 
         if (versionCode > BuildConfig.VERSION_CODE) {
-            val downloadUrl = "https://jasmine2008xyz.github.io/Jasemine2008xyz.github.io/release/$versionCode"
+            val downloadUrl = "http://103.24.204.23/release/$versionCodeStr"
             val filePath = if (context.packageName == "com.tencent.mobileqq") {
                 PathUtil.getApkDataPath() + "update/Camellia.APK"
             } else {
