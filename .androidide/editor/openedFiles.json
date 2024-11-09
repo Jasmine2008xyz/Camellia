@@ -1,20 +1,20 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/HookTheme.java",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/SettingsActivity.kt",
       "selection": {
         "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 13,
+          "index": 2926,
+          "line": 57
         },
         "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 13,
+          "index": 2926,
+          "line": 57
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/HookTheme.java"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/SettingsActivity.kt"
 }

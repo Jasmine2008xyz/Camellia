@@ -31,6 +31,7 @@ public class HookInit {
 
         // Init processName
         HookEnv.put("processName", lpparam.processName);
+        HookEnv.put("packageName", lpparam.packageName);
 
         // Init {@link com.luoyu.camellia.utils.PathUtil}
         PathUtil.setApkPath(lpparam.appInfo.sourceDir);
