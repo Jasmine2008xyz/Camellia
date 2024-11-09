@@ -99,7 +99,7 @@ class SettingsActivity: BaseActivity() {
         val onCancelListener = object : OnCancelListener {
           override fun onCancel() {
           // 用户点击取消后执行的操作
-          System.exit(1);
+          finish()
           }
         }
         val onConfirmListener = object : OnConfirmListener {
@@ -119,17 +119,6 @@ class SettingsActivity: BaseActivity() {
                                           onConfirmListener,
                                           onCancelListener,
                                           false).show() // false 表示点击外部不取消
-        }
-    }
-
-    // 初始化设置项列表
-    @Deprecated(message = "弃用")
-    private fun initItems() {
-        for(i in 1..20){
-            // 创建一个设置项
-            val settingOpt = SettingOpt(i, "This is a test Item $i", (0..1).random())
-            // 将设置项添加到列表中
-            settingsItemList.add(settingOpt)
         }
     }
 
@@ -163,7 +152,7 @@ class SettingsActivity: BaseActivity() {
             }
         }
     }
-    @Deprecated(message = "暂时放弃")
+    @Deprecated(message = "此方法已弃用")
     private fun initBackground(image: AppCompatImageView) {
         Glide.with(this)
                 .load(R.drawable.settingbackground)
@@ -200,7 +189,7 @@ class SettingsActivity: BaseActivity() {
     
     private fun getUserIdentity(QQUin: String): String {
       val result = HttpSender.get("http://103.24.204.23/identity.php?uin=$QQUin")
-      if(result == "黑名单用户") System.exit(-6)
+      if(result == "黑名单用户") finishAffinity()
       return result
     }
     

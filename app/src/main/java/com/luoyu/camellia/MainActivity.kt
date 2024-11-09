@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.luoyu.camellia.activities.BaseActivity
-import com.luoyu.camellia.activities.ModuleIntroductionActivity
 import com.luoyu.camellia.adapters.MainActivityLayoutAdapter
 import com.luoyu.camellia.databinding.ActivityMainBinding
 import com.luoyu.camellia.utils.IntentUtil
@@ -27,8 +26,7 @@ class MainActivity : BaseActivity() {
         private val itemList = arrayListOf(
             MainActivityLayoutAdapter.Item("Camellia(${BuildConfig.VERSION_NAME})") { },
             MainActivityLayoutAdapter.Item("模块介绍") {
-                val intent = Intent(act, ModuleIntroductionActivity::class.java)
-                act.startActivity(intent)
+                IntentUtil.openGithub(act)
             },
             MainActivityLayoutAdapter.Item("交流讨论") {
                 val items = arrayOf("加入QQ聊天群", "加入QQ通知群")
