@@ -1,125 +1,50 @@
 {
   "allFiles": [
     {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/README.md",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/Log.txt",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 394,
+          "line": 20
+        },
+        "start": {
+          "column": 0,
+          "index": 394,
+          "line": 20
+        }
+      }
+    },
+    {
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/SettingsActivity.kt",
       "selection": {
         "end": {
-          "column": 17,
-          "index": 4513,
-          "line": 101
+          "column": 1,
+          "index": 8070,
+          "line": 195
         },
         "start": {
-          "column": 17,
-          "index": 4513,
-          "line": 101
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/MainActivity.kt",
-      "selection": {
-        "end": {
-          "column": 41,
-          "index": 1080,
-          "line": 28
-        },
-        "start": {
-          "column": 41,
-          "index": 1080,
-          "line": 28
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/utils/IntentUtil.java",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/build.gradle",
-      "selection": {
-        "end": {
-          "column": 2,
-          "index": 3361,
-          "line": 122
-        },
-        "start": {
-          "column": 2,
-          "index": 3361,
-          "line": 122
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/utils/src/main/java/com/luoyu/utils/MethodUtil.kt",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/utils/src/main/java/com/luoyu/utils/XposedBridge.kt",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/BaseActivity.kt",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/AndroidManifest.xml",
-      "selection": {
-        "end": {
-          "column": 19,
-          "index": 965,
-          "line": 26
-        },
-        "start": {
-          "column": 19,
-          "index": 965,
-          "line": 26
+          "column": 1,
+          "index": 8070,
+          "line": 195
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/MainActivity.kt"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/SettingsActivity.kt"
 }
