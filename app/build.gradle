@@ -117,6 +117,7 @@ dependencies {
     implementation ("org.luckypray:dexkit:2.0.2")
     
     implementation project(':utils')
+    implementation project(':bsh')
     compileOnly project(':stub')
     
     implementation fileTree(dir: 'libs/implementation', include: ['*.jar'])

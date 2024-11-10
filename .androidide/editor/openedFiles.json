@@ -1,50 +1,20 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/README.md",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/utils/Reflex.java",
       "selection": {
         "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 69,
+          "index": 8971,
+          "line": 314
         },
         "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/Log.txt",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 394,
-          "line": 20
-        },
-        "start": {
-          "column": 0,
-          "index": 394,
-          "line": 20
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/SettingsActivity.kt",
-      "selection": {
-        "end": {
-          "column": 1,
-          "index": 8070,
-          "line": 195
-        },
-        "start": {
-          "column": 1,
-          "index": 8070,
-          "line": 195
+          "column": 69,
+          "index": 8971,
+          "line": 314
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/SettingsActivity.kt"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/utils/Reflex.java"
 }

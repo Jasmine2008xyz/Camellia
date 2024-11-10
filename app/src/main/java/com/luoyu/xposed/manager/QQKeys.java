@@ -83,7 +83,5 @@ public class QQKeys {
   public static Object GetTicketManager() throws Exception {
     return XposedHelpers.callMethod(
         QQUtil.getAppRuntime(), "getManager", new Class[] {int.class}, 2);
-    //  MethodUtils.CallMethod(QQUtil.getAppRuntime(), "getManager",
-    // ClassTool.loadClass("mqq.manager.Manager"), new Class[]{int.class}, 2);
   }
 }

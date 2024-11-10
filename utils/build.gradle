@@ -24,7 +24,6 @@ android {
 }
 
 dependencies {
-        implementation("androidx.appcompat:appcompat:1.6.1")
-        //implementation ("org.jetbrains.kotlin:kotlin-stdlib:2.0.10")
-        compileOnly fileTree(dir: 'libs/compile_only', include: ['*.jar'])
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    compileOnly fileTree(dir: '../app/libs/compile_only', include: ['*.jar'])
 }

@@ -42,6 +42,7 @@ class SettingsActivity: BaseActivity() {
         val settingsItemList = ArrayList<SettingOpt>()
         
         init {
+            settingsItemList.add(SettingOpt(settingsItemList.size,"Java插件",SettingOpt.TYPE_ITEM))
             settingsItemList.add(SettingOpt(settingsItemList.size,"图片外显",SettingOpt.TYPE_SWITCH))
             settingsItemList.add(SettingOpt(settingsItemList.size,"修改图片大小",SettingOpt.TYPE_SWITCH))
             settingsItemList.add(SettingOpt(settingsItemList.size,"长按消息菜单添加显示MsgRecord项",SettingOpt.TYPE_SWITCH))

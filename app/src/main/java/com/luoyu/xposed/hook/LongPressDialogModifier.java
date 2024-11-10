@@ -31,23 +31,7 @@ public class LongPressDialogModifier {
                       Context context = ActivityUtil.getTopActivity();
                       if (context != null) {
                         new XPopup.Builder(context)
-                            .isDestroyOnDismiss(true) // 确保对话框在消失时被销毁
-                            /*.asConfirm(
-                                            "长按文本修改内容", // 标题
-                                            "确定进行修改吗", // 内容
-                                            "取消", // 取消按钮文本
-                                            "确定", // 确定按钮文本
-                                            new OnConfirmListener() {
-                                              @Override
-                                              public void onConfirm() {
-                                                // 用户点击确定后执行的操作
-                                                ((TextView) param.thisObject)
-                                                    .setText("Camellia Change Text Test");
-                                              }
-                                            },
-                                            null,
-                                            false) // false 表示点击外部不取消
-                            */
+                            .isDestroyOnDismiss(true)
                             .asInputConfirm(
                                 "长按文本修改内容",
                                 null,
@@ -59,7 +43,7 @@ public class LongPressDialogModifier {
                                     ((TextView) param.thisObject).setText(text);
                                   }
                                 })
-                            .show(); // 不要忘了调用 show() 方法来显示对话框
+                            .show();
                         return true;
                       }
                       return false;

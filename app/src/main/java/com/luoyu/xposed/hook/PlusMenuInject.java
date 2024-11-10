@@ -67,11 +67,6 @@ public class PlusMenuInject {
                         ClassUtil.get("com.tencent.widget.PopupMenuDialog$MenuItem"),
                         new Class[] {int.class, String.class, String.class, int.class})
                     .newInstance(815, title, "介绍随便摸个鱼啦", com.luoyu.camellia.R.drawable.topic);
-           /* Drawable drawable =
-                HookEnv.getContext()
-                    .getResources()
-                    .getDrawable(com.luoyu.camellia.R.drawable.topic);
-            XposedHelpers.findField(mAddItem.getClass(), "drawable").set(mAddItem, drawable);*/
             XposedHelpers.findField(mAddItem.getClass(), "titleColorRes")
                 .set(mAddItem, com.luoyu.camellia.R.color.QQBlue);
             //  FieldUtils.setField(mAddItem, "drawable", drawable);
@@ -98,7 +93,7 @@ public class PlusMenuInject {
                 try {
                   new DexFinderProcessor();
                 } catch (Exception err) {
-                  LogCat.e("DexFinderProcessor_Construction", Log.getStackTraceString(err));
+                  LogCat.e("DexFinderProcessor_Constructor", Log.getStackTraceString(err));
                 }
               } else {
                 HookEnv.getActivity()
@@ -107,35 +102,5 @@ public class PlusMenuInject {
             }
           }
         });
-
-    XposedBridge.hookMethod_After(
-        XposedHelpers.findMethodBestMatch(
-            ClassUtil.get("com.tenpay.sdk.basebl.EncryptRequest"),
-            "encypt",
-            new Class[] {
-              String.class, String.class, int.class, String.class, String.class, String.class
-            }),
-        param -> {
-         // LogCat.d("调试", "阿巴" + param.args[5]);
-                LogCat.d("获取参数", "参数0:"+param.args[0]+"参数1:"+param.args[1]+"参数2:"+param.args[2]+"参数3"+param.args[3]+"参数4:"+param.args[4]+"参数5:"+param.args[5]);
-          OpenRedPacket.str5 = param.args[5].toString();
-        });
-  /*  XposedHelpers.findAndHookConstructor(
-        ClassUtil.load("tencent.im.qqwallet.QWalletHbPreGrab$QQHBRequest"),
-        new XC_MethodHook() {
-          @Override
-          protected void afterHookedMethod(MethodHookParam param) throws Throwable {
-            super.afterHookedMethod(param);
-                    LogCat.d("调试",XposedHelpers.callMethod(MField.GetField(param.thisObject,"reqBody"),"toString","UTF-8"));
-          }
-        });
-    /*    XposedHelpers.findAndHookConstructor(ClassUtil.get("mqq.app.NewIntent"),Context.class,Class.class,new XC_MethodHook()
-      {
-           @Override
-    protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
-      super.beforeHookedMethod(param);
-              LogCat.d("获取class",""+param.args[1]);
-              }
-      });*/
   }
 }

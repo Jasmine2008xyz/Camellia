@@ -5,6 +5,7 @@ import com.luoyu.utils.ClassUtil;
 import com.luoyu.utils.FileUtil;
 import com.luoyu.utils.MergeClassLoader;
 import com.luoyu.utils.PathUtil;
+import com.luoyu.utils.Reflex;
 import com.luoyu.xposed.ModuleController;
 import com.luoyu.xposed.base.HookEnv;
 import com.luoyu.xposed.core.BaseHook;
@@ -29,7 +30,7 @@ public class HookInit {
         HookEnv.put("SelfClassLoader", HookInit.class.getClassLoader());
         HookEnv.put("HostClassLoader", lpparam.classLoader);
 
-        // Init processName
+        // Init processName and packageName
         HookEnv.put("processName", lpparam.processName);
         HookEnv.put("packageName", lpparam.packageName);
 
@@ -42,6 +43,9 @@ public class HookInit {
 
         // Init {@link com.luoyu.camellia.utils.ClassUtil#InitClassLoader(ClassLoader)}
         ClassUtil.InitClassLoader(lpparam.classLoader);
+    
+        // Init {@link com.luoyu.utils.Reflex#setHostClassLoader(ClassLoader)}
+        Reflex.setHostClassLoader(lpparam.classLoader);
 
         // {@link com.luoyu.camellia.logging.QLog#setQLogPath(String)} was Abandoned
         // Init {@link com.luoyu.xposed.logging.LogCat#setQQLogCatPath(String)}

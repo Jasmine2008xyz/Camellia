@@ -2,6 +2,7 @@ package com.luoyu.utils;
 
 import android.util.Log;
 import androidx.annotation.NonNull;
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -64,6 +65,10 @@ public class Reflex {
 
   public static MethodMatcher findMethod(Class clz) {
     return MethodMatcher.create(clz);
+  }
+
+  public static FieldMatcher findField(Class clz) {
+    return FieldMatcher.create(clz);
   }
 
   public static class MethodMatcher {
@@ -237,11 +242,136 @@ public class Reflex {
     public void setParamsLength(int paramsLength) {
       this.paramsLength = paramsLength;
     }
+
+    @Override
+    public String toString() {
+      return "ReflexMethod[className="
+          + className
+          + ", methodName="
+          + methodName
+          + ", returnType="
+          + returnType
+          + ", params="
+          + params
+          + ", paramsLength="
+          + paramsLength
+          + "]";
+    }
   }
-  @Override
-    public String toString () {
-      return null;
+
+  public static class FieldMatcher {
+    public static HashMap<String, Field> field_Map = new HashMap<>();
+    public ReflexField reflexField;
+
+    public FieldMatcher(@NonNull Class<?> clz) {
+      this.reflexField = new ReflexField();
+      this.reflexField.setClassName(new Class[] {clz});
     }
 
-}
+    public static FieldMatcher create(@NonNull Class<?> clz) {
+      return new FieldMatcher(clz);
+    }
 
+    public static FieldMatcher create(@NonNull String clz) {
+      return new FieldMatcher(loadClass(clz));
+    }
+
+    public FieldMatcher setClassName(@NonNull Class<?> clz) {
+      this.reflexField.setClassName(new Class[] {clz});
+      return this;
+    }
+
+    public FieldMatcher setFieldName(@NonNull String fieldName) {
+      this.reflexField.setFieldName(fieldName);
+      return this;
+    }
+
+    public ReflexField getReflexField() {
+      return this.reflexField;
+    }
+
+    public FieldMatcher setReflexField(@NonNull ReflexField reflexField) {
+      this.reflexField = reflexField;
+      return this;
+    }
+
+    /*
+     * Field get()
+     * 获取匹配的字段
+     */
+    public Field get() {
+      if (field_Map.containsKey(this.reflexField.toString())) {
+        return field_Map.get(this.reflexField.toString());
+      } else if (this.reflexField.getClassName() == null) {
+        throw new RuntimeException("Class name canot be null!");
+      } else {
+        ArrayList<Field> temp = new ArrayList<>();
+        for (Class<?> clz : this.reflexField.className) {
+          for (Field f : clz.getDeclaredFields()) {
+            temp.add(f);
+            if (this.reflexField.getFieldName() != null
+                && !this.reflexField.getFieldName().equals(f.getName())) temp.remove(f);
+            if (this.reflexField.getReturnType() != null
+                && !this.reflexField.getReturnType().equals(f.getType())) temp.remove(f);
+          }
+        }
+        if (temp.size() == 0) {
+          this.reflexField.setClassName(
+              new Class[] {this.reflexField.getClassName()[0].getSuperclass()});
+          return get();
+        } else {
+          return temp.get(0);
+        }
+      }
+    }
+  }
+
+  public static class ReflexField {
+    public Class<?>[] className;
+    public String fieldName;
+    public Class<?> returnType;
+
+    public ReflexField(Class<?>[] className, String fieldName, Class<?> returnType) {
+      this.className = className;
+      this.fieldName = fieldName;
+      this.returnType = returnType;
+    }
+
+    public ReflexField() {}
+
+    public Class<?>[] getClassName() {
+      return this.className;
+    }
+
+    public void setClassName(Class<?>[] className) {
+      this.className = className;
+    }
+
+    public String getFieldName() {
+      return this.fieldName;
+    }
+
+    public void setFieldName(String fieldName) {
+      this.fieldName = fieldName;
+    }
+
+    public Class<?> getReturnType() {
+      return this.returnType;
+    }
+
+    public void setReturnType(Class<?> returnType) {
+      this.returnType = returnType;
+    }
+
+    @Override
+    public String toString() {
+      return "ReflexField[className="
+          + className
+          + ", fieldName="
+          + fieldName
+          + ", returnType="
+          + returnType
+          + "]";
+    }
+  }
+}

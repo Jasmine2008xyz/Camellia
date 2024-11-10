@@ -22,5 +22,7 @@ rootProject.name = "Camellia"
 include(":app")
 include (":utils")
 include (":stub")
+include(":bsh")
 project(':stub').projectDir = new File(rootDir, 'stub')
 project(':utils').projectDir = new File(rootDir, 'utils')
+project(':bsh').projectDir = new File(rootDir, 'bsh')

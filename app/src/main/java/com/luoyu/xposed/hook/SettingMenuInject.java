@@ -145,7 +145,7 @@ public class SettingMenuInject {
                                     new DexFinderProcessor();
                                   } catch (Exception err) {
                                     LogCat.e(
-                                        "DexFinderProcessor_Construction",
+                                        "DexFinderProcessor_Constructor",
                                         Log.getStackTraceString(err));
                                   }
                                 } else {
