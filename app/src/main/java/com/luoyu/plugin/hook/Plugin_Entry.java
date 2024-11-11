@@ -14,13 +14,6 @@ import de.robv.android.xposed.XposedBridge;
 public class Plugin_Entry {
   @Xposed_Item_UiClick
   public void onClick() {
-    Interpreter interpreter = new Interpreter();
-    NameSpace nameSpace = interpreter.getNameSpace();
-    try {
-      interpreter.eval(
-          FileUtil.readFileString(PathUtil.getApkDataPath() + "plugin/小明.java"), nameSpace);
-    } catch (EvalError err) {
-      XposedBridge.log("Java插件执行异常：" + Log.getStackTraceString(err));
-    }
+    
   }
 }

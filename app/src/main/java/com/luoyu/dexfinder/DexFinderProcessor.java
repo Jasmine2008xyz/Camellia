@@ -32,6 +32,7 @@ public class DexFinderProcessor {
   private TextView textMsg;
 
   public DexFinderProcessor() {
+    try {
     RDialog dialog = new RDialog(HookEnv.getActivity());
     dialog.setCancelable(false);
     dialog.setCanceledOnTouchOutside(false);
@@ -63,7 +64,9 @@ public class DexFinderProcessor {
               .start();
         });
     dialog.container.addView(btn2);
-    dialog.show();
+        } catch(Exception err) {
+    	LogCat.e("启动对话框失败",Log.getStackTraceString(err));
+    }
   }
 
   @SuppressWarnings("deprecation")

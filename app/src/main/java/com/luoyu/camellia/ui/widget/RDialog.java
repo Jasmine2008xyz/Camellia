@@ -34,7 +34,7 @@ public class RDialog extends Dialog {
 
         // 获取window
         show();
-        hide();
+        
         this.window = getWindow();
 
         // 先用Window设置好对话框大小和属性

@@ -1,6 +1,7 @@
 package com.luoyu.xposed.base;
 
 import androidx.annotation.NonNull;
+import com.luoyu.utils.ActivityUtil;
 import java.util.HashMap;
 import android.content.Context;
 import android.app.Activity;
@@ -15,10 +16,8 @@ public class HookEnv {
 
   @SuppressWarnings("unchecked")
   public static <T> T get(@NonNull String need) {
-    if (HookEnv.containsKey(need)) {
-      return (T) HookEnv.get(need);
-    }
-    throw null;
+    if (HookEnv.containsKey(need)) return (T) HookEnv.get(need);
+    return null;
   }
 
   public static Context getContext() {
@@ -26,7 +25,9 @@ public class HookEnv {
   }
 
   public static Activity getActivity() {
-    return get("HostActivity");
+    Activity act = get("HostActivity");
+    if (act != null) return act;
+    return ActivityUtil.getTopActivity();
   }
 
   public static ClassLoader getHostClassLoader() {
