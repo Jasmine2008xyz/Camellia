@@ -4,8 +4,8 @@ plugins {
     id 'kotlin-android'
 }
 ext {
-    apk_version_name = '0.2.5'
-    apk_version_code = '25'
+    apk_version_name = '0.2.6'
+    apk_version_code = '26'
 }
 
 android {
@@ -115,6 +115,7 @@ dependencies {
     implementation("net.bytebuddy:byte-buddy-android:1.14.10")
     
     implementation ("org.luckypray:dexkit:2.0.2")
+    implementation ("com.tencent:mmkv:2.0.1")
     
     implementation project(':utils')
     implementation project(':bsh')

@@ -115,7 +115,11 @@ public class DexFinderProcessor {
   private void sendMsg(@NonNull String msg) {
     Util.postToMain(
         () -> {
+        try {
           this.textMsg.setText(textMsg.getText() + msg);
+         } catch(Exception err) {
+        	LogCat.e("发送消息至对话框",Log.getStackTraceString(err));
+        }
         });
   }
 }

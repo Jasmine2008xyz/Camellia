@@ -12,6 +12,9 @@ import java.util.regex.Pattern;
 
 @Xposed_Item_Controller(itemTag = "OnEntryContact", isApi = true)
 public class OnEntryContact {
+  /*
+   * @author 小明
+   */
   @Xposed_Item_Entry
   public static void start() {
     Class<?> AIOContextImpl = ClassUtil.load("com.tencent.aio.runtime.AIOContextImpl");

@@ -32,11 +32,12 @@ public class Main_VoicePanel extends Dialog {
     getWindow().setGravity(Gravity.BOTTOM);
 
     GradientDrawable shape = new GradientDrawable();
-    shape.setColor(Color.parseColor("#FFFFFF"));
+    shape.setColor(Color.parseColor("#FFFFFF"/*"#00000000"*/));
     shape.setStroke(1, Color.parseColor("#000000"));
     shape.setPadding(15, 15, 15, 15);
     shape.setCornerRadius(30);
     //    shape.setAlpha(15);
+    
     shape.setShape(GradientDrawable.RECTANGLE);
 
     final LayoutInflater inflater = LayoutInflater.from(ctx);

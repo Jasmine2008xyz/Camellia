@@ -38,6 +38,7 @@ import com.luoyu.xposed.ModuleController
 import com.luoyu.utils.Classes
 import com.luoyu.utils.ClassUtil
 import com.luoyu.utils.Util
+import com.luoyu.utils.Hooker
 
 import com.luoyu.http.HttpSender
 

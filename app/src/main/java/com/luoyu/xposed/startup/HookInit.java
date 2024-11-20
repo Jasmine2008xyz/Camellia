@@ -11,6 +11,7 @@ import com.luoyu.xposed.base.HookEnv;
 import com.luoyu.xposed.core.BaseHook;
 import com.luoyu.xposed.hook.crash.LogcatCatcher;
 import com.luoyu.xposed.logging.LogCat;
+import com.tencent.mmkv.MMKV;
 import de.robv.android.xposed.XposedBridge;
 import de.robv.android.xposed.callbacks.XC_LoadPackage;
 import java.io.File;
@@ -39,7 +40,9 @@ public class HookInit {
         PathUtil.setApkDataPath("/sdcard/Android/data/" + lpparam.packageName + "/Camellia/");
 
         // Replace self classloader
-        replaceSelfClassLoader(lpparam.classLoader);
+        replaceClassLoader(lpparam.classLoader);
+        
+     //   initializeMMKV();
 
         // Init {@link com.luoyu.camellia.utils.ClassUtil#InitClassLoader(ClassLoader)}
         ClassUtil.InitClassLoader(lpparam.classLoader);
@@ -70,7 +73,7 @@ public class HookInit {
 
     @SuppressLint("DiscouragedPrivateApi")
     @SuppressWarnings("JavaReflectionMemberAccess")
-    private void replaceSelfClassLoader(ClassLoader cl) {
+    private void replaceClassLoader(ClassLoader cl) {
         if (cl == null) {
             throw new NullPointerException("classLoader canot be null");
         }
@@ -88,4 +91,11 @@ public class HookInit {
         } catch (Exception e) {
         }
     }
+  
+  private void initializeMMKV() {
+    LogCat.d("rootdir",MMKV.initialize(HookEnv.getContext()));
+    MMKV mmkv = MMKV.defaultMMKV();
+    mmkv.encode("uin","2968447202");
+    LogCat.d("测试MMKV",mmkv.decodeString("uin"));
+  }
 }
