@@ -60,6 +60,7 @@ class SettingsActivity: BaseActivity() {
             settingsItemList.add(SettingOpt(settingsItemList.size,"解锁字数限制",SettingOpt.TYPE_SWITCH))
            // settingsItemList.add(SettingOpt(settingsItemList.size,"劫持主题",SettingOpt.TYPE_SWITCH))
             settingsItemList.add(SettingOpt(settingsItemList.size,"跳转网页功能",SettingOpt.TYPE_ITEM))
+            settingsItemList.add(SettingOpt(settingsItemList.size,"添加账号",SettingOpt.TYPE_ITEM))
         }
         
     }

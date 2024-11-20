@@ -1,0 +1,80 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/README.md",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/FuckEditTextLimit.java",
+      "selection": {
+        "end": {
+          "column": 35,
+          "index": 1169,
+          "line": 32
+        },
+        "start": {
+          "column": 35,
+          "index": 1169,
+          "line": 32
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/AddAccount.java",
+      "selection": {
+        "end": {
+          "column": 32,
+          "index": 1290,
+          "line": 33
+        },
+        "start": {
+          "column": 32,
+          "index": 1290,
+          "line": 33
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/MainActivity.kt",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/SettingsActivity.kt",
+      "selection": {
+        "end": {
+          "column": 71,
+          "index": 3481,
+          "line": 62
+        },
+        "start": {
+          "column": 71,
+          "index": 3481,
+          "line": 62
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/AddAccount.java"
+}
