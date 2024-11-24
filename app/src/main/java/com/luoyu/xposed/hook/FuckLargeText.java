@@ -11,7 +11,7 @@ public class FuckLargeText {
   @Xposed_Item_Entry
   public void hook() {
     XposedBridge.hookMethod_Before(
-        Reflex.findMethod(TextView.class).setMethodName("setText").setParams(String.class).get(),
+        Reflex.findMethod(TextView.class).setMethodName("setText").get(),
         param -> {
           if (param.args[0] instanceof CharSequence) {
             CharSequence msg = (CharSequence) param.args[0];

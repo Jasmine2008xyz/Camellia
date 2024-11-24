@@ -156,14 +156,16 @@ public class Reflex {
                 && !this.reflexMethod.getReturnType().equals(m.getReturnType())) temp.remove(m);
             if (this.reflexMethod.getParamsLength() != -1
                 && this.reflexMethod.getParamsLength() != m.getParameterCount()) temp.remove(m);
-            if (this.reflexMethod.getParams() != null
-                && this.reflexMethod.getParams().length == m.getParameterCount()) {
-              int i = 0;
-              for (Class<?> clazz : this.reflexMethod.getParams()) {
-                if (!clazz.equals(m.getParameterTypes()[i]) && clazz != Object.class) {
-                  temp.remove(m);
+            if (this.reflexMethod.getParams() != null) {
+              if (this.reflexMethod.getParams().length != m.getParameterCount()) temp.remove(m);
+              else {
+                int i = 0;
+                for (Class<?> clazz : this.reflexMethod.getParams()) {
+                  if ((!clazz.equals(m.getParameterTypes()[i])) && (!clazz.equals(Object.class))) {
+                    temp.remove(m);
+                    break;
+                  }
                   i++;
-                  break;
                 }
               }
             }
@@ -174,7 +176,9 @@ public class Reflex {
               new Class[] {this.reflexMethod.getClassName()[0].getSuperclass()});
           return get();
         } else {
-          return temp.get(0);
+          var result = temp.get(0);
+          result.setAccessible(true);
+          return result;
         }
       }
     }
@@ -320,7 +324,9 @@ public class Reflex {
               new Class[] {this.reflexField.getClassName()[0].getSuperclass()});
           return get();
         } else {
-          return temp.get(0);
+          var result = temp.get(0);
+          result.setAccessible(true);
+          return result;
         }
       }
     }

@@ -16,7 +16,7 @@ public class AddAccount {
   public void show() {
     var act = ActivityAttributes.context;
     MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(act);
-    dialog.setTitle("添加账号(娱乐功能)");
+    dialog.setTitle("添加账号");
     final EditText et = new EditText(act);
     et.setHint("请在此输入要添加的账号");
     dialog.setNegativeButton("取消", null);
