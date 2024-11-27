@@ -1,10 +1,6 @@
 # Ignore internal file
 app/src/main/java/com/luoyu/internal/
-
-
-
-
-
+app/src/main/cpp/internal/
 
 # Built application files
 *.apk

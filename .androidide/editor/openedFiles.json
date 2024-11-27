@@ -4,14 +4,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/.gitignore",
       "selection": {
         "end": {
-          "column": 13,
-          "index": 36,
-          "line": 1
+          "column": 26,
+          "index": 87,
+          "line": 2
         },
         "start": {
-          "column": 13,
-          "index": 36,
-          "line": 1
+          "column": 26,
+          "index": 87,
+          "line": 2
         }
       }
     },
@@ -35,13 +35,13 @@
       "selection": {
         "end": {
           "column": 0,
-          "index": 31,
-          "line": 3
+          "index": 88,
+          "line": 5
         },
         "start": {
           "column": 0,
-          "index": 31,
-          "line": 3
+          "index": 88,
+          "line": 5
         }
       }
     },
@@ -57,6 +57,51 @@
           "column": 21,
           "index": 78,
           "line": 3
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/build.gradle",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/Rules.txt",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/bsh/.gitignore",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
         }
       }
     }

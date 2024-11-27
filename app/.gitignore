@@ -1,4 +1,5 @@
 /build
 
 # Ignore internal file
-src/java/com/luoyu/internal/
+src/main/java/com/luoyu/internal/
+src/main/cpp/internal/
