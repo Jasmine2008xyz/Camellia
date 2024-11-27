@@ -1,5 +1,5 @@
 # Ignore internal file
-app/src/java/com/luoyu/internal/
+app/src/main/java/com/luoyu/internal/
 
 
 
