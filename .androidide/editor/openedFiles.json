@@ -1,0 +1,65 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/.gitignore",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 56,
+          "line": 2
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/proguard-rules.pro",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/.gitignore",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 31,
+          "line": 3
+        },
+        "start": {
+          "column": 0,
+          "index": 31,
+          "line": 3
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/base/Constants.java",
+      "selection": {
+        "end": {
+          "column": 21,
+          "index": 78,
+          "line": 3
+        },
+        "start": {
+          "column": 21,
+          "index": 78,
+          "line": 3
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/base/Constants.java"
+}
