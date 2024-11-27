@@ -149,7 +149,37 @@
           "line": 3
         }
       }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/bsh/README.md",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/README.md",
+      "selection": {
+        "end": {
+          "column": 3,
+          "index": 420,
+          "line": 17
+        },
+        "start": {
+          "column": 3,
+          "index": 420,
+          "line": 17
+        }
+      }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/plugin/ui/activities/PluginActivity.kt"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/README.md"
 }
