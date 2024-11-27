@@ -5,13 +5,13 @@
       "selection": {
         "end": {
           "column": 0,
-          "index": 56,
-          "line": 2
+          "index": 59,
+          "line": 5
         },
         "start": {
           "column": 0,
-          "index": 0,
-          "line": 0
+          "index": 59,
+          "line": 5
         }
       }
     },
@@ -61,5 +61,5 @@
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/base/Constants.java"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/.gitignore"
 }
