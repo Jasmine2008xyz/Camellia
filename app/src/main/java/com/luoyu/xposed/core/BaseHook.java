@@ -10,6 +10,7 @@ import com.luoyu.xposed.base.HookEnv;
 import com.luoyu.xposed.data.table.HostInfo;
 import com.luoyu.xposed.utils.QQThemeBroadCastReceiver;
 import de.robv.android.xposed.XC_MethodHook;
+import de.robv.android.xposed.XposedBridge;
 import de.robv.android.xposed.XposedHelpers;
 import com.luoyu.utils.ClassUtil;
 import android.app.Activity;
@@ -75,5 +76,14 @@ public class BaseHook {
             HookEnv.put("AppInterFace", param.thisObject);
           }
         });
+    /*XposedHelpers.findAndHookMethod(Class.class,"forName",String.class,new XC_MethodHook(){
+      @Override
+        protected void afterHookedMethod(MethodHookParam param) {
+        //	if(((Class)param.getResult()).getName().startsWith("com.tencent.qqnt")) {
+        		XposedBridge.log("Loaded class: " + param.getResult());
+        //	}
+        }
+    });*/
+ 
   }
 }

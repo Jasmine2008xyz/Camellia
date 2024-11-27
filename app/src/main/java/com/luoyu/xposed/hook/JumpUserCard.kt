@@ -86,7 +86,6 @@ class JumpUserCard {
     private fun startOpenUrlDialog(con: Context) {
         val edit: TextInputEditText = TextInputEditText(con)
         edit.setHint("填入链接")
-        edit.inputType = InputType.TYPE_CLASS_NUMBER
         MaterialAlertDialogBuilder(con)
                             .setTitle("自定义")
                             .setView(edit)

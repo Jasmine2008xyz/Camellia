@@ -1,37 +1,37 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/utils/Reflex.java",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/plugin/ui/activities/PluginActivity.kt",
       "selection": {
         "end": {
-          "column": 35,
-          "index": 10333,
-          "line": 368
+          "column": 56,
+          "index": 1292,
+          "line": 39
         },
         "start": {
-          "column": 35,
-          "index": 10333,
-          "line": 368
+          "column": 56,
+          "index": 1292,
+          "line": 39
         }
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/FuckLargeText.java",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/MainActivity.kt",
       "selection": {
         "end": {
-          "column": 4,
-          "index": 661,
-          "line": 18
+          "column": 48,
+          "index": 371,
+          "line": 10
         },
         "start": {
-          "column": 4,
-          "index": 661,
-          "line": 18
+          "column": 0,
+          "index": 267,
+          "line": 9
         }
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/FuckEditTextLimit.java",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/voicepanel/Main_VoicePanel.java",
       "selection": {
         "end": {
           "column": 0,
@@ -46,35 +46,110 @@
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/FuckQQNotification.java",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/BaseActivity.kt",
       "selection": {
         "end": {
-          "column": 49,
-          "index": 959,
-          "line": 22
+          "column": 0,
+          "index": 0,
+          "line": 0
         },
         "start": {
-          "column": 49,
-          "index": 959,
-          "line": 22
+          "column": 0,
+          "index": 0,
+          "line": 0
         }
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/build.gradle",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/res/layout/plugin_activity.xml",
       "selection": {
         "end": {
-          "column": 29,
-          "index": 105,
-          "line": 6
+          "column": 0,
+          "index": 890,
+          "line": 21
         },
         "start": {
-          "column": 29,
-          "index": 105,
-          "line": 6
+          "column": 0,
+          "index": 890,
+          "line": 21
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/adapters/MainActivityLayoutAdapter.java",
+      "selection": {
+        "end": {
+          "column": 44,
+          "index": 1142,
+          "line": 35
+        },
+        "start": {
+          "column": 44,
+          "index": 1142,
+          "line": 35
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/plugin/ui/adapters/PluginAdapter.java",
+      "selection": {
+        "end": {
+          "column": 25,
+          "index": 412,
+          "line": 11
+        },
+        "start": {
+          "column": 25,
+          "index": 412,
+          "line": 11
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/JumpUserCard.kt",
+      "selection": {
+        "end": {
+          "column": 28,
+          "index": 3545,
+          "line": 87
+        },
+        "start": {
+          "column": 28,
+          "index": 3545,
+          "line": 87
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/.gitignore",
+      "selection": {
+        "end": {
+          "column": 31,
+          "index": 54,
+          "line": 1
+        },
+        "start": {
+          "column": 31,
+          "index": 54,
+          "line": 1
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/internal/pb/ProtoBufDecoder.java",
+      "selection": {
+        "end": {
+          "column": 45,
+          "index": 108,
+          "line": 3
+        },
+        "start": {
+          "column": 45,
+          "index": 108,
+          "line": 3
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/build.gradle"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/plugin/ui/activities/PluginActivity.kt"
 }

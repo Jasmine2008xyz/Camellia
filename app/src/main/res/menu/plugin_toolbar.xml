@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/plugin_item_1"
+        android:title="本地脚本"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/plugin_item_2"
+        android:title="在线脚本"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/plugin_item_3"
+        android:title="创建脚本"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/plugin_item_4"
+        android:title="编写文档"
+        app:showAsAction="never" />
+</menu>

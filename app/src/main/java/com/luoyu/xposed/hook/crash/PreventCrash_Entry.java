@@ -11,6 +11,8 @@ import com.luoyu.utils.ParseUtil;
 import com.luoyu.xposed.ModuleController;
 import com.luoyu.xposed.base.annotations.Xposed_Item_Controller;
 import com.luoyu.xposed.base.annotations.Xposed_Item_UiLongClick;
+import de.robv.android.xposed.XC_MethodHook;
+import de.robv.android.xposed.XposedBridge;
 
 @Xposed_Item_Controller(isApi = false, itemTag = "阻止Java层闪退")
 public class PreventCrash_Entry {
@@ -39,5 +41,20 @@ public class PreventCrash_Entry {
         dialog.setTitle("阻止Java层闪退");
         dialog.setPositiveButton("Leave", null);
         dialog.show();
+       try {
+    	
+   
+    XposedBridge.hookMethod(Class.class.getDeclaredMethod("forName",String.class),new XC_MethodHook(){
+      @Override
+        protected void afterHookedMethod(MethodHookParam param) {
+            if(param.getResult()!=null){
+        	if(((Class)param.getResult()).getName().startsWith("com.tencent.qqnt")) {
+        		XposedBridge.log("Loaded class: " + param.getResult());
+        	}
+        }}
+    });
+ } catch(Exception err) {
+    	
+    }
     }
 }
