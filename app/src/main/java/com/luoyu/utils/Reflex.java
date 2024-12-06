@@ -289,7 +289,19 @@ public class Reflex {
       this.reflexField.setFieldName(fieldName);
       return this;
     }
+    
+public FieldMatcher setReturnType(@NonNull Class<?> clz) {
+      this.reflexField.setReturnType(clz);
+      return this;
+    }
 
+    public FieldMatcher setReturnType(@NonNull String clz) {
+      this.reflexField.setReturnType(loadClass(clz));
+      return this;
+    }
+    public Class<?> getReturnType() {
+      return this.reflexField.getReturnType();
+    }
     public ReflexField getReflexField() {
       return this.reflexField;
     }

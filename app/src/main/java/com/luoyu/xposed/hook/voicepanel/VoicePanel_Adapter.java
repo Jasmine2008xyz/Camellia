@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.luoyu.utils.PathUtil;
+import com.luoyu.xposed.data.table.ContactTable;
 import com.luoyu.xposed.data.table.SessionTable;
 import com.luoyu.xposed.message.MsgElementCreator;
 import de.robv.android.xposed.XposedBridge;
@@ -59,7 +60,7 @@ public class VoicePanel_Adapter
                   MsgElementCreator.createPttElement(
                       PathUtil.getApkDataPath() + "voice/" + textView.getText()));
               MsgUtil.sendMsg(
-                  QQApi.createContact(SessionTable.ChatType, SessionTable.PeerUid), list);
+                  QQApi.createContact(ContactTable.chatType, ContactTable.peerUid), list);
             } catch (Exception err) {
 XposedBridge.log("发送语音失败："+Log.getStackTraceString(err));
             }
