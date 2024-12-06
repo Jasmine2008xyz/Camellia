@@ -36,7 +36,7 @@ class MainActivity : BaseActivity() {
                         when (which) {
                             0 -> IntentUtil.openQQGroup(act, "902327702")
                             1 -> IntentUtil.openQQGroup(act, "837012640")
-                            2 -> IntentUtil.openTelegram(context)
+                            2 -> IntentUtil.openTelegram(act)
                         }
                     }
                     .setPositiveButton("取消", null)
