@@ -58,7 +58,7 @@ public class AutoOpenRedPacket {
     }
     @Xposed_Item_Finder
     public void find(IDexFinder finder) {
-        finder.findMethodsByPathAndUseString(new String[]{"AutoOpenRedPacket_1"},new String[]{"com.tencent.qqnt.msg"},new String[]{"[不支持的元素类型]", "[图片]", "[文件]", "[emoji]"});
+     //   finder.findMethodsByPathAndUseString(new String[]{"AutoOpenRedPacket_1"},new String[]{"com.tencent.qqnt.msg"},new String[]{"[不支持的元素类型]", "[图片]", "[文件]", "[emoji]"});
     }
     @Xposed_Item_Entry
     public void hook(){

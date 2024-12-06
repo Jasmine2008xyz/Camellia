@@ -19,6 +19,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class HookTheme {
   @Xposed_Item_Entry
   public void start() {
+    
     Method method =
         XposedHelpers.findMethodBestMatch(
             ClassUtil.get("com.tencent.mobileqq.activity.QQBrowserActivity"),

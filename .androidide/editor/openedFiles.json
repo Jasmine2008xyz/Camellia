@@ -1,80 +1,50 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/manager/ChannelManager.java",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/api/QQNTOnMessage.kt",
       "selection": {
         "end": {
-          "column": 18,
-          "index": 53,
-          "line": 2
+          "column": 29,
+          "index": 2046,
+          "line": 50
         },
         "start": {
-          "column": 18,
-          "index": 53,
-          "line": 2
+          "column": 29,
+          "index": 2046,
+          "line": 50
         }
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/SettingsActivity.kt",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/README.md",
       "selection": {
         "end": {
-          "column": 5,
-          "index": 7598,
-          "line": 177
+          "column": 0,
+          "index": 0,
+          "line": 0
         },
         "start": {
-          "column": 5,
-          "index": 7598,
-          "line": 177
+          "column": 0,
+          "index": 0,
+          "line": 0
         }
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/utils/IntentUtil.java",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/SelfResponseEmoji.java",
       "selection": {
         "end": {
-          "column": 41,
-          "index": 2280,
-          "line": 66
+          "column": 24,
+          "index": 731,
+          "line": 20
         },
         "start": {
-          "column": 41,
-          "index": 2280,
-          "line": 66
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/MainActivity.kt",
-      "selection": {
-        "end": {
-          "column": 60,
-          "index": 1602,
-          "line": 38
-        },
-        "start": {
-          "column": 60,
-          "index": 1602,
-          "line": 38
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/build.gradle",
-      "selection": {
-        "end": {
-          "column": 31,
-          "index": 107,
-          "line": 6
-        },
-        "start": {
-          "column": 31,
-          "index": 107,
-          "line": 6
+          "column": 24,
+          "index": 731,
+          "line": 20
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/MainActivity.kt"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/api/QQNTOnMessage.kt"
 }
