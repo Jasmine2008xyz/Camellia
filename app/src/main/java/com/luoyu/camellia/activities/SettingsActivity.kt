@@ -165,14 +165,14 @@ class SettingsActivity: BaseActivity() {
     }
     
     private fun joinGroup(context: Context) {
-    val items = arrayOf("加入QQ聊天群", "加入QQ通知群", "加入QQ备用交流群")
+    val items = arrayOf("加入QQ聊天群", "加入QQ通知群", "加入TG群组")
     MaterialAlertDialogBuilder(context)
     .setTitle("交流讨论")
     .setItems(items) { _, which ->
         when (which) {
             0 -> IntentUtil.openQQGroup(context, "902327702")
             1 -> IntentUtil.openQQGroup(context, "837012640")
-            2 -> IntentUtil.openQQGroup(context, "859184034")
+            2 -> IntentUtil.openTelegram(context)
             else -> {}
         }
     }

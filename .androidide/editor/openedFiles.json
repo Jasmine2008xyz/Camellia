@@ -1,122 +1,62 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/README.md",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/manager/ChannelManager.java",
       "selection": {
         "end": {
-          "column": 53,
-          "index": 2508,
-          "line": 110
+          "column": 18,
+          "index": 53,
+          "line": 2
         },
         "start": {
-          "column": 53,
-          "index": 2508,
-          "line": 110
+          "column": 18,
+          "index": 53,
+          "line": 2
         }
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/api/OnEntryContact.java",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/activities/SettingsActivity.kt",
       "selection": {
         "end": {
-          "column": 90,
-          "index": 1828,
-          "line": 45
+          "column": 49,
+          "index": 7559,
+          "line": 174
         },
         "start": {
-          "column": 90,
-          "index": 1828,
-          "line": 45
+          "column": 12,
+          "index": 7522,
+          "line": 174
         }
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/dexfinder/DexKitFinder.java",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/utils/IntentUtil.java",
       "selection": {
         "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 41,
+          "index": 2280,
+          "line": 66
         },
         "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 41,
+          "index": 2280,
+          "line": 66
         }
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/ShowMsgRecord.kt",
+      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/camellia/MainActivity.kt",
       "selection": {
         "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 65,
+          "index": 1607,
+          "line": 38
         },
         "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/utils/Reflex.java",
-      "selection": {
-        "end": {
-          "column": 37,
-          "index": 8204,
-          "line": 293
-        },
-        "start": {
-          "column": 37,
-          "index": 8204,
-          "line": 293
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/data/table/ContactTable.java",
-      "selection": {
-        "end": {
-          "column": 19,
-          "index": 85,
-          "line": 3
-        },
-        "start": {
-          "column": 19,
-          "index": 85,
-          "line": 3
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/voicepanel/Main_VoicePanel.java",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/src/main/java/com/luoyu/xposed/hook/voicepanel/VoicePanel_Adapter.java",
-      "selection": {
-        "end": {
-          "column": 25,
-          "index": 2116,
-          "line": 62
-        },
-        "start": {
-          "column": 25,
-          "index": 2116,
-          "line": 62
+          "column": 65,
+          "index": 1607,
+          "line": 38
         }
       }
     },
@@ -124,14 +64,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/Camellia/app/build.gradle",
       "selection": {
         "end": {
-          "column": 26,
-          "index": 135,
-          "line": 7
+          "column": 31,
+          "index": 107,
+          "line": 6
         },
         "start": {
-          "column": 26,
-          "index": 135,
-          "line": 7
+          "column": 31,
+          "index": 107,
+          "line": 6
         }
       }
     }

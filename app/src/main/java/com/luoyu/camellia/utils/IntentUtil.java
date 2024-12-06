@@ -61,4 +61,16 @@ public class IntentUtil {
       Toast.makeText(act, "升起github错误：" + e.toString(), Toast.LENGTH_SHORT).show();
     }
   }
+  public static void openTelegram(Context act) {
+    try {
+      Toast.makeText(act, "正在打开Telegram...", Toast.LENGTH_SHORT).show();
+      String url = "https://t.me/wsy666HD";
+      Intent intent = new Intent(Intent.ACTION_VIEW);
+      intent.setData(Uri.parse(url));
+
+      act.startActivity(intent);
+    } catch (Exception e) {
+      Toast.makeText(act, "升起Telegram错误：" + e.toString(), Toast.LENGTH_SHORT).show();
+    }
+  }
 }

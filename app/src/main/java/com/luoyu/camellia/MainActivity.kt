@@ -29,13 +29,14 @@ class MainActivity : BaseActivity() {
                 IntentUtil.openGithub(act)
             },
             MainActivityLayoutAdapter.Item("交流讨论") {
-                val items = arrayOf("加入QQ聊天群", "加入QQ通知群")
+                val items = arrayOf("加入QQ聊天群", "加入QQ通知群", "加入TG群组")
                 MaterialAlertDialogBuilder(act)
                     .setTitle("模块介绍")
                     .setItems(items) { _, which ->
                         when (which) {
                             0 -> IntentUtil.openQQGroup(act, "902327702")
                             1 -> IntentUtil.openQQGroup(act, "837012640")
+                            2 -> IntentUtil.openTelegram(context)
                         }
                     }
                     .setPositiveButton("取消", null)
