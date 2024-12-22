@@ -44,7 +44,8 @@ public class Reflex {
       if (clz.startsWith("L")) clz = clz.substring(1, clz.length() - 1);
       return hostClassLoader.loadClass(clz);
     } catch (Exception e) {
-      throw new RuntimeException("未在QQ中找到此类：" + clz + "\n" + Log.getStackTraceString(e));
+      return null;
+      // throw new RuntimeException("未在QQ中找到此类：" + clz + "\n" + Log.getStackTraceString(e));
     }
   }
 
@@ -289,8 +290,8 @@ public class Reflex {
       this.reflexField.setFieldName(fieldName);
       return this;
     }
-    
-public FieldMatcher setReturnType(@NonNull Class<?> clz) {
+
+    public FieldMatcher setReturnType(@NonNull Class<?> clz) {
       this.reflexField.setReturnType(clz);
       return this;
     }
@@ -299,9 +300,11 @@ public FieldMatcher setReturnType(@NonNull Class<?> clz) {
       this.reflexField.setReturnType(loadClass(clz));
       return this;
     }
+
     public Class<?> getReturnType() {
       return this.reflexField.getReturnType();
     }
+
     public ReflexField getReflexField() {
       return this.reflexField;
     }

@@ -19,7 +19,8 @@ import de.robv.android.xposed.XposedBridge;
 public class Plugin_Entry {
   @Xposed_Item_UiClick
   public void onClick() {
-  /*  try{
+        
+   /* try{
       Interpreter interpreter = new Interpreter();
       NameSpace nameSpace = interpreter.getNameSpace();
       interpreter.eval(FileUtil.readFileString(PathUtil.getApkDataPath()+"plugin/小明.java"),nameSpace);

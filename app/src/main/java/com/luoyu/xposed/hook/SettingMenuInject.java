@@ -11,6 +11,7 @@ import com.luoyu.utils.ClassUtil;
 import com.luoyu.utils.ConstructorUtil;
 import com.luoyu.utils.FileUtil;
 import com.luoyu.utils.PathUtil;
+import com.luoyu.utils.Reflex;
 import com.luoyu.utils.XRes;
 import com.luoyu.xposed.ModuleController;
 import com.luoyu.xposed.base.HookEnv;
@@ -47,8 +48,8 @@ public class SettingMenuInject {
             ClassUtil.get("com.tencent.mobileqq.setting.main.MainSettingConfigProvider"),
             List.class,
             new Class[] {Context.class})[0];
-    XposedBridge.hookMethod(
-        method,
+        
+    XC_MethodHook methodHook = 
         new XC_MethodHook(99) {
           @Override
           protected void afterHookedMethod(MethodHookParam param) throws Throwable {
@@ -58,6 +59,7 @@ public class SettingMenuInject {
             // 获取方法的返回结果 item组包装器List-结构和当前类的DemoItemGroupWraper类似
             Object result = param.getResult();
             List<Object> itemGroupWraperList = (List<Object>) result;
+                 //   XposedBridge.log("name:"+itemGroupWraperList);
             // 获取返回的集合泛类型
             Class<?> itemGroupWraperClass = itemGroupWraperList.get(0).getClass();
             // 循环包装器组集合 目的是获取里面的元素
@@ -73,7 +75,7 @@ public class SettingMenuInject {
 
                 if (itemList == null || itemList.isEmpty()) continue;
                 String name = itemList.get(0).getClass().getName();
-
+                            
                 if (!name.startsWith("com.tencent.mobileqq.setting.processor")) continue;
                 // 获取itemList的首个元素并取得Class
                 final Class<?> itemClass = itemList.get(0).getClass();
@@ -162,7 +164,7 @@ public class SettingMenuInject {
                 for (Method setOnClickMethod : setOnClickMethods) {
                   setOnClickMethod.invoke(mItem, onClickListener);
                 }
-
+               // itemList.add(mItem);
                 List<Object> mItemGroup = new ArrayList<>();
                 mItemGroup.add(mItem);
                 // 按长度获取item包装器的构造器
@@ -171,7 +173,7 @@ public class SettingMenuInject {
                 // 新建包装器实例并添加到返回结果
                 Object itemGroupWrap =
                     itemGroupWraperConstructor.newInstance(mItemGroup, null, null, 6, null);
-                itemGroupWraperList.add(0, itemGroupWrap);
+                itemGroupWraperList.add(0,itemGroupWrap);
                 break;
               } catch (Exception e) {
                 /*
@@ -181,7 +183,17 @@ public class SettingMenuInject {
               }
             }
           }
-        });
+        };
+        Class<?> hook_9020 = Reflex.loadClass("com.tencent.mobileqq.setting.main.NewSettingConfigProvider");
+        if(hook_9020!=null) {
+        	Method method2 =XposedHelpers.findMethodsByExactParameters(
+            ClassUtil.get("com.tencent.mobileqq.setting.main.NewSettingConfigProvider"),
+            List.class,
+            new Class[] {Context.class})[0];
+            XposedBridge.hookMethod(method2,methodHook);
+        }
+        XposedBridge.hookMethod(method,methodHook);
+        
   }
 
   private static Method[] fuzzyLookupMethod(

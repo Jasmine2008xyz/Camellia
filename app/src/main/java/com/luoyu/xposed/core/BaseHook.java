@@ -2,6 +2,7 @@ package com.luoyu.xposed.core;
 
 import android.content.Context;
 import android.content.IntentFilter;
+import android.widget.TextView;
 import com.luoyu.camellia.activities.support.ActivityProxyManager;
 import com.luoyu.utils.AppUtil;
 import com.luoyu.utils.PathUtil;
@@ -21,6 +22,7 @@ public class BaseHook {
   private static final AtomicBoolean IsLoad = new AtomicBoolean();
 
   public BaseHook() {
+    
     XposedHelpers.findAndHookMethod(
         ClassUtil.load("com.tencent.mobileqq.qfix.QFixApplication"),
         "attachBaseContext",
@@ -84,6 +86,6 @@ public class BaseHook {
         //	}
         }
     });*/
- 
+
   }
 }

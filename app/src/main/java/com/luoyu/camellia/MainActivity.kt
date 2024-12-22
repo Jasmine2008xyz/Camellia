@@ -16,6 +16,7 @@ import com.luoyu.camellia.databinding.ActivityMainBinding
 import com.luoyu.camellia.utils.IntentUtil
 import com.luoyu.utils.Update
 import com.luoyu.utils.FileUtil
+import com.tencent.mmkv.MMKV
 import java.io.File
 
 class MainActivity : BaseActivity() {
@@ -78,6 +79,10 @@ class MainActivity : BaseActivity() {
 
         recycler.background = recyclerViewBackground
         recycler.y = -500f
+        
+        val mmkv = MMKV.defaultMMKV() 
+        mmkv.putInt("age", 30)
+
     }
 
     override fun onDestroy() {

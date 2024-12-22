@@ -47,7 +47,9 @@ class QQNTOnMessage {
                             val msgRecord = list.get(0)
                             val senderUin = XposedHelpers.getLongField(msgRecord, "senderUin")
                             if (senderUin.toString() == QQUtil.getCurrentUin()) {
-                            SelfResponseEmoji().loadResponse(msgRecord)
+                                if(XposedHelpers.getIntField(msgRecord, "chatType") == 2) {
+                                    SelfResponseEmoji().loadResponse(msgRecord)
+                                }
                             }
                     }
                 }
