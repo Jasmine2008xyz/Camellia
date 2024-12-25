@@ -55,9 +55,6 @@
 -dontusemixedcaseclassnames
 -verbose
 
--keep class androidx.**.**{*;}
--keep class android.**.**{*;}
-
 # Keep any classes referenced by DexKitBridge
 -keep class org.luckypray.dexkit.DexKitBridge { *; }
 -dontwarn kotlin.jvm.internal.**
@@ -84,6 +81,6 @@
  # -packageobfuscationdictionary Rules.txt
  
 -renamesourcefileattribute SourceFile
--repackageclasses "l"
+-repackageclasses "abcd"
 -allowaccessmodification
 -optimizations !code/simplification/arithmetic,!code/simplification/cast,!field/*,!class/merging/*

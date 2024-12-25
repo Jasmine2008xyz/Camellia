@@ -4,7 +4,7 @@ plugins {
     id 'kotlin-android'
 }
 ext {
-    apk_version_name = '0.2.7.7(Internal)'
+    apk_version_name = '0.2.7.9(Internal)'
     apk_version_code = '27'
 }
 
@@ -122,7 +122,7 @@ dependencies {
     compileOnly project(':stub')
     
     implementation fileTree(dir: 'libs/implementation', include: ['*.jar'])
-	  compileOnly fileTree(dir: 'libs/compile_only', include: ['*.jar'])
+    compileOnly fileTree(dir: 'libs/compile_only', include: ['*.jar'])
     debugImplementation 'androidx.compose.ui:ui-tooling'
     debugImplementation 'androidx.compose.ui:ui-test-manifest'
 
